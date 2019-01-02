@@ -1,5 +1,7 @@
 <template>
-  <button class="g-button">按钮</button>
+  <button class="g-button">
+    <slot></slot>
+  </button>
 </template>
 
 <script>
@@ -7,7 +9,6 @@ export default {
   name: "g-button",
   data() {
     return {
-      msg: "Welcome to Your Vue.js App"
     };
   }
 };
@@ -34,14 +35,15 @@ export default {
   border-radius: var(--border-radius);
   padding: 0 1em;
   cursor: pointer;
-}
-.g-button:hover {
-  border-color: var(--border-color-hover);
-}
-.g-button:active {
-  background-color: var(--button-active-bg);
-}
-.g-button:focus {
-  outline: none;
+
+  &:hover {
+    border-color: var(--border-color-hover);
+  }
+  &:active {
+    background-color: var(--button-active-bg);
+  }
+  &:focus {
+    outline: none;
+  }
 }
 </style>
