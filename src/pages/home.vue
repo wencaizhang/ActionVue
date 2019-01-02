@@ -9,17 +9,23 @@ import button from '@/components/button'
 
 export default {
   components: {
-    gbutton: button,
-    
+    gbutton: button
   },
-  data() {
+  data () {
     return {
-      msg: "Welcome to Your Vue.js App"
-    };
+      msg: 'Welcome to Your Vue.js App'
+    }
   }
-};
+}
 </script>
 
-<style lang="less" scoped>
-
+<style lang="less">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 20px;
+}
 </style>
