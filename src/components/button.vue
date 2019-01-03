@@ -1,17 +1,25 @@
 <template>
   <button class="g-button">
+    <svg v-if="icon" class="icon">
+      <use :xlink:href="`#i-${icon}`"></use>
+    </svg>
     <slot></slot>
   </button>
 </template>
 
 <script>
 export default {
-  name: "g-button",
-  data() {
+  name: 'g-button',
+  props: {
+    icon: {
+      type: String,
+    }
+  },
+  data () {
     return {
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="less">
@@ -45,5 +53,9 @@ export default {
   &:focus {
     outline: none;
   }
+}
+.icon {
+  width: 1em;
+  height: 1em;
 }
 </style>
