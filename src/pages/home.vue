@@ -1,5 +1,6 @@
 <template>
   <div>
+    <gbutton>按钮</gbutton>
     <gbutton icon="home">Home</gbutton>
     <gbutton icon="user">User</gbutton>
   </div>

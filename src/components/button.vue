@@ -12,7 +12,7 @@ export default {
   name: 'g-button',
   props: {
     icon: {
-      type: String,
+      type: String
     }
   },
   data () {
