@@ -20,7 +20,10 @@ export default {
     },
     iconPosition: {
       type: String,
-      default: 'left'
+      default: 'left',
+      validator (v) {
+        return v === 'left' || v === 'right'
+      }
     }
   },
   data () {
