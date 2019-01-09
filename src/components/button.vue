@@ -95,8 +95,6 @@ export default {
   &:focus {
     outline: none;
   }
-
-
   .loading {
     animation: spin 1s infinite linear;
   }
