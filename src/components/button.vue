@@ -1,7 +1,7 @@
 <template>
   <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
     <slot name="icon">
-      <icon v-if="icon" :name="icon" />
+      <icon v-if="loading || icon" class="icon" :class="{loading: loading}" :name="loading ? 'loading' : icon" />
     </slot>
     <div class="content">
       <slot></slot>
@@ -14,6 +14,10 @@ import icon from './icon'
 export default {
   name: 'g-button',
   props: {
+    loading: {
+      type: Boolean,
+      default: false
+    },
     icon: {
       type: String
     },
@@ -42,6 +46,16 @@ export default {
   --border-color: #999;
   --border-color-hover: #666;
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .g-button {
   font-size: var(--font-size);
   height: var(--button-height);
@@ -61,7 +75,7 @@ export default {
   }
   > .icon {
     order: 1;
-    margin: 0 .1em 0 0;
+    margin: 0 .2em 0 0;
   }
   &.icon-right {
     > .content {
@@ -69,7 +83,7 @@ export default {
     }
     > .icon {
       order: 2;
-      margin: 0 0 0 .1em;
+      margin: 0 0 0 .2em;
     }
   }
   &:hover {
@@ -80,6 +94,11 @@ export default {
   }
   &:focus {
     outline: none;
+  }
+
+
+  .loading {
+    animation: spin 1s infinite linear;
   }
 }
 .icon {
