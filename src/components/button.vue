@@ -1,9 +1,13 @@
 <template>
-  <button class="g-button">
-    <svg v-if="icon" class="icon">
-      <use :xlink:href="`#i-${icon}`"></use>
-    </svg>
-    <slot></slot>
+  <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
+    <slot name="icon">
+      <svg v-if="icon" class="icon">
+        <use :xlink:href="`#i-${icon}`"></use>
+      </svg>
+    </slot>
+    <div class="content">
+      <slot></slot>
+    </div>
   </button>
 </template>
 
@@ -13,6 +17,10 @@ export default {
   props: {
     icon: {
       type: String
+    },
+    iconPosition: {
+      type: String,
+      default: 'left'
     }
   },
   data () {
@@ -43,7 +51,26 @@ export default {
   border-radius: var(--border-radius);
   padding: 0 1em;
   cursor: pointer;
-
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  > .content {
+    order: 2;
+  }
+  > .icon {
+    order: 1;
+    margin: 0 .1em 0 0;
+  }
+  &.icon-right {
+    > .content {
+      order: 1;
+    }
+    > .icon {
+      order: 2;
+      margin: 0 0 0 .1em;
+    }
+  }
   &:hover {
     border-color: var(--border-color-hover);
   }

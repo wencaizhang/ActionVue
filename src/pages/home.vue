@@ -1,8 +1,8 @@
 <template>
   <div>
-    <gbutton>按钮</gbutton>
-    <gbutton icon="home">Home</gbutton>
-    <gbutton icon="user">User</gbutton>
+    <g-button>按钮</g-button>
+    <g-button icon="home" iconPosition="right">Home</g-button>
+    <g-button icon="user">User</g-button>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import button from '@/components/button'
 
 export default {
   components: {
-    gbutton: button
+    gButton: button
   },
   data () {
     return {
