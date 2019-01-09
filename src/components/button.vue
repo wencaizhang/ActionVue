@@ -1,9 +1,7 @@
 <template>
   <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
     <slot name="icon">
-      <svg v-if="icon" class="icon">
-        <use :xlink:href="`#i-${icon}`"></use>
-      </svg>
+      <icon v-if="icon" :name="icon" />
     </slot>
     <div class="content">
       <slot></slot>
@@ -12,6 +10,7 @@
 </template>
 
 <script>
+import icon from './icon'
 export default {
   name: 'g-button',
   props: {
@@ -26,9 +25,8 @@ export default {
       }
     }
   },
-  data () {
-    return {
-    }
+  components: {
+    icon
   }
 }
 </script>
