@@ -1,9 +1,17 @@
 <template>
-<div>
+  <div>
+    <g-button :loading="loading1" @click.native="loading1 = !loading1">按钮</g-button>
+    <g-button icon="home" iconPosition="right" :loading="loading2" @click.native="loading2 = !loading2">Home</g-button>
+    <g-button icon="user" :loading="loading3" @click.native="loading3 = !loading3">User</g-button>
+    <g-icon name="download" />
+    <hr style="margin: 20px 0">
     <div>
-    <gbutton>按钮</gbutton>
-    <gbutton icon="home" icon-position="left">Home</gbutton>
-    <gbutton icon="user">User</gbutton>
+      <buttonGroup>
+        <g-button :loading="loading1" @click.native="loading1 = !loading1">按钮</g-button>
+        <g-button icon="home" iconPosition="right" :loading="loading2" @click.native="loading2 = !loading2">Home</g-button>
+        <g-button icon="user" :loading="loading3" @click.native="loading3 = !loading3">User</g-button>
+      </buttonGroup>
+    </div>
   </div>
 
   <hr style="margin: 10px 0">
@@ -16,16 +24,29 @@
 
 <script>
 import button from '@/components/button'
+<<<<<<< HEAD
 import input from '@/components/input/input'
 
 export default {
   components: {
     gbutton: button,
     ginput: input
+=======
+import icon from '@/components/icon'
+import buttonGroup from '@/components/button-group'
+
+export default {
+  components: {
+    gButton: button,
+    gIcon: icon,
+    buttonGroup
+>>>>>>> 20fa6dc084405ae9350afa4d680752735bc47363
   },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      loading1: false,
+      loading2: false,
+      loading3: false
     }
   }
 }
