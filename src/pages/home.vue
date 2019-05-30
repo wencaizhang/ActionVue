@@ -37,10 +37,7 @@
     <hr style="margin: 10px 0">
 
     <gInput/> -->
-
-
-
-
+    <button @click="showToast">点我</button>
   </div>
 </template>
 
@@ -74,6 +71,13 @@ export default {
   watch: {
     activeKey (key) {
       console.log(key)
+    }
+  },
+  mounted () {
+    },
+  methods: {
+    showToast () {
+      this.$toast('我是toast')
     }
   }
 }
