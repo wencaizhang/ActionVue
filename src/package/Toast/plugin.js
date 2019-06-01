@@ -9,7 +9,6 @@ export default {
       toast.$mount()
 
       document.body.appendChild(toast.$el)
-
     }
   }
 }
