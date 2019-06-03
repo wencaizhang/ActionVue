@@ -1,6 +1,11 @@
 <template>
   <div>
-    <div>
+
+    <button style="padding: 10px 20px;"
+      @click="showToast"
+    >点我</button>
+
+    <!-- <div>
       <gbutton :loading="loading1" @click.native="loading1 = !loading1">按钮</gbutton>
       <gbutton
         icon="home"
@@ -41,7 +46,7 @@
       <hr style="margin: 10px 0">
 
       <ginput value="张三"/>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -79,7 +84,14 @@ export default {
   mounted () {},
   methods: {
     showToast () {
-      this.$toast('我是toast')
+      this.$toast('我是toast', {
+        closeButton: {
+          text: '已阅',
+          callback () {
+            console.log('朕知道了！退下吧！')
+          }
+        }
+      })
     }
   }
 }
