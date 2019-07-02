@@ -1,5 +1,5 @@
 <template>
-  <div class="wraper">
+  <div class="wraper" v-if="!hideIfOnePage || totalPage > 1">
     <span
       class="pager prev-page"
       :class="{ disabled: currPage === 1 }"
