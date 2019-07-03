@@ -1,6 +1,6 @@
 <template>
   <div class="sticky-wraper" ref="wrapper" :style="{ height }">
-    <div class="sticky-inner" :class="clazz" :style="{ left, width, top }">
+    <div class="sticky-inner" :class="clazz" :style="{ left, width, top, bottom, }">
       <slot />
     </div>
   </div>
@@ -10,6 +10,16 @@
 export default {
   name: 'sticky',
   props: {
+    position: {
+      type: String,
+      default: 'top',
+      validator (v) {
+        if (['top', 'bottom'].includes(v)) {
+          return v
+        }
+        return 'top'
+      }
+    },
     distance: {
       type: Number,
       default: 0
@@ -19,6 +29,7 @@ export default {
     return {
       sticky: false,
       top: undefined,
+      bottom: undefined,
       left: undefined,
       width: undefined,
       height: undefined
@@ -37,25 +48,30 @@ export default {
     window.addEventListener('scroll', this.windowScrollHandler)
   },
   methods: {
-    getTop () {
-      let { top } = this.$refs.wrapper.getBoundingClientRect()
-      return top
+    getDistance () {
+      let offset = this.$refs.wrapper.getBoundingClientRect()
+      return offset[this.position]
     },
     _windowScrollHandler () {
       let { height, left, width } = this.$refs.wrapper.getBoundingClientRect()
+      console.log(this.getDistance(), this.$refs.wrapper.getBoundingClientRect())
 
-      if (this.getTop() < this.distance) {
+      let distance = this.position === 'top'
+        ? this.getDistance()
+        : document.documentElement.clientHeight - this.getDistance()
+
+      if (distance < this.distance) {
         this.sticky = true
         this.height = height + 'px'
         this.left = left + 'px'
         this.width = width + 'px'
-        this.top = this.distance + 'px'
+        this[this.position] = this.distance + 'px'
       } else {
         this.sticky = false
         this.height = undefined
         this.left = undefined
         this.width = undefined
-        this.top = undefined
+        this[this.position] = undefined
       }
     }
   }

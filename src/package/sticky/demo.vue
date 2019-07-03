@@ -11,7 +11,7 @@
     <p>段落</p>
     <p>段落</p>
     <p>段落</p>
-    <sticky :distance="100">
+    <sticky :distance="0" position="bottom">
       <div class="box">我是粘滞内容</div>
     </sticky>
     <p>段落</p>

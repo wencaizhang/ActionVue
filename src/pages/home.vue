@@ -1,100 +1,35 @@
 <template>
-  <div>
+  <div class="wrapper">
+    <div class="menu">
+      <h3>目录</h3>
+      <a @click="$router.go(-1)">&lt;- 返回</a>
+      <router-link :to="{ name: 'button' }">Button Demo</router-link>
+      <router-link :to="{ name: 'input' }">input Demo</router-link>
+      <router-link :to="{ name: 'icon' }">icon Demo</router-link>
+      <router-link :to="{ name: 'toast' }">toast Demo</router-link>
+      <router-link :to="{ name: 'grid' }">Grid Demo</router-link>
+      <router-link :to="{ name: 'pager' }">pager Demo</router-link>
+      <router-link :to="{ name: 'collapse' }">collapse Demo</router-link>
+      <router-link :to="{ name: 'sticky' }">sticky Demo</router-link>
+    </div>
 
-    <button style="padding: 10px 20px;"
-      @click="showToast"
-    >点我</button>
+    <div class="content">
+      <router-view />
+    </div>
 
-    <!-- <div>
-      <gbutton :loading="loading1" @click.native="loading1 = !loading1">按钮</gbutton>
-      <gbutton
-        icon="home"
-        iconPosition="right"
-        :loading="loading2"
-        @click.native="loading2 = !loading2"
-      >Home</gbutton>
-      <gbutton icon="user" :loading="loading3" @click.native="loading3 = !loading3">User</gbutton>
-      <gicon name="download"/>
-      <hr style="margin: 20px 0">
-      <div>
-        <buttonGroup>
-          <gbutton :loading="loading1" @click.native="loading1 = !loading1">按钮</gbutton>
-          <gbutton
-            icon="home"
-            iconPosition="right"
-            :loading="loading2"
-            @click.native="loading2 = !loading2"
-          >Home</gbutton>
-          <gbutton icon="user" :loading="loading3" @click.native="loading3 = !loading3">User</gbutton>
-        </buttonGroup>
-      </div>
-
-      <div>
-        <a-collapse v-model="activeKey">
-          <a-collapse-panel header="This is panel header 1" name="1">
-            <p>{{text}}</p>
-          </a-collapse-panel>
-          <a-collapse-panel header="This is panel header 2" name="2" :disabled="false">
-            <p>{{text}}</p>
-          </a-collapse-panel>
-          <a-collapse-panel header="This is panel header 3" name="3" disabled>
-            <p>{{text}}</p>
-          </a-collapse-panel>
-        </a-collapse>
-      </div>
-
-      <hr style="margin: 10px 0">
-
-      <ginput value="张三"/>
-    </div> -->
   </div>
 </template>
 
 <script>
-import button from '@/package/button'
-import buttonGroup from '@/package/button-group'
-import input from '@/package/input/input'
-import icon from '@/package/icon'
-import ACollapse from '@/package/ACollapse'
-import ACollapsePanel from '@/package/ACollapsePanel'
+
+
 
 export default {
   components: {
-    gbutton: button,
-    ginput: input,
-    gicon: icon,
-    buttonGroup,
-    ACollapse,
-    ACollapsePanel
+
   },
-  data () {
-    return {
-      loading1: false,
-      loading2: false,
-      loading3: false,
-      text: `A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.`,
-      activeKey: ['1']
-    }
-  },
-  watch: {
-    activeKey (key) {
-      console.log(key)
-    }
-  },
-  mounted () {},
-  methods: {
-    showToast () {
-      this.$toast('我是toast', {
-        closeButton: {
-          text: '已阅',
-          callback () {
-            console.log('朕知道了！退下吧！')
-          }
-        }
-      })
-    }
-  }
-}
+  mounted() {}
+};
 </script>
 
 <style lang="less">
@@ -106,4 +41,23 @@ export default {
 body {
   margin: 20px;
 }
+.wrapper {
+  display: flex;
+}
+.menu {
+  border: 1px solid yellowgreen;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  min-width: 200px;
+
+  a {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+.content {
+  flex-grow: 1;
+}
+
 </style>

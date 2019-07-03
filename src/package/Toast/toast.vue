@@ -80,6 +80,7 @@ export default {
 }
 
 .close {
+  flex-shrink: 0;
   display: inline-block;
   border-left: 1px solid #666;
   margin-left: 8px;
