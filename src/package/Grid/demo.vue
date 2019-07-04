@@ -1,61 +1,52 @@
 <template>
-  <div>
+  <div class="grid-demo-wrapper">
+
+    <h3>响应式</h3>
+    <demo5 />
+
     <h3>基础栅格</h3>
-    <div class="grid-demo-wrapper">
-      <a-row>
-        <a-col :span="12">col-12</a-col>
-        <a-col :span="12">col-12</a-col>
-      </a-row>
-      <a-row>
-        <a-col :span="8">col-8</a-col>
-        <a-col :span="8">col-8</a-col>
-        <a-col :span="8">col-8</a-col>
-      </a-row>
-      <a-row>
-        <a-col :span="6">col-6</a-col>
-        <a-col :span="6">col-6</a-col>
-        <a-col :span="6">col-6</a-col>
-        <a-col :span="6">col-6</a-col>
-      </a-row>
-    </div>
+    <demo1 />
+
     <h3>栅格间距</h3>
-    <div class="grid-demo-wrapper">
-      <a-row :gutter="24">
-        <a-col :span="12">col-12</a-col>
-        <a-col :span="12">col-12</a-col>
-      </a-row>
-      <a-row :gutter="24">
-        <a-col :span="8">col-8</a-col>
-        <a-col :span="8">col-8</a-col>
-        <a-col :span="8">col-8</a-col>
-      </a-row>
-      <a-row :gutter="24">
-        <a-col :span="6">col-6</a-col>
-        <a-col :span="6">col-6</a-col>
-        <a-col :span="6">col-6</a-col>
-        <a-col :span="6">col-6</a-col>
-      </a-row>
-    </div>
+    <demo2 />
+
+    <h3>左右偏移</h3>
+    <demo3 />
+
+    <h3>Flex 布局</h3>
+    <demo4 />
+
   </div>
 </template>
 
 <script>
-import col from "./col";
-import row from "./row";
+import demo1 from './demos/demo1'
+import demo2 from './demos/demo2'
+import demo3 from './demos/demo3'
+import demo4 from './demos/demo4'
+import demo5 from './demos/demo5'
 export default {
   components: {
-    ACol: col,
-    ARow: row
+    demo1,
+    demo2,
+    demo3,
+    demo4,
+    demo5,
   }
 };
 </script>
 
 <style>
 .grid-demo-wrapper {
-  color: #fff;
   width: 800px;
 }
-
+.grid-demo-wrapper .col {
+  color: #fff;
+}
+.grid-demo-wrapper h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
 .grid-demo-wrapper .col:nth-child(2n) {
   background: #00a0e9;
 }

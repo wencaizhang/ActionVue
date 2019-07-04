@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style  scoped>
 .gicon {
   width: 1em;
   height: 1em;

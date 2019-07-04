@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 :root {
   --font-size: 14px;
   --button-height: 32px;

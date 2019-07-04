@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import toast from '@/package/Toast/plugin'
+import toast from '@/package/toast/plugin'
 
 // import button from "@/package/button/button";
 // import buttonGroup from "@/package/button/button-group";
@@ -47,5 +47,5 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  render: h => h(App)
 })

@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .g-button-group {
   display: inline-flex;
   vertical-align: middle;

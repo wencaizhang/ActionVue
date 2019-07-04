@@ -54,7 +54,6 @@ export default {
     },
     _windowScrollHandler () {
       let { height, left, width } = this.$refs.wrapper.getBoundingClientRect()
-      console.log(this.getDistance(), this.$refs.wrapper.getBoundingClientRect())
 
       let distance = this.position === 'top'
         ? this.getDistance()
@@ -78,7 +77,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .sticky-wraper {
   border: 1px solid #ccc;
 

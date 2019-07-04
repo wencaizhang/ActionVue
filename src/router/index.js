@@ -8,9 +8,8 @@ import input from '@/package/input/demo'
 import icon from '@/package/icon/demo'
 import toast from '@/package/toast/demo'
 import grid from '@/package/Grid/demo'
-import pager from '@/package/Pager/demo'
+import pager from '@/package/pager/demo'
 import collapse from '@/package/collapse/demo'
-
 
 import sticky from "@/package/sticky/demo";
 
