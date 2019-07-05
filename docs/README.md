@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: https://vuepress.vuejs.org/logo.png
-heroText: vue-gulu-ui
+heroText: actionvue
 tagline: 个人开发的组件库
 actionText: 快速上手 →
 actionLink: /get-started/
@@ -12,5 +12,5 @@ features:
   details: 基于 Vue 2.5 开发，无其他依赖。
 - title: 简单易用
   details: 简单易用
-footer: MIT Licensed | Copyright © 2018-present wencai zhang
+footer: MIT Licensed | Copyright © 2018-present wencaizhang
 ---

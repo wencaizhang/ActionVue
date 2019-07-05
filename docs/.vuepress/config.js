@@ -1,8 +1,8 @@
 const path = require('path')
 module.exports = {
-  base: '/gulu',
-  title: 'vue-gulu-ui',
-  description: 'vue-gulu-ui - 一个个人开发的组件库',
+  base: '/actionvue',
+  title: 'actionvue',
+  description: 'actionvue - vue 组件库',
   head: [
     ['link', { rel: 'icon', href: 'https://vuepress.vuejs.org/logo.png' }],
   ],

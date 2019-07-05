@@ -1,12 +1,14 @@
 # actionvue :stuck_out_tongue_winking_eye:
 
-中文 | [english](./README-en.md)
+english | [中文](./READMD.md)
 
-## what is this
+## Intro
 
-这是一个基于 Vue.js 的组件库
+### what is this
 
-## why this
+A UI components based on Vue.
+
+### why this
 
 组件库由个人开发，旨在技术研究，探索如何搭建一个基于 Vue 的组件库。
 
@@ -28,8 +30,7 @@ action + vue === actionvue
 Check out our [documentation website](https://wencaizhang.github.io/actionvue/).
 
 
-## how
-
+### Install
 ```bash
 npm install actionvue --save
 
@@ -38,19 +39,23 @@ npm install actionvue --save
 yarn add actionvue
 ```
 
-## feature
+
+## Usage
+
+
+## Components
 
 + [x] Button
 + [x] Input
 + [x] icon
 + [x] Toast
 + [x] Pager 分页器
-+ [x] 网格组件
-+ [x] skeleton 骨架屏
++ [x] Grid 网格系统
++ [x] Skeleton 骨架屏
 + [x] Sticky - 粘滞 / 吸顶组件
-+ [ ] Nav
++ [ ] Nav - 导航
 + [ ] 轮播组件
-+ [ ] 文件上传
++ [ ] Uploader 文件上传
 + [ ] Tab
 + [ ] Table
 + [ ] Popover
@@ -66,7 +71,7 @@ yarn add actionvue
 
 ## Contributing
 
-如果你遇到什么问题，或者有好的建议，欢迎提 [Issues](https://github.com/wencaizhang/actionvue/issues/) 和 [Pull Request](https://github.com/wencaizhang/actionvue/pulls/)
+Thank you for considering contributing to the Actionvue! If you have some doubts, find some issues, propose a new feature, or improvements of existing behavior, [Issues](https://github.com/wencaizhang/actionvue/issues/) and [Pull Request](https://github.com/wencaizhang/actionvue/pulls/) are welcome.
 
 
 ## Licence
