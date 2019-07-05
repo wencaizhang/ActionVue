@@ -12,6 +12,7 @@ import pager from '@/package/pager/demo'
 import collapse from '@/package/collapse/demo'
 
 import sticky from "@/package/sticky/demo";
+import KeyBoard from '@/package/keyboard'
 
 Vue.use(Router)
 
@@ -60,6 +61,11 @@ export default new Router({
           path: '/sticky',
           name: 'sticky',
           component: sticky,
+        },
+        {
+          path: '/keyboard',
+          name: 'keyboard',
+          component: KeyBoard,
         },
       ]
     }

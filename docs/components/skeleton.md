@@ -6,7 +6,7 @@
 **预览**
 
 <ClientOnly>
-  <skeleton-demo11 />
+  <skeleton-demo-1-1 />
 </ClientOnly>
 
 

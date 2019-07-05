@@ -1,0 +1,238 @@
+.sidebar
+  .sidebar-heading
+    display flex
+    justify-content space-between
+    align-items center
+
+  .sidebar-sub-headers
+
+    a.sidebar-link
+      border-left 1px solid $borderColor
+    a.sidebar-link.active
+      color $accentColor
+      border-left 1px solid $accentColor
+      border-right none
+      background-color #fff
+
+  a.sidebar-link
+    border-right 0.12rem solid transparent
+    border-left 0
+    &.active
+      font-weight 600
+      color $accentColor
+      border-color $accentColor
+      background-color #dbf3e8
+
+
+@media (min-width: 719px)
+  .page
+    padding-right 20rem
+
+  .sidebar-sub-headers
+    font-size 15px
+    background-color #fff
+    width $sidebarWidth
+    position fixed
+    z-index 10
+    margin 0
+    top $navbarHeight
+    right 0
+    bottom 0
+    box-sizing border-box
+
+    overflow-y auto
+    padding-left 0
+@media (max-width: 719px)
+  .theme-container .page
+    padding-right 0
+
+.navbar .site-name
+  font-size 1.8rem
+  font-family x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,'Source Han Serif SC', STZhongsong, "Source Han Sans CN", 'PingFang SC', 'Myriad Pro', 'Hiragino Sans GB', SimHei
+
+h1, h2, h3
+  font-family  x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,'Source Han Serif SC', STZhongsong, "Source Han Sans CN", 'PingFang SC', 'Myriad Pro', 'Hiragino Sans GB', SimHei
+.page .content code
+  color #e96900
+  padding 3px 5px
+  margin 0 2px
+  border-radius 2px
+
+code, pre
+  font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+  font-size 1em
+  background-color #f8f8f8
+  -webkit-font-smoothing initial
+  -moz-osx-font-smoothing initial
+
+body
+  letter-spacing .5px
+
+// 纠正自定义代码块样式引起的高亮错位
+div[class*="language-"] .highlight-lines
+  padding-top 3.05rem!important
+
+@media (min-width: 719px)
+  .features a:not(.external):hover
+    border-bottom 2px solid #46bd87
+
+
+// 自定义页面
+// .theme-container.custom-page-class
+//  color: #eee;
+
+
+@-webkit-keyframes logo-blink {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+  }
+  5% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  39% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  65% {
+    opacity: 0.8;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  70% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+@keyframes logo-blink {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+  }
+  5% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  39% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  65% {
+    opacity: 0.8;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  70% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+.navbar-blank-------
+  animation: logo-blink 8s ease-in 1s infinite;
+
+.navbar-blank------:before
+  position: absolute;
+  top: 15%;
+  left: 0;
+  content: "";
+  width: 11rem;
+  height: 3rem;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background: radial-gradient(#fff,hsla(0,0%,100%,.2),hsla(0,0%,100%,0));
+  background: red;
+
+
+.content pre, .content pre[class*="language-"]
+  position: relative;
+  padding: 3em 1.5em 1.5em;
+  margin: .5em 0;
+  overflow: auto;
+  border-radius: 6px;
+
+div[class*="language-"].line-numbers-mode::after
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  content: "";
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #ff5f56;
+  -webkit-box-shadow: 18px 0 0 0 #ffbd2e, 36px 0 0 0 #27c93f;
+  box-shadow: 18px 0 0 0 #ffbd2e, 36px 0 0 0 #27c93f;
+
+div[class*=language-].line-numbers-mode .line-numbers-wrapper
+  top 1.6rem!important
+  border-right 1px solid rgba(0,0,0,0.66)
+  padding 0!important
+  margin 1.35rem 0
+  z-index 11
+  background-color #282c34
+
+div[class*="language-"]::before
+  top: 1em;
+  left: 6.4em;
+
+// 复制按钮
+.btn-copy
+  position: absolute;
+  z-index: 3;
+  top: 0.8em;
+  right: 1em;
+  font-size: 0.75rem;
+  cursor: pointer;
+  color: rgba(255,255,255,0.4);
+
+// QR
+#qrcode
+  position: absolute;
+  left: 160px;
+  top: 0;
+  z-index: 101;
+  width: 100px;
+  height: 100px;
+
+#qrcode img
+  width: 100%;
+  height: 100%;
+
+
+.sidebar
+  padding-bottom: 150px;
+
+.music-container
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100px;

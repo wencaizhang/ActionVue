@@ -3,7 +3,7 @@
     <slot name="icon">
       <icon v-if="loading || icon" class="icon" :class="{loading: loading}" :name="loading ? 'loading' : icon" />
     </slot>
-    <div class="content">
+    <div class="g-button-content">
       <slot></slot>
     </div>
   </button>
@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 :root {
   --font-size: 14px;
   --button-height: 32px;
@@ -70,7 +70,7 @@ export default {
   justify-content: center;
   align-items: center;
   vertical-align: middle;
-  > .content {
+  > .g-button-content {
     order: 2;
   }
   > .icon {
@@ -78,7 +78,7 @@ export default {
     margin: 0 .2em 0 0;
   }
   &.icon-right {
-    > .content {
+    > .g-button-content {
       order: 1;
     }
     > .icon {

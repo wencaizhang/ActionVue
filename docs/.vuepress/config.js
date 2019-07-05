@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  base: '/vue-gulu-ui',
+  base: '/gulu',
   title: 'vue-gulu-ui',
   description: 'vue-gulu-ui - 一个个人开发的组件库',
   head: [
@@ -24,7 +24,12 @@ module.exports = {
         title: 'components 组件',
         collapsable: false,
         children: [
+          '/components/button',
+          '/components/grid',
+          '/components/pager',
           '/components/skeleton',
+          '/components/skicky',
+          '/components/toast',
         ]
       },
     ]
@@ -33,3 +38,5 @@ module.exports = {
     includePaths: [path.join(__dirname, '../../styles')]
   }
 }
+
+

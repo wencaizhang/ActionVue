@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: https://vuepress.vuejs.org/logo.png
-heroText: vue-skeleton-antd
-tagline: vue-gulu-ui - 一个个人开发的组件库
+heroText: vue-gulu-ui
+tagline: 个人开发的组件库
 actionText: 快速上手 →
 actionLink: /get-started/
 features:
