@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://vuepress.vuejs.org/logo.png
+heroImage: ./actionvue/logo.png
 heroText: actionvue
 tagline: 个人开发的组件库
 actionText: 快速上手 →

@@ -1,0 +1,37 @@
+.dt-container {
+	display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  
+  box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  
+  box-direction: normal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+	flex-direction: row;
+
+  /* 默认有可能在弹性盒子里 */
+  box-flex: 1;
+	-webkit-box-flex: 1;
+  -ms-flex: 1;
+	flex: 1;
+	flex-basis: auto;
+
+	/* IE10 */
+  -ms-flex-preferred-size: auto;
+
+  -webkit-box-sizing: border-box;
+	box-sizing: box;
+	min-width: 0;
+}
+
+/* 垂直 */
+.dt-container.is-vertical {
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  box-direction: normal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column
+}

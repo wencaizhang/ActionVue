@@ -1,16 +1,16 @@
 const path = require('path')
 module.exports = {
-  base: '/actionvue',
-  title: 'actionvue',
-  description: 'actionvue - vue 组件库',
+  base: '/actionvue/',
+  title: 'ActionVue',
+  description: 'ActionVue - vue 组件库',
   head: [
-    ['link', { rel: 'icon', href: 'https://vuepress.vuejs.org/logo.png' }],
+    ['link', { rel: 'icon', href: "./logo.png" }],
   ],
   themeConfig: {
     nav: [
       {text: '主页', link: '/'},
-      {text: 'GitHub', link: 'https://github.com/wencaizhang/gulu/'},
-      {text: '交流', link: 'https://github.com/wencaizhang/gulu/issues'},
+      {text: 'GitHub', link: 'https://github.com/wencaizhang/actionvue/'},
+      {text: '交流', link: 'https://github.com/wencaizhang/actionvue/issues'},
     ],
     sidebar: [
       {

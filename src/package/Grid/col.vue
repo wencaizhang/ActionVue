@@ -39,7 +39,7 @@ export default {
       const { span, offset, gutter } = this;
       return {
         [`col-${span}`]: true,
-        [`col-col-offset-${offset}`]: offset,
+        [`col-offset-${offset}`]: offset,
       }
     },
     styles () {

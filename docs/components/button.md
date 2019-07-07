@@ -10,5 +10,5 @@
 **代码**
 
 ```html
-<vue-skeleton :active="true" />
+<a-skeleton :active="true" />
 ```

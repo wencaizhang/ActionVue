@@ -1,6 +1,6 @@
-# actionvue :stuck_out_tongue_winking_eye:
+# ActionVue :stuck_out_tongue_winking_eye:
 
-中文 | [english](./README-en.md)
+中文简体 | [English](./README-en.md)
 
 ## what is this
 

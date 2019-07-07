@@ -1,0 +1,557 @@
+/**
+ * 基本样式
+ */
+ .dt-button {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-appearance: none;
+
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid #dcdfe6;
+  margin: 0;
+
+  border-radius: 4px;
+  background-color: #fff;
+  outline: 0;
+
+  color: #606266;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  transition: .1s;
+  -webkit-transition: .1s;
+}
+
+.dt-button + .dt-button {
+  margin-left: 10px;
+}
+
+.dt-button:focus,
+.dt-button:hover {
+  color: #409EFF;
+  border-color: #c6e2ff;
+  background-color: #ecf5ff;
+}
+
+.dt-button:active {
+  color: #3a8ee6;
+  border-color: #3a8ee6;
+  outline: 0;
+}
+
+.dt-button::-moz-focus-inner {
+  border: 0;
+}
+
+/**
+ * 按钮是否有图标
+ */
+.dt-button [class*=dt-icon-] + span {
+  margin-left: 5px;
+}
+
+.dt-button [class*=fa-] + span {
+  margin-left: 5px;
+}
+
+/**
+ * 按钮是否激活
+ * is-active
+ */
+.dt-button.is-active {
+  border-color: #3a8ee6;
+  color: #3a8ee6;
+}
+
+/**
+ * 是否圆角
+ * is-round
+ */
+.dt-button.is-round {
+  padding: 12px 23px;
+  border-radius: 20px;
+}
+
+/**
+ * 是否禁止
+ * is-disabled
+ */
+.dt-button.is-disabled,
+.dt-button.is-disabled:focus,
+.dt-button.is-disabled:hover{
+  border-color: #ebeef5;
+  background-image: none;
+  background-color: #fff;
+  color: #c0c4cc;
+
+  cursor: not-allowed;
+}
+
+/**
+ * 按钮类型，默认按钮、朴素按钮
+ * is-plain
+ */
+.dt-button.is-plain:focus,
+.dt-button.is-plain:hover {
+  border-color: #409EFF;
+  background: #fff;
+  color: #409EFF;
+}
+
+.dt-button.is-plain:active {
+  border-color: #3a8ee6;
+  color: #3a8ee6;
+}
+
+.dt-button.is-plain:active {
+  background: #fff;
+  outline: 0;
+}
+
+.dt-button.is-plain.is-disabled,
+.dt-button.is-plain.is-disabled:focus,
+.dt-button.is-plain.is-disabled:hover {
+  border-color: #ebeef5;
+  background-color: #fff;
+  color: #c0c4cc;
+}
+
+/**
+ * 按钮样式预定义
+ * type: primary（主要按钮）, success（成功按钮）, warning（警告按钮）, danger（危险按钮）, info（信息按钮）, text（文字按钮）
+ */
+  /* type 1 */
+  .dt-button--primary {
+    border-color: #409EFF;
+    background-color: #409EFF;
+    color: #fff;
+  }
+
+  .dt-button--primary:focus,
+  .dt-button--primary:hover {
+    border-color: #66b1ff;
+    background-color: #66b1ff;
+    color: #fff;
+  }
+
+  .dt-button--primary:active {
+    border-color: #3a8ee6;
+    background-color: #3a8ee6;
+    color: #fff;
+
+    outline: 0;
+  }
+    /* type 1 active */
+    .dt-button--primary.is-active {
+      border-color: #3a8ee6;
+      background-color: #3a8ee6;
+      color: #fff;
+    }
+
+    /* type 1 disabled */
+    .dt-button--primary.is-disabled,
+    .dt-button--primary.is-disabled:active,
+    .dt-button--primary.is-disabled:focus,
+    .dt-button--primary.is-disabled:hover {
+      border-color: #a0cfff;
+      background-color: #a0cfff;
+      color: #fff;
+    }
+
+    /* type 1 plain */
+    .dt-button--primary.is-plain {
+      border-color: #b3d8ff;
+      background: #ecf5ff;
+      color: #409EFF;
+    }
+
+    .dt-button--primary.is-plain:focus,
+    .dt-button--primary.is-plain:hover {
+      border-color: #409EFF;
+      background-color: #409EFF;
+      color: #fff;
+    }
+
+    .dt-button--primary.is-plain:active {
+      border-color: #3a8ee6;
+      background-color: #3a8ee6;
+      color: #fff;
+
+      outline: 0;
+    }
+
+    /* type 1 plain disabled */
+    .dt-button--primary.is-plain.is-disabled,
+    .dt-button--primary.is-plain.is-disabled:active,
+    .dt-button--primary.is-plain.is-disabled:focus,
+    .dt-button--primary.is-plain.is-disabled:hover {
+      border-color: #d9ecff;
+      background-color: #ecf5ff;
+      color: #8cc5ff;
+    }
+
+  /* type 2 */
+  .dt-button--success {
+    border-color: #67c23a;
+    background-color: #67c23a;
+    color: #fff;
+  }
+
+  .dt-button--success:focus,
+  .dt-button--success:hover {
+    border-color: #85ce61;
+    background-color: #85ce61;
+    color: #fff;
+  }
+
+  .dt-button--success:active {
+    border-color: #5daf34;
+    background-color: #5daf34;
+    color: #fff;
+
+    outline: 0
+  }
+
+    /* type 2 active */
+    .dt-button--success.is-active {
+      border-color: #5daf34;
+      background-color: #5daf34;
+      color: #fff;
+    }
+
+    /* type 2 disabled */
+    .dt-button--success.is-disabled,
+    .dt-button--success.is-disabled:active,
+    .dt-button--success.is-disabled:focus,
+    .dt-button--success.is-disabled:hover {
+      border-color: #b3e19d;
+      background-color: #b3e19d;
+      color: #fff;
+    }
+
+    /* type 2 plain */
+    .dt-button--success.is-plain {
+      border-color: #c2e7b0;
+      background-color: #f0f9eb;
+      color: #67c23a;
+    }
+
+    .dt-button--success.is-plain:focus,
+    .dt-button--success.is-plain:hover {
+      border-color: #67c23a;
+      background-color: #67c23a;
+      color: #fff;
+    }
+
+    .dt-button--success.is-plain:active {
+      border-color: #5daf34;
+      background-color: #5daf34;
+      color: #fff;
+      outline: 0;
+    }
+
+    /* type 2 plain disabled */
+    .dt-button--success.is-plain.is-disabled,
+    .dt-button--success.is-plain.is-disabled:active,
+    .dt-button--success.is-plain.is-disabled:focus,
+    .dt-button--success.is-plain.is-disabled:hover {
+      border-color: #e1f3d8;
+      background-color: #f0f9eb;
+      color: #a4da89;
+    }
+
+  /* type 3 */
+  .dt-button--warning {
+    border-color: #e6a23c;
+    background-color: #e6a23c;
+    color: #fff;
+  }
+
+  .dt-button--warning:focus,
+  .dt-button--warning:hover {
+    border-color: #ebb563;
+    background-color: #ebb563;
+    color: #fff
+  }
+
+  .dt-button--warning:active {
+    border-color: #cf9236;
+    background-color: #cf9236;
+    color: #fff;
+
+    outline: 0;
+  }
+
+    /* type 3 active */
+    .dt-button--success.is-active {
+      border-color: #cf9236;
+      background-color: #cf9236;
+      color: #fff;
+    }
+
+    /* type 3 disabled */
+    .dt-button--warning.is-disabled,
+    .dt-button--warning.is-disabled:active,
+    .dt-button--warning.is-disabled:focus,
+    .dt-button--warning.is-disabled:hover {
+      border-color: #f3d19e;
+      background-color: #f3d19e;
+      color: #fff;
+    }
+
+    /* type 3 plain */
+    .dt-button--warning.is-plain {
+      border-color: #f5dab1;
+      background-color: #fdf6ec;
+      color: #e6a23c;
+    }
+
+    .dt-button--warning.is-plain:focus,
+    .dt-button--warning.is-plain:hover {
+      border-color: #e6a23c;
+      background-color: #e6a23c;
+      color: #fff;
+    }
+
+    .dt-button--warning.is-plain:active {
+      border-color: #cf9236;
+      background-color: #cf9236;
+      color: #fff;
+
+      outline: 0;
+    }
+
+    /* type 3 plain disabled */
+    .dt-button--warning.is-plain.is-disabled,
+    .dt-button--warning.is-plain.is-disabled:active,
+    .dt-button--warning.is-plain.is-disabled:focus,
+    .dt-button--warning.is-plain.is-disabled:hover {
+      border-color: #faecd8;
+      background-color: #fdf6ec;
+      color: #f0c78a;
+    }
+
+  /* type 4 */
+  .dt-button--danger {
+    border-color: #f56c6c;
+    background-color: #f56c6c;
+    color: #fff;
+  }
+
+  .dt-button--danger:focus,
+  .dt-button--danger:hover {
+    border-color: #f78989;
+    background-color: #f78989;
+    color: #fff;
+  }
+
+  .dt-button--danger:active {
+    border-color: #dd6161;
+    background-color: #dd6161;
+    color: #fff;
+
+    outline: 0;
+  }
+
+    /* type 4 active */
+    .dt-button--danger.is-active {
+      border-color: #dd6161;
+      background-color: #dd6161;
+      color: #fff;
+    }
+
+    /* type 4 disabled */
+    .dt-button--danger.is-disabled,
+    .dt-button--danger.is-disabled:active,
+    .dt-button--danger.is-disabled:focus,
+    .dt-button--danger.is-disabled:hover {
+      border-color: #fab6b6;
+      background-color: #fab6b6;
+      color: #fff;
+    }
+
+    /* type 4 plain */
+    .dt-button--danger.is-plain {
+      border-color: #fbc4c4;
+      background: #fef0f0;
+      color: #f56c6c;
+    }
+
+    .dt-button--danger.is-plain:focus,
+    .dt-button--danger.is-plain:hover {
+      border-color: #f56c6c;
+      background-color: #f56c6c;
+      color: #fff
+    }
+
+    .dt-button--danger.is-plain:active {
+      border-color: #dd6161;
+      background-color: #dd6161;
+      color: #fff;
+
+      outline: 0
+    }
+
+    /* type 4 plain disabled */
+    .dt-button--danger.is-plain.is-disabled,
+    .dt-button--danger.is-plain.is-disabled:active,
+    .dt-button--danger.is-plain.is-disabled:focus,
+    .dt-button--danger.is-plain.is-disabled:hover {
+      border-color: #fde2e2;
+      background-color: #fef0f0;
+      color: #f9a7a7;
+    }
+
+  /* type 5 */
+  .dt-button--info {
+    border-color: #909399;
+    background-color: #909399;
+    color: #fff;
+  }
+
+  .dt-button--info:focus,
+  .dt-button--info:hover {
+    border-color: #a6a9ad;
+    background-color: #a6a9ad;
+    color: #fff
+  }
+
+  .dt-button--info:active {
+    border-color: #82848a;
+    background-color: #82848a;
+    color: #fff;
+
+    outline: 0;
+  }
+
+    /* type 5 active */
+    .dt-button--info.is-active {
+      border-color: #82848a;
+      background-color: #82848a;
+      color: #fff;
+    }
+
+    /* type 5 disabled */
+    .dt-button--info.is-disabled,
+    .dt-button--info.is-disabled:active,
+    .dt-button--info.is-disabled:focus,
+    .dt-button--info.is-disabled:hover {
+      border-color: #c8c9cc;
+      background-color: #c8c9cc;
+      color: #fff;
+    }
+
+    /* type 5 plain */
+    .dt-button--info.is-plain {
+      border-color: #d3d4d6;
+      background: #f4f4f5;
+      color: #909399;
+    }
+
+    .dt-button--info.is-plain:focus,
+    .dt-button--info.is-plain:hover {
+      border-color: #909399;
+      background-color: #909399;
+      color: #fff;
+    }
+
+    .dt-button--info.is-plain:active {
+      border-color: #82848a;
+      background-color: #82848a;
+      color: #fff;
+
+      outline: 0;
+    }
+
+    /* type 5 plain disabled */
+    .dt-button--info.is-plain.is-disabled,
+    .dt-button--info.is-plain.is-disabled:active,
+    .dt-button--info.is-plain.is-disabled:focus,
+    .dt-button--info.is-plain.is-disabled:hover {
+      border-color: #e9e9eb;
+      background-color: #f4f4f5;
+      color: #bcbec2;
+    }
+
+  /* type 6 */
+  .dt-button--text {
+    padding-left: 0;
+    padding-right: 0;
+    border-color: transparent;
+
+    background: 0 0;
+    color: #409EFF;
+  }
+
+  .dt-button--text:focus,
+  .dt-button--text:hover {
+    border-color: transparent;
+    background-color: transparent;
+    color: #66b1ff;
+  }
+
+  .dt-button--text:active {
+    border-color: transparent;
+    background-color: transparent;
+    color: #3a8ee6;
+  }
+
+    /* type 6 disabled */
+    .dt-button--text.is-disabled {
+      border-color: transparent;
+      background-color: transparent;
+    }
+
+    .dt-button--text.is-disabled:focus,
+    .dt-button--text.is-disabled:hover {
+      border-color: transparent;
+    }
+
+/**
+ * 按钮尺寸
+ * size: mini, small, medium
+ */
+.dt-button--medium {
+  padding: 10px 20px;
+
+  border-radius: 4px;
+
+  font-size: 14px;
+}
+
+.dt-button--medium.is-round {
+  padding: 10px 20px;
+}
+
+.dt-button--small {
+  padding: 9px 15px;
+
+  border-radius: 3px;
+
+  font-size: 12px;
+}
+
+.dt-button--small.is-round {
+  padding: 9px 15px;
+}
+
+.dt-button--mini {
+  padding: 7px 15px;
+
+  border-radius: 3px;
+
+  font-size: 12px;
+}
+
+.dt-button--mini.is-round {
+  padding: 7px 15px;
+}

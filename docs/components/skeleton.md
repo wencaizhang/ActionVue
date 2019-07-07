@@ -1,149 +1,74 @@
 
 # 骨架屏 skeleton
 
-### 基本使用
+<Common-Democode title="基本使用" description="">
+  <skeleton-demo11 />
+  <highlight-code slot="codeText" lang="vue">
+    <a-skeleton />
+  </highlight-code>
+</Common-Democode>
 
-**预览**
+<Common-Democode title="动画效果" description="">
+  <skeleton-demo12 />
+  <highlight-code slot="codeText" lang="vue">
+    <a-skeleton active />
+  </highlight-code>
+</Common-Democode>
 
-<ClientOnly>
-  <skeleton-demo-1-1 />
-</ClientOnly>
-
-
-**代码**
-
-```html
-<vue-skeleton/>
-```
-
-### 动画效果
-
-**预览**
-
-<ClientOnly>
-  <skeleton-demo-1-2></skeleton-demo-1-2>
-</ClientOnly>
-
-**代码**
-
-```html
-<vue-skeleton :active="true" />
-```
-
-或者简写如下：
-
-```html
-<vue-skeleton active />
-```
+<Common-Democode title="显示头像" description="">
+  <skeleton-demo21 />
+  <highlight-code slot="codeText" lang="vue">
+    <a-skeleton avatar/>
+  </highlight-code>
+</Common-Democode>
 
 
-## 头像
-
-### 显示头像
-
-**预览**
-
-<ClientOnly>
-  <skeleton-demo-2-1></skeleton-demo-2-1>
-</ClientOnly>
-
-**代码**
-
-```html
-<vue-skeleton avatar/>
-```
-
-### 头像形状
-
-**预览**
-
-<ClientOnly>
-  <skeleton-demo-2-2></skeleton-demo-2-2>
-</ClientOnly>
-
-**代码**
-
-```html
-<vue-skeleton :avatar="{shape: 'square'}"/>
-```
+<Common-Democode title="头像形状" description="">
+  <skeleton-demo22 />
+  <highlight-code slot="codeText" lang="vue">
+    <a-skeleton :avatar="{shape: 'square'}" />
+  </highlight-code>
+</Common-Democode>
 
 
-## 标题
-
-### 标题默认显示
-
-**预览**
-
-<ClientOnly>
-  <skeleton-demo-3-1></skeleton-demo-3-1>
-</ClientOnly>
-
-**代码**
-
-```html
-<vue-skeleton/>
-```
-
-### 指定标题宽度
-
-**预览**
-
-<ClientOnly>
-  <skeleton-demo-3-2></skeleton-demo-3-2>
-</ClientOnly>
-
-**代码**
-
-```html
-<vue-skeleton :title="{width: '80%'}"/>
-```
+<Common-Democode title="标题默认显示" description="">
+  <skeleton-demo31 />
+  <highlight-code slot="codeText" lang="vue">
+    <a-skeleton />
+  </highlight-code>
+</Common-Democode>
 
 
-## 段落
+<Common-Democode title="指定标题宽度" description="">
+  <skeleton-demo32 />
+  <highlight-code slot="codeText" lang="vue">
+    <a-skeleton :title="{width: '80%'}" />
+  </highlight-code>
+</Common-Democode>
 
-### 段落默认显示三行
 
-**预览**
+<Common-Democode title="段落默认显示三行" description="">
+  <skeleton-demo41 />
+  <highlight-code slot="codeText" lang="vue">
+    <a-skeleton />
+  </highlight-code>
+</Common-Democode>
 
-<ClientOnly>
-  <skeleton-demo-4-1></skeleton-demo-4-1>
-</ClientOnly>
 
-**代码**
+<Common-Democode title="段落默认显示三行" description="">
+  <skeleton-demo42 />
+  <highlight-code slot="codeText" lang="vue">
+    <a-skeleton :paragraph="{rows: 4}"/>
+  </highlight-code>
+</Common-Democode>
 
-```html
-<vue-skeleton/>
-```
 
-### 指定段落行数
-
-**预览**
-
-<ClientOnly>
-  <skeleton-demo-4-2></skeleton-demo-4-2>
-</ClientOnly>
-
-**代码**
-
-```html
-<vue-skeleton :paragraph="{rows: 4}"/>
-```
-
-### 指定段落宽度
-
-默认段落每一行的宽度都是 100%，可以自定义最后一行的宽度。
-
-**预览**
-
-<ClientOnly>
-  <skeleton-demo-4-3></skeleton-demo-4-3>
-</ClientOnly>
-
-**代码**
-
-```html
-<vue-skeleton :paragraph="{rows: 4, width: '80%'}"/>
-```
+<Common-Democode title="指定段落宽度" description="">
+  <skeleton-demo43 />
+  <highlight-code slot="codeText" lang="vue">
+    <a-skeleton :paragraph="{rows: 4, width: '80%'}" />
+  </highlight-code>
+</Common-Democode>
 
 
 ## API

@@ -20,7 +20,7 @@ yarn add vue-skeleton-antd
 
 ```javascript
 import Vue from 'vue';
-import VueSkeleton from 'vue-skeleton-antd';
+import ASkeleton from 'vue-skeleton-antd';
 
 Vue.use(VueSkeleton);
 ```

@@ -18,6 +18,6 @@ git init
 git add -A
 git commit -m ":rocket: deploy ${currTime}"
 
-git push -f https://github.com/wencaizhang/gulu.git master:gh-pages
+git push -f https://github.com/wencaizhang/actionvue.git master:gh-pages
 
 cd -

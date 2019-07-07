@@ -1,6 +1,6 @@
-# actionvue :stuck_out_tongue_winking_eye:
+# ActionVue :stuck_out_tongue_winking_eye:
 
-english | [中文](./READMD.md)
+English | [中文简体](./READMD.md)
 
 ## Intro
 
