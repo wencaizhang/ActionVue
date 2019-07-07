@@ -19,7 +19,7 @@
 因此这里取 `action` 的 “行动” 的之意，意为提醒自己 “立即行动”，just do it.
 
 ```
-action + vue === actionvue
+action + vue === ActionVue
 ```
 
 
@@ -38,29 +38,29 @@ npm install actionvue --save
 yarn add actionvue
 ```
 
-## feature
+## 组件
 
 + [x] Button
 + [x] Input
 + [x] icon
 + [x] Toast
 + [x] Pager 分页器
-+ [x] 网格组件
-+ [x] skeleton 骨架屏
++ [x] Grid 网格系统
++ [x] Skeleton 骨架屏
 + [x] Sticky - 粘滞 / 吸顶组件
-+ [ ] Nav
-+ [ ] 轮播组件
-+ [ ] 文件上传
++ [ ] Nav - 导航
++ [ ] Carousel 轮播组件
++ [ ] Uploader 文件上传
 + [ ] Tab
 + [ ] Table
 + [ ] Popover
-+ [ ] 默认布局
++ [ ] Layout 默认布局
 + [ ] 手风琴
 + [ ] 省市区级联组件
-+ [ ] 动画
++ [ ] Animation 动画
 + [ ] Datepicker
-+ [ ] 滚动组件
-+ [ ] 图片加载
++ [ ] Scroll 滚动组件
++ [ ] Img Load 图片加载
 + [ ] 支付密码框
 
 
