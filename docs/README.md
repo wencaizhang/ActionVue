@@ -1,7 +1,7 @@
 ---
 home: true
-heroImage: ./actionvue/logo.png
-heroText: actionvue
+heroImage: ./ActionVue/logo.png
+heroText: ActionVue
 tagline: 个人开发的组件库
 actionText: 快速上手 →
 actionLink: /get-started/

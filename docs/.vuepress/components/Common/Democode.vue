@@ -39,6 +39,9 @@ export default {
 
 <style lang="less" scoped>
 .code {
+  .code--segment {
+    border-bottom: 1px solid #f2f2f2;
+  }
   .code--title {
     h2 {
       padding: 0;
