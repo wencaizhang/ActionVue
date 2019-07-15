@@ -30,9 +30,6 @@ export default {
 </script>
 
 <style>
-.grid-demo-wrapper {
-  width: 800px;
-}
 .grid-demo-wrapper .col {
   color: #fff;
 }

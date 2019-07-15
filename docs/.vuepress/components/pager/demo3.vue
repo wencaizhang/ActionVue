@@ -1,17 +1,13 @@
 <template>
   <div>
-    <p>页数较少时的效果</p>
+    <label>
+      当只有一页时隐藏分页
+      <input type="checkbox" v-model="hideIfOnePage">
+    </label>
     <a-pager
-      :totalPage="7"
+      :totalPage="1"
       :currPage="currPage"
-      :hideIfOnePage="false"
-      @onChange="onPageChange"
-    />
-    <p>大于 7 页时的效果</p>
-    <a-pager
-      :totalPage="100"
-      :currPage="currPage"
-      :hideIfOnePage="false"
+      :hideIfOnePage="hideIfOnePage"
       @onChange="onPageChange"
     />
   </div>
@@ -24,7 +20,8 @@ export default {
   components: { APager },
   data() {
     return {
-      currPage: 30
+      currPage: 1,
+      hideIfOnePage: true,
     };
   },
   methods: {

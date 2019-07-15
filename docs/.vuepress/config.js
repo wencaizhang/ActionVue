@@ -32,6 +32,7 @@ module.exports = {
           '/components/skicky',
           '/components/toast',
           '/components/image',
+          '/components/message',
         ]
       },
     ]

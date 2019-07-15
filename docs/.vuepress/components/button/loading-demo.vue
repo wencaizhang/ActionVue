@@ -1,9 +1,6 @@
 <template>
   <div>
-    <a-button>默认按钮</a-button>
-    <a-button>主要按钮</a-button>
-    <a-button>次要按钮</a-button>
-    <a-button>危险按钮</a-button>
+    <a-button :loading="loading" @click="loading = !loading">加载中</a-button>
   </div>
 </template>
 
@@ -11,5 +8,10 @@
 import AButton from "../../../../src/package/button/button";
 export default {
   components: { AButton },
+  data () {
+    return {
+      loading: false
+    }
+  }
 };
 </script>
