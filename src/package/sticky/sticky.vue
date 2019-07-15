@@ -1,6 +1,6 @@
 <template>
   <div class="sticky-wraper" ref="wrapper" :style="{ height }">
-    <div class="sticky-inner" :class="clazz" :style="{ left, width, top, bottom, }">
+    <div class="sticky-inner" :style="{ position: sticky ? 'fixed' : '', left, width, top, bottom, }">
       <slot />
     </div>
   </div>
@@ -23,6 +23,10 @@ export default {
     distance: {
       type: Number,
       default: 0
+    },
+    customClass: {
+      type: String,
+      default: 'stuck',
     }
   },
   data () {
@@ -40,7 +44,7 @@ export default {
   },
   computed: {
     clazz () {
-      return { sticky: this.sticky }
+      return { [this.customClass]: this.sticky }
     }
   },
   mounted () {
@@ -73,7 +77,7 @@ export default {
         this[this.position] = undefined
       }
     }
-  }
+  },
 }
 </script>
 
@@ -81,8 +85,7 @@ export default {
 .sticky-wraper {
   border: 1px solid #ccc;
 
-  .sticky {
-    background-color: red;
+  .sticky-inner {
     position: fixed;
   }
 }

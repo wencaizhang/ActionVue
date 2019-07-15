@@ -54,6 +54,11 @@ export default {
       }
     }
   },
+  filters: {
+    currPage (v) {
+
+    }
+  },
   computed: {
     pages () {
       const { currPage, totalPage } = this
@@ -74,7 +79,9 @@ export default {
       return ret
     },
     onClick (item) {
-      this.$emit('onChange', item)
+      if (this.pages.includes(item)) {
+        this.$emit('onChange', item)
+      }
     }
   }
 }
@@ -106,6 +113,7 @@ export default {
   &.curr-page {
     color: blue;
     border-color: blue;
+    pointer-events: none;
   }
   &:hover {
     border-color: blue;

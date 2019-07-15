@@ -86,4 +86,8 @@ p {
   height: 40px;
   line-height: 40px;
 }
+.box {
+  line-height: 80px;
+  padding: 10px;
+}
 </style>

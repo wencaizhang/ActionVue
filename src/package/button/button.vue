@@ -1,9 +1,9 @@
 <template>
-  <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
+  <button class="a-button" :class="{[`icon-${iconPosition}`]: true}">
     <slot name="icon">
       <icon v-if="loading || icon" class="icon" :class="{loading: loading}" :name="loading ? 'loading' : icon" />
     </slot>
-    <div class="g-button-content">
+    <div class="a-button-content" @click="$emit('click')">
       <slot></slot>
     </div>
   </button>
@@ -12,7 +12,7 @@
 <script>
 import icon from '../icon/icon'
 export default {
-  name: 'g-button',
+  name: 'a-button',
   props: {
     loading: {
       type: Boolean,
@@ -36,41 +36,54 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-:root {
-  --font-size: 14px;
-  --button-height: 32px;
-  --color: #333;
-  --button-bg: #fff;
-  --button-active-bg: #eee;
-  --border-radius: 4px;
-  --border-color: #999;
-  --border-color-hover: #666;
-}
+// @import "var";
 
+$border-color-hover: #666;
+$border-color: #999;
+$border-color-light: lighten($border-color, 30%);
+$border-radius: 4px;
+$box-shadow-color: rgba(0, 0, 0, 0.5);
+$button-active-bg: #eee;
+$button-bg: white;
+$button-height: 32px;
+$color: #333;
+$light-color: #666;
+$font-size: 14px;
+$small-font-size: 12px;
+$input-height: 32px;
+$red: #F1453D;
+$grey: #eee;
+$blue: #4a90e2;
+.box-shadow {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@mixin spin {
+  animation: spin 2s infinite linear;
 }
 
-.g-button {
-  font-size: var(--font-size);
-  height: var(--button-height);
-  color: var(--color);
-  background-color: var(--button-bg);
+.a-button {
+  font-size: $font-size;
+  height: $button-height;
+  color: $color;
+  background-color: $button-bg;
   border: 1px solid;
-  border-color: var(--border-color);
-  border-radius: var(--border-radius);
+  border-color: $border-color;
+  border-radius: $border-radius;
   padding: 0 1em;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
-  > .g-button-content {
+
+      margin-right: 8px;
+    margin-bottom: 12px;
+    
+  > .a-button-content {
     order: 2;
   }
   > .icon {
@@ -78,7 +91,7 @@ export default {
     margin: 0 .2em 0 0;
   }
   &.icon-right {
-    > .g-button-content {
+    > .a-button-content {
       order: 1;
     }
     > .icon {
@@ -87,10 +100,10 @@ export default {
     }
   }
   &:hover {
-    border-color: var(--border-color-hover);
+    border-color: $border-color-hover;
   }
   &:active {
-    background-color: var(--button-active-bg);
+    background-color: $button-active-bg;
   }
   &:focus {
     outline: none;
@@ -98,9 +111,5 @@ export default {
   .loading {
     animation: spin 1s infinite linear;
   }
-}
-.icon {
-  width: 1em;
-  height: 1em;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <svg class="gicon">
+  <svg class="a-icon">
     <use :xlink:href="`#i-${name}`"></use>
   </svg>
 </template>
@@ -16,8 +16,10 @@ export default {
 </script>
 
 <style  scoped>
-.gicon {
-  width: 1em;
-  height: 1em;
+.a-icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
 }
 </style>

@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import '@/assets/symbol'
 import toast from '@/package/toast/plugin'
 
 // import button from "@/package/button/button";

@@ -71,11 +71,14 @@ export default {
   position: fixed;
   left: 50%;
   top: 15px;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+
   transform: translate(-50%);
   line-height: 1.8;
   padding: 5px 16px;
-  display: flex;
-  align-items: center;
   border-radius: 4px;
 }
 
