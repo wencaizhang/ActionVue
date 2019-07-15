@@ -1,6 +1,6 @@
 # ActionVue :stuck_out_tongue_winking_eye:
 
-English | [中文简体](./READMD.md)
+English | [中文简体](./README.md)
 
 ## Intro
 
@@ -36,6 +36,8 @@ yarn add actionvue
 + [x] Input
 + [x] icon
 + [x] Toast
++ [ ] Message
++ [ ] Notification
 + [x] Pager 分页器
 + [x] Grid 网格系统
 + [x] Skeleton 骨架屏
