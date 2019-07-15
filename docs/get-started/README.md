@@ -3,16 +3,16 @@
 ## 安装
 
 使用 npm 安装
+
 ```bash
-npm i vue-skeleton-antd
+npm i actionvue --save
 ```
 
 或使用 yarn 安装
 
 ```bash
-yarn add vue-skeleton-antd
+yarn add actionvue
 ```
-
 
 ## 导入组件
 
@@ -20,7 +20,7 @@ yarn add vue-skeleton-antd
 
 ```javascript
 import Vue from 'vue';
-import ASkeleton from 'vue-skeleton-antd';
+import actionvue from 'actionvue';
 
-Vue.use(VueSkeleton);
+Vue.use(actionvue);
 ```

@@ -1,4 +1,4 @@
-# 网格组件
+# grid 网格组件
 
 ## 基本用法
 
@@ -25,9 +25,6 @@
       </div>
     </template>
     <style>
-    .grid-demo-wrapper {
-      width: 800px;
-    }
     .grid-demo-wrapper .col {
       color: #fff;
     }
@@ -71,9 +68,6 @@
       </div>
     </template>
     <style>
-    .grid-demo-wrapper {
-      width: 800px;
-    }
     .grid-demo-wrapper .col {
       color: #fff;
     }
@@ -113,9 +107,6 @@
       </div>
     </template>
     <style>
-    .grid-demo-wrapper {
-      width: 800px;
-    }
     .grid-demo-wrapper .col {
       color: #fff;
     }
@@ -141,35 +132,35 @@
   <highlight-code slot="codeText" lang="vue">
     <template>
       <div class="grid-demo-wrapper">
-        <p>sub-element align left</p>
+        <p>子元素左对齐</p>
         <a-row type="flex" justify="flex-start">
           <a-col :span="4">col-4</a-col>
           <a-col :span="4">col-4</a-col>
           <a-col :span="4">col-4</a-col>
           <a-col :span="4">col-4</a-col>
         </a-row>
-        <p>sub-element align center</p>
+        <p>子元素居中</p>
         <a-row type="flex" justify="center">
           <a-col :span="4">col-4</a-col>
           <a-col :span="4">col-4</a-col>
           <a-col :span="4">col-4</a-col>
           <a-col :span="4">col-4</a-col>
         </a-row>
-        <p>sub-element align right</p>
+        <p>子元素右对齐</p>
         <a-row type="flex" justify="flex-end">
           <a-col :span="4">col-4</a-col>
           <a-col :span="4">col-4</a-col>
           <a-col :span="4">col-4</a-col>
           <a-col :span="4">col-4</a-col>
         </a-row>
-        <p>sub-element monospaced arrangement</p>
+        <p>子元素两端对齐，子元素之间的间隔都相等</p>
         <a-row type="flex" justify="space-between">
           <a-col :span="4">col-4</a-col>
           <a-col :span="4">col-4</a-col>
           <a-col :span="4">col-4</a-col>
           <a-col :span="4">col-4</a-col>
         </a-row>
-        <p>sub-element align full</p>
+        <p>子元素两侧的间隔相等，子元素之间的间隔比子元素与边框的间隔大一倍</p>
         <a-row type="flex" justify="space-around">
           <a-col :span="4">col-4</a-col>
           <a-col :span="4">col-4</a-col>

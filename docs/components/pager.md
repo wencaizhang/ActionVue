@@ -1,6 +1,8 @@
 # pager 分页器
 
-<Common-Democode title="基本用法一" description="简洁模式">
+
+## 简洁模式
+<Common-Democode title="" description="">
   <pager-demo1 />
   <highlight-code slot="codeText" lang="vue">
     <template>
@@ -29,8 +31,9 @@
   </highlight-code>
 </Common-Democode>
 
+## 正常模式
 
-<Common-Democode title="基本用法二" description="正常模式">
+<Common-Democode title="" description="">
   <pager-demo2 />
   <highlight-code slot="codeText" lang="vue">
     <template>
@@ -56,6 +59,47 @@
           }
         }
       };
+    </script>
+  </highlight-code>
+</Common-Democode>
+
+
+## 当只有一页时隐藏分页
+
+当只有一页时，通过设置 hide-on-single-page 属性来隐藏分页。
+
+<Common-Democode title="" description="">
+  <pager-demo3 />
+  <highlight-code slot="codeText" lang="vue">
+    <template>
+      <div>
+        <label>
+          当只有一页时隐藏分页
+          <input type="checkbox" v-model="hideIfOnePage">
+        </label>
+        <a-pager
+          :totalPage="1"
+          :currPage="currPage"
+          :hideIfOnePage="hideIfOnePage"
+          @onChange="onPageChange"
+        />
+      </div>
+    </template>
+    <script>
+    export default {
+      data() {
+        return {
+          currPage: 1,
+          hideIfOnePage: true,
+        };
+      },
+      methods: {
+        onPageChange(item) {
+          this.currPage = item;
+          console.log("onPageChange", item);
+        }
+      }
+    };
     </script>
   </highlight-code>
 </Common-Democode>

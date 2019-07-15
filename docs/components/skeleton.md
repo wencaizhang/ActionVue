@@ -1,70 +1,66 @@
 
-# 骨架屏 skeleton
+# skeleton 骨架屏
 
-<Common-Democode title="基本使用" description="">
-  <skeleton-demo11 />
+## 基本使用
+
+<Common-Democode title="" description="默认情况下，第一行是标题（title），下面有三行段落（paragraph）">
+  <skeleton-demo1 />
   <highlight-code slot="codeText" lang="vue">
     <a-skeleton />
   </highlight-code>
 </Common-Democode>
 
-<Common-Democode title="动画效果" description="">
-  <skeleton-demo12 />
+## 动画效果
+
+<Common-Democode title="" description="">
+  <skeleton-demo2 />
   <highlight-code slot="codeText" lang="vue">
     <a-skeleton active />
   </highlight-code>
 </Common-Democode>
 
-<Common-Democode title="显示头像" description="">
-  <skeleton-demo21 />
+## 显示头像
+
+<Common-Democode title="" description="">
+  <skeleton-demo3 />
   <highlight-code slot="codeText" lang="vue">
     <a-skeleton avatar/>
   </highlight-code>
 </Common-Democode>
 
+## 头像形状
 
-<Common-Democode title="头像形状" description="">
-  <skeleton-demo22 />
+<Common-Democode title="" description="">
+  <skeleton-demo4 />
   <highlight-code slot="codeText" lang="vue">
     <a-skeleton :avatar="{shape: 'square'}" />
   </highlight-code>
 </Common-Democode>
 
 
-<Common-Democode title="标题默认显示" description="">
-  <skeleton-demo31 />
-  <highlight-code slot="codeText" lang="vue">
-    <a-skeleton />
-  </highlight-code>
-</Common-Democode>
+## 指定标题宽度
 
-
-<Common-Democode title="指定标题宽度" description="">
-  <skeleton-demo32 />
+<Common-Democode title="" description="">
+  <skeleton-demo5 />
   <highlight-code slot="codeText" lang="vue">
     <a-skeleton :title="{width: '80%'}" />
   </highlight-code>
 </Common-Democode>
 
 
-<Common-Democode title="段落默认显示三行" description="">
-  <skeleton-demo41 />
-  <highlight-code slot="codeText" lang="vue">
-    <a-skeleton />
-  </highlight-code>
-</Common-Democode>
+## 指定段落行数
 
-
-<Common-Democode title="段落默认显示三行" description="">
-  <skeleton-demo42 />
+<Common-Democode title="" description="">
+  <skeleton-demo6 />
   <highlight-code slot="codeText" lang="vue">
     <a-skeleton :paragraph="{rows: 4}"/>
   </highlight-code>
 </Common-Democode>
 
+## 指定段落最后一行的宽度
 
-<Common-Democode title="指定段落宽度" description="">
-  <skeleton-demo43 />
+<Common-Democode title="" description="">
+  <skeleton-demo7 />
   <highlight-code slot="codeText" lang="vue">
     <a-skeleton :paragraph="{rows: 4, width: '80%'}" />
   </highlight-code>
