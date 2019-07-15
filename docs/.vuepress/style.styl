@@ -1,0 +1,80 @@
+// 默认主题自带变量 - end
+// colors
+$accentColor = #3eaf7c
+$textColor = #2c3e50
+$borderColor = #eaecef
+$codeBgColor = #282c34
+$arrowBgColor = #ccc
+
+// layout
+$navbarHeight = 3.6rem
+$sidebarWidth = 20rem
+$contentWidth = 740px
+
+// responsive breakpoints
+$MQNarrow = 959px
+$MQMobile = 719px
+$MQMobileNarrow = 419px
+
+// code
+$lineNumbersWrapperWidth = 3.5rem
+$codeLang = js ts html md vue css sass scss less stylus go java c sh yaml py
+// 默认主题自带变量 - end
+
+
+// sidebar 拆分成左右结构
+.sidebar
+  .sidebar-heading
+    display flex
+    justify-content space-between
+    align-items center
+
+  .sidebar-sub-headers
+
+    a.sidebar-link
+      border-left 1px solid $borderColor
+    a.sidebar-link.active
+      color $accentColor
+      border-left 1px solid $accentColor
+      border-right none
+      background-color #fff
+
+  a.sidebar-link
+    border-right 0.12rem solid transparent
+    border-left 0
+    &.active
+      font-weight 600
+      color $accentColor
+      border-color $accentColor
+      background-color #dbf3e8
+
+
+@media (min-width: 719px)
+  .page
+    padding-right 20rem
+
+  .sidebar-sub-headers
+    font-size 15px
+    background-color #fff
+    width $sidebarWidth
+    position fixed
+    z-index 10
+    margin 0
+    top $navbarHeight
+    right 0
+    bottom 0
+    box-sizing border-box
+
+    overflow-y auto
+    padding-left 0
+@media (max-width: 719px)
+  .theme-container .page
+    padding-right 0
+// sidebar 拆分成左右结构 - end
+
+
+h2, h3, h4, h5 {
+  font-weight: 400;
+  color: rgb(31, 47, 61);
+}
+
