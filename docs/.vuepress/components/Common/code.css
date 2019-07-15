@@ -1,0 +1,139 @@
+/* 复制按钮 */
+.copy-code-btn {
+  position: absolute;
+  z-index: 3;
+  top: 0.8em;
+  right: 1em;
+  font-size: 0.75rem;
+  cursor: pointer;
+  color: rgba(255,255,255,0.4);
+}
+.content pre {
+  position: relative;
+  padding: 3em 1.5em 1.5em;
+  margin: .5em 0;
+  overflow: auto;
+  border-radius: 6px;
+}
+/* 右上角 代码块语言类型 */
+code.hljs:before {
+  position: absolute;
+  z-index: 3;
+  top: 1.1em;
+  left: 6em;
+  font-size: .75rem;
+  color: hsla(0,0%,100%,.4);
+}
+
+code.hljs[class~=js]:before {
+  content: "js"
+}
+
+code.hljs[class~=ts]:before {
+  content: "ts"
+}
+
+code.hljs[class~=html]:before {
+  content: "html"
+}
+
+code.hljs[class~=md]:before {
+  content: "md"
+}
+
+code.hljs[class~=vue]:before {
+  content: "vue"
+}
+
+code.hljs[class~=css]:before {
+  content: "css"
+}
+
+code.hljs[class~=sass]:before {
+  content: "sass"
+}
+
+code.hljs[class~=scss]:before {
+  content: "scss"
+}
+
+code.hljs[class~=less]:before {
+  content: "less"
+}
+
+code.hljs[class~=stylus]:before {
+  content: "stylus"
+}
+
+code.hljs[class~=go]:before {
+  content: "go"
+}
+
+code.hljs[class~=java]:before {
+  content: "java"
+}
+
+code.hljs[class~=c]:before {
+  content: "c"
+}
+
+code.hljs[class~=sh]:before {
+  content: "sh"
+}
+
+code.hljs[class~=yaml]:before {
+  content: "yaml"
+}
+
+code.hljs[class~=py]:before {
+  content: "py"
+}
+
+code.hljs[class~=javascript]:before {
+  content: "js"
+}
+
+code.hljs[class~=typescript]:before {
+  content: "ts"
+}
+
+code.hljs[class~=markup]:before {
+  content: "html"
+}
+
+code.hljs[class~=markdown]:before {
+  content: "md"
+}
+
+code.hljs[class~=json]:before {
+  content: "json"
+}
+
+code.hljs[class~=ruby]:before {
+  content: "rb"
+}
+
+code.hljs[class~=python]:before {
+  content: "py"
+}
+
+code.hljs[class~=bash]:before {
+  content: "sh"
+}
+
+/* 左上角三个点 */
+.highlight {
+  position: relative;
+}
+.highlight:after {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  content: "";
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #ff5f56;
+  -webkit-box-shadow: 18px 0 0 0 #ffbd2e, 36px 0 0 0 #27c93f;
+  box-shadow: 18px 0 0 0 #ffbd2e, 36px 0 0 0 #27c93f;
+}

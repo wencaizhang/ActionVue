@@ -1,98 +1,214 @@
 <template>
-  <div class="code">
-    <div class="code--title">
-      <h2>
-        {{ title }}
-      </h2>
-      <small>{{description}}</small>
+  <div class="demo-block">
+    <div class="source">
+      <slot></slot>
     </div>
-    <div class="code--demo">
-      <div class="code-content">
-        <slot></slot>
+    <div class="meta">
+      <div v-show="description" class="desc">
+        <small>{{ description }}</small>
+      </div>
+      <div v-show="isShowCode" class="highlight" ref="highlight">
+        <span class="copy-code-btn" :class="className" title="点击复制代码">复制</span>
+        <transition name="slide">
+          <slot name="codeText"></slot>
+        </transition>
       </div>
     </div>
-    <div v-if="isShow" class="code--segment">
-      <slot name="codeText"></slot>
+    <div class="demo-block-control" @click="isShowCode = !isShowCode">
+      <div class="ctrl">
+        <i class="icon" :class="iconClass"></i>
+        <span>{{ codeTextBtn }}</span>
+      </div>
     </div>
-    <div v-if="$slots.codeText" class="code--button" @click="handleToggleShow">{{codeTextBtn}}</div>
   </div>
 </template>
 
 <script>
+let uid = 0;
+
+import ClipboardJS from 'clipboard';
+import { debuglog } from 'util';
 export default {
-  name: 'DemoPage',
-  props: ['title', 'description'],
+  name: "DemoPage",
+  props: ["title", "description"],
   data() {
     return {
-      isShow: false,
-      codeTextBtn: '显示代码'
-    }
+      isShowCode: false,
+      clip: null,
+
+    };
+  },
+  computed: {
+    iconClass () {
+      return this.isShowCode ? "triangle-up" : "triangle-down";
+    },
+    codeTextBtn() {
+      return this.isShowCode ? "隐藏代码" : "显示代码";
+    },
+    className () {
+      return 'copy-code-btn' + (uid++);
+    },
+  },
+  mounted () {
+    this.initCopyCode({});
   },
   methods: {
-    handleToggleShow() {
-      this.isShow = !this.isShow
-      this.codeTextBtn = this.isShow ? '隐藏代码' : '显示代码'
+    initCopyCode({ success, error }) {
+      this.clip = new ClipboardJS("." + this.className, {
+        target(trigger) {
+          return trigger.parentNode.querySelector("pre");
+        }
+      });
+      this.clip.on("success", e => {
+        e.clearSelection();
+        this.$message.success({ content: '复制成功'})
+      });
+      this.clip.on("error", e => {
+        console.error("Action:", e.action);
+        console.error("Trigger:", e.trigger);
+      });
     }
   }
-}
+};
 </script>
 
 <style lang="less" scoped>
-.code {
-  .code--segment {
-    border-bottom: 1px solid #f2f2f2;
-  }
-  .code--title {
-    h2 {
-      padding: 0;
-      margin: 0;
-      border-bottom: none;
-      font-size: 18px;
-    }
+@import url(./code.css);
+.demo-block {
+  margin-bottom: 24px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(235, 235, 235);
+  border-image: initial;
+  border-radius: 3px;
+  transition: all 0.2s ease 0s;
 
-    small {
+  .source {
+    padding: 24px;
+  }
+
+  .meta {
+    background-color: rgb(250, 250, 250);
+    border-top: 1px solid rgb(234, 238, 251);
+    overflow: hidden;
+    transition: height 0.2s ease 0s;
+
+    .desc {
+      box-sizing: border-box;
       font-size: 14px;
-      display: inline-block;
-      margin: 10px 0;
-      color: #5e6d82;
+      line-height: 22px;
+      color: rgb(102, 102, 102);
+      word-break: break-word;
+      background-color: rgb(255, 255, 255);
+      padding: 20px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(235, 235, 235);
+      border-image: initial;
+      border-radius: 3px;
+      margin: 10px;
     }
   }
-  .code--demo {
-    border: 1px solid #ebebeb;
-    border-bottom: none;
-    border-radius: 3px;
-    box-shadow: 0 0 2px 0 rgba(232, 237, 250, 0.6),
-      0 1px 2px 0 rgba(232, 237, 250, 0.5);
-    .code-content {
+  &:hover .demo-block-control span {
+    display: inline;
+  }
+  .demo-block-control:hover {
+    color: rgb(25, 137, 250);
+  }
+
+  .demo-block-control {
+    position: relative;
+    height: 44px;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    text-align: center;
+    margin-top: -1px;
+    color: rgb(211, 220, 230);
+    cursor: pointer;
+    border-top: 1px solid rgb(234, 238, 251);
+
+    .ctrl {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
-      box-sizing: border-box;
-      padding: 4%;
-      border-bottom: 1px solid #ddd;
+      transform: translate(-50%, -50%);
     }
-  }
-  .code--button {
-    background: #fafbfc;
-    color: #409eff;
-    font-weight: 400;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6),
-      0 2px 4px 0 rgba(232, 237, 250, 0.5);
-    &:hover {
-      font-size: 17px;
+    & span {
+      display: none;
+      font-size: 14px;
+      line-height: 44px;
+      margin-left: 16px;
+      transition: all 0.3s ease 0s;
     }
-  }
 
-  & + .code {
-    margin-top: 20px;
-  }
-
-  &:not(:first-child) {
-    margin-top: 20px;
+    // .icon {
+    //   height: 10px;
+    //   width: 10px;
+    //   border: 1px;
+    //   background-color: currentColor;
+    //   display: inline-block;
+    // }
   }
 }
-</style>
 
+// 代码块展开收缩动画
+.expand-enter-active {
+  transition: all 0.5s ease;
+  height: auto;
+  overflow: hidden;
+}
+.expand-leave-active {
+  transition: all 0.5s ease;
+  height: 0px;
+  overflow: hidden;
+}
+.expand-enter,
+.expand-leave {
+  height: 0;
+  opacity: 0;
+}
+
+.slide-enter-active {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+
+.slide-leave-active {
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.slide-enter-to,
+.slide-leave {
+  height: auto;
+  overflow: hidden;
+}
+
+.slide-enter,
+.slide-leave-to {
+  height: auto;
+  overflow: hidden;
+}
+
+// 三角形图标
+
+.icon.triangle-up {
+  width: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid;
+}
+.icon.triangle-down {
+  width: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid;
+}
+
+</style>
