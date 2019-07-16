@@ -8,15 +8,15 @@ npm run docs:build
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
-
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
 
-currTime=`date +%Y-%m-%d-%H-%M-$S`
+currTime1=`date +%Y-%m-%d`
+currTime2=`date +%H:%M:%S`
 
 git init
 git add -A
-git commit -m ":rocket: deploy ${currTime}"
+git commit -m ":rocket: deploy @${currTime1} ${currTime2}"
 
 git push -f https://github.com/wencaizhang/actionvue.git master:gh-pages
 
