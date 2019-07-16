@@ -18,17 +18,16 @@
 
 因此这里取 `action` 的 “行动” 的之意，意为提醒自己 “立即行动”，just do it.
 
-```
+```bash
 action + vue === ActionVue
 ```
 
+## 文档
 
-## Documentation
-
-Check out our [documentation website](https://wencaizhang.github.io/actionvue/).
+请查看 [文档](https://wencaizhang.github.io/ActionVue/).
 
 
-## how
+## 安装
 
 ```bash
 npm install actionvue --save
@@ -36,6 +35,13 @@ npm install actionvue --save
 # or
 
 yarn add actionvue
+```
+
+## 使用
+
+```js
+import Vue from 'vue';
+Vue.use(actionvue);
 ```
 
 ## 组件
@@ -65,14 +71,12 @@ yarn add actionvue
 + [ ] Img Load 图片加载
 + [ ] 支付密码框
 
-
 ## Contributing
 
-如果你遇到什么问题，或者有好的建议，欢迎提 [Issues](https://github.com/wencaizhang/actionvue/issues/) 和 [Pull Request](https://github.com/wencaizhang/actionvue/pulls/)
-
+如果你遇到什么问题，或者有好的建议，欢迎提 [Issues](https://github.com/wencaizhang/ActionVue/issues/) 和 [Pull Request](https://github.com/wencaizhang/ActionVue/pulls/)
 
 ## Licence
 
-actionvue is open source and released under the MIT Licence.
+ActionVue is open source and released under the MIT Licence.
 
 Copyright (c) 2019 wencaizhang

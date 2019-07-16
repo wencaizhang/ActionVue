@@ -8,16 +8,16 @@ English | [中文简体](./README.md)
 
 A UI components based on Vue.
 
-```
+```bash
 action + vue === ActionVue
 ```
 
 ## Documentation
 
-Check out our [documentation website](https://wencaizhang.github.io/actionvue/).
-
+Check out our [documentation website](https://wencaizhang.github.io/ActionVue/).
 
 ### Install
+
 ```bash
 npm install actionvue --save
 
@@ -26,9 +26,12 @@ npm install actionvue --save
 yarn add actionvue
 ```
 
-
 ## Usage
 
+```js
+import Vue from 'vue';
+Vue.use(actionvue);
+```
 
 ## Components
 
@@ -57,14 +60,12 @@ yarn add actionvue
 + [ ] Img Load 图片加载
 + [ ] 支付密码框
 
-
 ## Contributing
 
-Thank you for considering contributing to the Actionvue! If you have some doubts, find some issues, propose a new feature, or improvements of existing behavior, [Issues](https://github.com/wencaizhang/actionvue/issues/) and [Pull Request](https://github.com/wencaizhang/actionvue/pulls/) are welcome.
-
+Thank you for considering contributing to the Actionvue! If you have some doubts, find some issues, propose a new feature, or improvements of existing behavior, [Issues](https://github.com/wencaizhang/ActionVue/issues/) and [Pull Request](https://github.com/wencaizhang/ActionVue/pulls/) are welcome.
 
 ## Licence
 
-actionvue is open source and released under the MIT Licence.
+ActionVue is open source and released under the MIT Licence.
 
 Copyright (c) 2019 wencaizhang
