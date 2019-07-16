@@ -4,7 +4,7 @@ module.exports = {
   title: 'ActionVue',
   description: 'ActionVue - vue 组件库',
   head: [
-    ['link', { rel: 'icon', href: "./logo.png" }],
+    ['link', { rel: 'icon', href: "/logo.png" }],
   ],
   themeConfig: {
     nav: [

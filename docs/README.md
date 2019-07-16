@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: ./ActionVue/logo.png
+heroImage: ./logo.png
 heroText: ActionVue
 tagline: 个人开发的组件库
 actionText: 快速上手 →
