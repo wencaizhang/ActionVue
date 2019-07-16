@@ -5,9 +5,7 @@
 </template>
 
 <script>
-import AButton from "../../../../src/package/button/button";
 export default {
-  components: { AButton },
   data () {
     return {
       loading: false

@@ -14,17 +14,6 @@
   </div>
 </template>
 
-<script>
-import col from "../../../../src/package/Grid/col";
-import row from "../../../../src/package/Grid/row";
-export default {
-  components: {
-    ACol: col,
-    ARow: row
-  }
-};
-</script>
-
 <style>
 .grid-demo-wrapper .col {
   color: #fff;

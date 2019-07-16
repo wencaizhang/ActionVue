@@ -8,10 +8,7 @@
 </template>
 
 <script>
-import AImage from "../../../../src/package/Image/main";
-
 export default {
-  components: { AImage },
   data() {
     return {
       fits: ["fill", "contain", "cover", "none", "scale-down"],

@@ -6,10 +6,3 @@
     <a-button>危险按钮</a-button>
   </div>
 </template>
-
-<script>
-import AButton from "../../../../src/package/button/button";
-export default {
-  components: { AButton },
-};
-</script>

@@ -5,10 +5,7 @@
 </template>
 
 <script>
-import ASkeleton from "./ASkeleton";
-
 export default {
-  components: { ASkeleton },
   data() {
     return {
       loading: true,

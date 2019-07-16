@@ -1,28 +1,23 @@
 <template>
   <div>
-    <a-button @click="onClick">按钮</a-button>
+    <a-button @click="onClick('top')">上方弹出</a-button>
+    <a-button @click="onClick('middle')">中间弹出</a-button>
+    <a-button @click="onClick('bottom')">下方弹出</a-button>
   </div>
 </template>
 
 <script>
-import Vue from "vue";
-import AButton from "../../../../src/package/button/button";
-
 export default {
-  components: {
-    AButton,
-  },
-
   methods: {
-    onClick() {
+    onClick(dir) {
       this.$toast(
         "我是toast我是toast我是toast我是toast我是toast我是toast我是toast",
         {
-          closeButton: {
-            text: "已阅",
-            callback() {
-              console.log("朕知道了！退下吧！");
-            }
+          message: "我是toast我是toast我是toast我是toast我是toast我是toast我是toast",
+          position: dir || 'top',
+          closeText: '已阅',
+          close() {
+            console.log("朕知道了！退下吧！");
           }
         }
       );

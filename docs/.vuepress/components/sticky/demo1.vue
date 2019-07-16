@@ -21,18 +21,6 @@
   </div>
 </template>
 
-<script>
-import sticky from '../../../../src/package/sticky/sticky'
-export default {
-  components: {
-    sticky
-  },
-  data () {
-    return {}
-  }
-}
-</script>
-
 <style scoped>
 p {
   height: 50px;

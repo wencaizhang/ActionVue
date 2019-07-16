@@ -15,13 +15,13 @@
 </template>
 
 <script>
-import AButton from "../../../../src/package/button/button";
-import AButtonGroup from "../../../../src/package/button/button-group";
 export default {
-  components: { AButton, AButtonGroup},
   data () {
     return {
-      loading: false
+      loading1: false,
+      loading2: false,
+      loading3: false,
+
     }
   }
 };

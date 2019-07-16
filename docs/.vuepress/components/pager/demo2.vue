@@ -18,10 +18,7 @@
 </template>
 
 <script>
-import APager from "../../../../src/package/pager/pager";
-
 export default {
-  components: { APager },
   data() {
     return {
       currPage: 30
