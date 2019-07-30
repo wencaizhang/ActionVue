@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-demo-wrapper">
+  <div class="grid-demo-wrapper-3">
     <a-row>
       <a-col :span="8">col-8</a-col>
       <a-col :span="8" :offset="8">col-8 col-offset-8</a-col>
@@ -15,20 +15,20 @@
 </template>
 
 <style>
-.grid-demo-wrapper .col {
+.grid-demo-wrapper-3 .col {
   color: #fff;
 }
-.grid-demo-wrapper h3 {
+.grid-demo-wrapper-3 .row {
+  background: #f5f5f5;
+}
+.grid-demo-wrapper-3 h3 {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-.grid-demo-wrapper .col:nth-child(2n) {
+.grid-demo-wrapper-3 .col:nth-child(2n) {
   background: #00a0e9;
 }
-.grid-demo-wrapper .col:nth-child(2n + 1) {
+.grid-demo-wrapper-3 .col:nth-child(2n + 1) {
   background: rgba(0, 160, 233, 0.7);
-}
-.grid-demo-wraper .row {
-  background: #f5f5f5;
 }
 </style>

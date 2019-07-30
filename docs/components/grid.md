@@ -172,3 +172,27 @@
   </highlight-code>
 </Common-Democode>
 
+
+
+<Common-Democode title="" description="">
+  <grid-demo5 />
+  <highlight-code slot="codeText" lang="vue">
+  </highlight-code>
+</Common-Democode>
+## API
+
+### Row
+
+属性 |	说明	| 类型 |	默认值
+--- | --- | --- | ---
+gutter | 栅格间隔 | number | 0
+type	| 布局模式，可选 flex，现代浏览器 下有效 |	string | -
+justify	| flex 布局下的水平排列方式：`start` `end` `center` `space-around` `space-between` | string	| `start`
+align | flex 布局下的垂直对齐方式：`top` `middle` `bottom` | string | top
+
+### Col
+
+属性 |	说明	| 类型 |	默认值
+--- | --- | --- | ---
+span | 栅格占位格数，为 0 时相当于 `display: none` | number | -
+offset | 栅格左侧的间隔格数，间隔内不可以有栅格 | number | 0

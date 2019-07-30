@@ -12,6 +12,17 @@ export default {
     }
   },
   props: {
+    gutter: {
+      type: [Number, String],
+      default: 0
+    },
+    type: {
+      type: String,
+      default: '',
+      validator (v) {
+        return ['flex', ''].includes(v)
+      }
+    },
     align: {
       type: String,
       default: 'top',
@@ -26,15 +37,12 @@ export default {
         return ['flex-start', 'flex-end', 'center', 'space-around', 'space-between'].includes(v)
       }
     },
-    gutter: {
-      type: [Number, String],
-      default: 0
-    }
   },
   computed: {
     styles () {
-      const { gutter, justify, align } = this;
+      const { gutter, type, justify, align } = this;
       return {
+        // 'display': type || 'block',
         'margin-left': `-${gutter/2}px`,
         'margin-right': `-${gutter/2}px`,
         'justify-content': justify,
@@ -48,6 +56,5 @@ export default {
 <style lang="scss" scoped>
 .row {
   display: flex;
-  // flex-wrap: wrap;
 }
 </style>

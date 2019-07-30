@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-demo-wrapper">
+  <div class="grid-demo-wrapper-4">
     <p>子元素左对齐</p>
     <a-row type="flex" justify="flex-start">
       <a-col :span="4">col-4</a-col>
@@ -39,23 +39,17 @@
 </template>
 
 <style>
-.grid-demo4-wrap .row {
-  background: #f5f5f5;
-}
-</style>
-
-<style>
-.grid-demo-wrapper .col {
+.grid-demo-wrapper-4 .col {
   color: #fff;
 }
-.grid-demo-wrapper h3 {
+.grid-demo-wrapper-4 h3 {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-.grid-demo-wrapper .col:nth-child(2n) {
+.grid-demo-wrapper-4 .col:nth-child(2n) {
   background: #00a0e9;
 }
-.grid-demo-wrapper .col:nth-child(2n + 1) {
+.grid-demo-wrapper-4 .col:nth-child(2n + 1) {
   background: rgba(0, 160, 233, 0.7);
 }
 </style>
