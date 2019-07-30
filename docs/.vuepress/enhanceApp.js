@@ -9,7 +9,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 import '../.vuepress/public/css/index.css'
 
-import Amessage     from '../../src/package/message/alert';
+import Amessage     from '../../src/package/message/message';
 import AToast       from '../../src/package/toast/plugin';
 import AButton      from '../../src/package/button/button';
 import AButtonGroup from '../../src/package/button/button-group';

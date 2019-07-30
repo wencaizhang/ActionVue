@@ -1,13 +1,13 @@
-import Alert from './main.vue';
+import Message from './main.vue';
 import Vue from 'vue';
 
-Alert.newInstance = properties => {
+Message.newInstance = properties => {
   const props = properties || {};
 
   const Instance = new Vue({
     data: props,
     render (h) {
-      return h(Alert, {
+      return h(Message, {
         props,
       })
     }
@@ -16,16 +16,16 @@ Alert.newInstance = properties => {
   const component = Instance.$mount();
   document.body.appendChild(component.$el);
 
-  const alert = Instance.$children[0];
+  const msg = Instance.$children[0];
 
   return {
     add (notices) {
-      alert.add(notices);
+      msg.add(notices);
     },
     remove (name) {
-      alert.remove(name);
+      msg.remove(name);
     }
   }
 };
 
-export default Alert;
+export default Message;

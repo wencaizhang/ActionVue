@@ -1,9 +1,8 @@
 <template>
-  <section class="toast">
+  <section class="toast" :style="styles">
     <slot></slot>
-
-    <span class="close" v-if="closeButton">
-      <span @click="onClickClose">{{ closeButton.text }}</span>
+    <span class="close" v-if="closeText">
+      <span @click="onClickClose">{{ closeText }}</span>
     </span>
   </section>
 </template>
@@ -13,29 +12,43 @@ export default {
   name: 'Toast',
   components: {},
   props: {
-    autoClose: {
-      type: Boolean,
-      default: false
-    },
     durition: {
       type: Number,
       default: 3
     },
-    closeButton: {
-      type: Object,
-      default () {
-        return {
-          text: '知道了',
-          callback: undefined
-        }
+    autoClose: {
+      type: Boolean,
+      default: true,
+    },
+    closeText: {
+      type: String,
+      default: '确定',
+    },
+    close: {
+      type: Function,
+    },
+    position: {
+      type: String,
+      default: 'top',
+      validtor (v) {
+        return ['top', 'middle', 'bottom'].includes(v);
       }
     }
   },
-  computed: {},
+  computed: {
+    styles () {
+      const map = {
+        top: { top: '15px' },
+        middle: { top: '50%' },
+        bottom: { bottom: '15px' },
+      }
+      return map[this.position]
+    }
+  },
   mounted () {
     if (this.autoClose) {
       setTimeout(() => {
-        this.close()
+        this.remove()
       }, this.durition * 1000)
     }
   },
@@ -43,17 +56,15 @@ export default {
     return {}
   },
   methods: {
-    close () {
+    remove () {
       this.$el.remove()
       // destroy 并不会把元素删掉，所以要自己手动删掉
       this.$destroy()
     },
     onClickClose () {
-      this.close()
-      if (this.closeButton && typeof this.closeButton.callback === 'function') {
-        this.closeButton.callback()
-      }
-    }
+      this.remove()
+      this.closeText && this.close && this.close();
+    },
   }
 }
 </script>
@@ -70,7 +81,6 @@ export default {
 
   position: fixed;
   left: 50%;
-  top: 15px;
   z-index: 100;
 
   display: flex;

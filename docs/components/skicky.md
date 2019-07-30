@@ -1,4 +1,4 @@
-# skicky 粘滞吸顶组件
+# Skicky 粘滞吸顶组件
 
 <Common-Democode title="基本使用" description="">
   <sticky-demo1 />

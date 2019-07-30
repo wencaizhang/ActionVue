@@ -8,9 +8,11 @@
 
 ## why this
 
-组件库由个人开发，旨在技术研究，探索如何搭建一个基于 Vue 的组件库。
+本组件库由个人开发，旨在技术研究，探索如何搭建一个基于 Vue 的组件库，不推荐在生产环境使用。
 
-市面上已经有很多成熟的中后台组件库，比如 element-ui 和 iview。不推荐在生产环境使用。
+生产环境中更加推荐市面上现有的成熟的中后台组件库，比如 [Element](https://github.com/ElemeFE/element) /[iview](https://github.com/iview/iview) / [Vant](https://github.com/youzan/vant) 等等，在此不一一列觉，事实上
+
+我也会努力早日将本组件库打磨成可以投入生产环境的
 
 ## why this name
 
@@ -25,7 +27,6 @@ action + vue === ActionVue
 ## 文档
 
 请查看 [文档](https://wencaizhang.github.io/ActionVue/).
-
 
 ## 安装
 

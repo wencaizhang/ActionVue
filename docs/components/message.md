@@ -1,4 +1,4 @@
-# mssage 消息提示
+# Mssage 消息提示
 
 <Common-Democode title="" description="">
   <message-demo1 />
@@ -12,7 +12,7 @@
     export default {
       methods: {
         onClick () {
-          this.$alert.success({ content: '复制成功'})
+          this.$message.success({ content: '复制成功'})
         }
       }
     };

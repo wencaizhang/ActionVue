@@ -1,5 +1,5 @@
 
-# skeleton 骨架屏
+# Skeleton 骨架屏
 
 ## 基本使用
 
@@ -85,7 +85,7 @@
 
 |  属性 |  说明 | 类型  |  默认值 |
 | ------------ | ------------ | ------------ | ------------ |
-|  `shape` |  指定头像的形状 | Enum{ 'circle', 'square' }  | circle  |
+|  `shape` |  指定头像的形状，可选 `circle`, `square` | String  | `circle`  |
 
 ### 3. TitleProps 标题参数
 
