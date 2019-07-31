@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-demo-wrapper-4">
+  <div class="grid-demo grid-demo-wrapper-4">
     <p>子元素左对齐</p>
     <a-row type="flex" justify="flex-start">
       <a-col :span="4">col-4</a-col>

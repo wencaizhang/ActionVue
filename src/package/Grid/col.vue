@@ -15,6 +15,9 @@ export default {
       type: [Number, String],
       default: 0
     },
+    order: {
+      type: [Number],
+    },
     xs: {
       type: [Number, Object],
     },
@@ -36,18 +39,18 @@ export default {
   },
   computed: {
     clazz () {
-      const { span, offset, gutter } = this;
+      const { span, offset, gutter, order } = this;
       return {
         [`col-${span}`]: true,
         [`col-offset-${offset}`]: offset,
       }
     },
     styles () {
-      const { gutter } = this;
-      if (!gutter) return null;
+      const { gutter=0, order } = this;
       return {
-        'margin-left': `${gutter/2}px`,
-        'margin-right': `${gutter/2}px`,
+        'padding-left': `${gutter/2}px`,
+        'padding-right': `${gutter/2}px`,
+        order,
       }
     }
   }
@@ -56,10 +59,12 @@ export default {
 
 <style scoped lang="scss">
 .col {
+  float: left;
+  display: block;
   min-height: 30px;
   text-align: center;
   margin: 8px 0;
-  padding: 16px 0;
+  padding: 8px 0;
 }
   .col {
     $class-prefix: col-;

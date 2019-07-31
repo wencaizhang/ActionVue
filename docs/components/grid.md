@@ -43,7 +43,7 @@
 </Common-Democode>
 
 
-## gutter
+## 区块间隔
 
 <Common-Democode title="" description="">
   <grid-demo2 />
@@ -125,7 +125,7 @@
 </Common-Democode>
 
 
-## flex
+## flex 水平对齐
 
 <Common-Democode title="" description="">
   <grid-demo4 />
@@ -173,26 +173,103 @@
 </Common-Democode>
 
 
+## flex 垂直对齐
 
 <Common-Democode title="" description="">
   <grid-demo5 />
   <highlight-code slot="codeText" lang="vue">
+    <template>
+      <div class="grid-demo-wrapper-5">
+        <p>Align: flex-start</p>
+        <a-row type="flex" align="flex-start" justify="center">
+          <a-col :span="4">
+            <p class="height-100">col-4</p>
+          </a-col>
+          <a-col :span="4">
+            <p class="height-80">col-4</p>
+          </a-col>
+          <a-col :span="4">
+            <p class="height-120">col-4</p>
+          </a-col>
+          <a-col :span="4">
+            <p class="height-50">col-4</p>
+          </a-col>
+        </a-row>
+        <p>Align: center</p>
+        <a-row type="flex" align="center" justify="space-around">
+          <a-col :span="4">
+            <p class="height-100">col-4</p>
+          </a-col>
+          <a-col :span="4">
+            <p class="height-80">col-4</p>
+          </a-col>
+          <a-col :span="4">
+            <p class="height-120">col-4</p>
+          </a-col>
+          <a-col :span="4">
+            <p class="height-50">col-4</p>
+          </a-col>
+        </a-row>
+        <p>Align: flex-end</p>
+        <a-row type="flex" align="flex-end" justify="space-between">
+          <a-col :span="4">
+            <p class="height-100">col-4</p>
+          </a-col>
+          <a-col :span="4">
+            <p class="height-80">col-4</p>
+          </a-col>
+          <a-col :span="4">
+            <p class="height-120">col-4</p>
+          </a-col>
+          <a-col :span="4">
+            <p class="height-50">col-4</p>
+          </a-col>
+        </a-row>
+      </div>
+    </template>
   </highlight-code>
 </Common-Democode>
+
+## flex 排序
+
+<Common-Democode title="" description="">
+  <grid-demo6 />
+  <highlight-code slot="codeText" lang="vue">
+    <template>
+      <div>
+        <a-row type="flex">
+          <a-col :span="6" :order="4">1 col-order-4</a-col>
+          <a-col :span="6" :order="3">2 col-order-3</a-col>
+          <a-col :span="6" :order="2">3 col-order-2</a-col>
+          <a-col :span="6" :order="1">4 col-order-1</a-col>
+        </a-row>
+      </div>
+    </template>
+  </highlight-code>
+</Common-Democode>
+
+
 ## API
+
+::: tip 提示
+与 flex 相关的属性：justify、align、order 分别对应原生 CSS 的 flex 布局中的 justify-content、align-items、order 属性，其属性值也保持一致。
+
+不熟悉 flex 的同学可以参考：[Flex 布局教程：语法篇 - 阮一峰](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+:::
 
 ### Row
 
 属性 |	说明	| 类型 |	默认值
 --- | --- | --- | ---
-gutter | 栅格间隔 | number | 0
+gutter | 栅格间隔 | Number | 0
 type	| 布局模式，可选 flex，现代浏览器 下有效 |	string | -
-justify	| flex 布局下的水平排列方式：`start` `end` `center` `space-around` `space-between` | string	| `start`
-align | flex 布局下的垂直对齐方式：`top` `middle` `bottom` | string | top
+justify	| flex 布局下的水平排列方式：`flex-start` `flex-end` `center` `space-between` `space-around` | string	| `flex-start`
+align | flex 布局下的垂直对齐方式：`flex-start` `flex-end` `center` `baseline` `stretch` | string | `stretch`
 
 ### Col
 
 属性 |	说明	| 类型 |	默认值
 --- | --- | --- | ---
-span | 栅格占位格数，为 0 时相当于 `display: none` | number | -
-offset | 栅格左侧的间隔格数，间隔内不可以有栅格 | number | 0
+span | 栅格占位格数，为 0 时相当于 `display: none` | Number | -
+offset | 栅格左侧的间隔格数，间隔内不可以有栅格 | Number | 0
+order | 栅格顺序，`flex` 布局模式下有效 | Number | 0

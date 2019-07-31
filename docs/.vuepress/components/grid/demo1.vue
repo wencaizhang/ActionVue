@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-demo-wrapper-1">
+  <div class="grid-demo grid-demo-wrapper-1">
     <a-row>
       <a-col :span="12">col-12</a-col>
       <a-col :span="12">col-12</a-col>

@@ -1,7 +1,7 @@
 <template>
-  <div class="grid-demo-wrapper-5">
-    <p>Align Top</p>
-    <a-row type="flex" aligh="top" justify="center">
+  <div class="grid-demo grid-demo-wrapper-5">
+    <p>Align: flex-start</p>
+    <a-row type="flex" align="flex-start" justify="center">
       <a-col :span="4">
         <p class="height-100">col-4</p>
       </a-col>
@@ -15,8 +15,8 @@
         <p class="height-50">col-4</p>
       </a-col>
     </a-row>
-    <p>Align Center</p>
-    <a-row type="flex" aligh="middle" justify="space-around">
+    <p>Align: center</p>
+    <a-row type="flex" align="center" justify="space-around">
       <a-col :span="4">
         <p class="height-100">col-4</p>
       </a-col>
@@ -30,8 +30,8 @@
         <p class="height-50">col-4</p>
       </a-col>
     </a-row>
-    <p>Align Bottom</p>
-    <a-row type="flex" aligh="bottom" justify="space-between">
+    <p>Align: flex-end</p>
+    <a-row type="flex" align="flex-end" justify="space-between">
       <a-col :span="4">
         <p class="height-100">col-4</p>
       </a-col>
@@ -49,6 +49,9 @@
 </template>
 
 <style>
+.grid-demo {
+  text-align: center;
+}
 .grid-demo-wrapper-5 .row {
   background-color: #f5f5f5;
 }
@@ -64,6 +67,10 @@
 }
 .grid-demo-wrapper-5 .col:nth-child(2n + 1) p{
   background: rgba(0, 160, 233, 0.7);
+}
+
+.grid-demo-wrapper-5 p{
+  width: 100%;
 }
 .grid-demo-wrapper-5 .height-100 {
   height: 100px;

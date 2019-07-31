@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-demo-wrapper-3">
+  <div class="grid-demo grid-demo-wrapper-3">
     <a-row>
       <a-col :span="8">col-8</a-col>
       <a-col :span="8" :offset="8">col-8 col-offset-8</a-col>

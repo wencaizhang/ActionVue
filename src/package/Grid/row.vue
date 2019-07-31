@@ -18,17 +18,13 @@ export default {
     },
     type: {
       type: String,
-      default: '',
       validator (v) {
-        return ['flex', ''].includes(v)
+        return ['flex'].includes(v)
       }
     },
     align: {
       type: String,
-      default: 'top',
-      validator (v) {
-        return ['top', 'middle', 'bottom'].includes(v)
-      }
+      default: 'stretch',
     },
     justify: {
       type: String,
@@ -42,7 +38,7 @@ export default {
     styles () {
       const { gutter, type, justify, align } = this;
       return {
-        // 'display': type || 'block',
+        'display': type === 'flex' ? 'flex' : 'block',
         'margin-left': `-${gutter/2}px`,
         'margin-right': `-${gutter/2}px`,
         'justify-content': justify,
@@ -55,6 +51,13 @@ export default {
 
 <style lang="scss" scoped>
 .row {
-  display: flex;
+  // display: flex;
+  zoom: 1;
+  box-sizing: border-box;
+}
+.row:before, .row:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 </style>
