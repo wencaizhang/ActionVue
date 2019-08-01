@@ -11,6 +11,9 @@ export default {
     name: {
       type: String
     }
+  },
+  mounted () {
+    import("./symbol")
   }
 }
 </script>
