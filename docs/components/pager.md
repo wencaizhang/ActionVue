@@ -103,3 +103,20 @@
     </script>
   </highlight-code>
 </Common-Democode>
+
+
+## API
+
+属性 |	说明	| 类型 |	默认值
+--- | --- | --- | ---
+`totalPage` | 总页数 | Number | -
+`currPage` | 当前页数 | Number | -
+`hideIfOnePage` | 只有一页是否自动隐藏 | Boolean | `true`
+`mode` | 页码模式，有 `sample` `normal` | String | simple normal
+
+
+### 事件
+
+事件名称 |	说明	| 回调参数
+--- | --- | ---
+`onChange` | 页码发生变化时调用 | `Function(currPage:Number)`

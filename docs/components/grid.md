@@ -252,24 +252,24 @@
 ## API
 
 ::: tip 提示
-与 flex 相关的属性：justify、align、order 分别对应原生 CSS 的 flex 布局中的 justify-content、align-items、order 属性，其属性值也保持一致。
+与 flex 相关的属性：`justify`、`align`、`order` 分别对应原生 CSS 的 `flex` 布局中的 `justify-content`、`align-items`、`order` 属性，其属性值也保持一致。
 
-不熟悉 flex 的同学可以参考：[Flex 布局教程：语法篇 - 阮一峰](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+不熟悉 `flex` 的同学可以参考：[Flex 布局教程：语法篇 - 阮一峰](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 :::
 
 ### Row
 
 属性 |	说明	| 类型 |	默认值
 --- | --- | --- | ---
-gutter | 栅格间隔 | Number | 0
-type	| 布局模式，可选 flex，现代浏览器 下有效 |	string | -
-justify	| flex 布局下的水平排列方式：`flex-start` `flex-end` `center` `space-between` `space-around` | string	| `flex-start`
-align | flex 布局下的垂直对齐方式：`flex-start` `flex-end` `center` `baseline` `stretch` | string | `stretch`
+`gutter` | 栅格间隔 | Number | 0
+`type`	| 布局模式，可选 `flex`，现代浏览器 下有效 |	string | -
+`justify`	| `flex` 布局下的水平排列方式：`flex-start` `flex-end` `center` `space-between` `space-around` | string	| `flex-start`
+`align` | `flex` 布局下的垂直对齐方式：`flex-start` `flex-end` `center` `baseline` `stretch` | string | `stretch`
 
 ### Col
 
 属性 |	说明	| 类型 |	默认值
 --- | --- | --- | ---
-span | 栅格占位格数，为 0 时相当于 `display: none` | Number | -
-offset | 栅格左侧的间隔格数，间隔内不可以有栅格 | Number | 0
-order | 栅格顺序，`flex` 布局模式下有效 | Number | 0
+`span` | 栅格占位格数，为 0 时相当于 `display: none` | Number | -
+`offset` | 栅格左侧的间隔格数，间隔内不可以有栅格 | Number | 0
+`order` | 栅格顺序，`flex` 布局模式下有效 | Number | 0

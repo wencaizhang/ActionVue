@@ -49,10 +49,10 @@
 </template>
 
 <style>
-.grid-demo {
+.grid-demo .row {
   text-align: center;
 }
-.grid-demo-wrapper-5 .row {
+.grid-demo .row {
   background-color: #f5f5f5;
 }
 .grid-demo-wrapper-5 .col {
