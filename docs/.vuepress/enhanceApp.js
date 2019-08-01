@@ -8,9 +8,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 // import VueECharts from 'vue-echarts' //注册图表
 
 import '../.vuepress/public/css/index.css'
-import '../../src/assets/symbol';
-import AIcon      from '../../src/package/icon/icon';
 
+import AIcon        from '../../src/package/icon/icon';
 import Amessage     from '../../src/package/message/message';
 import AToast       from '../../src/package/toast/plugin';
 import AButton      from '../../src/package/button/button';

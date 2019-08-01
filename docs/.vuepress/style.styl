@@ -8,7 +8,7 @@ $arrowBgColor = #ccc
 
 // layout
 $navbarHeight = 3.6rem
-$sidebarWidth = 20rem
+$sidebarWidth = 16rem
 $contentWidth = 740px
 
 // responsive breakpoints
@@ -51,12 +51,12 @@ $codeLang = js ts html md vue css sass scss less stylus go java c sh yaml py
 
 @media (min-width: 719px)
   .page
-    padding-right 20rem
+    padding-right 11rem
 
   .sidebar-sub-headers
     font-size 15px
     background-color #fff
-    width $sidebarWidth
+    width 11rem
     position fixed
     z-index 10
     margin 0
@@ -72,6 +72,9 @@ $codeLang = js ts html md vue css sass scss less stylus go java c sh yaml py
     padding-right 0
 // sidebar 拆分成左右结构 - end
 
+.content:not(.custom) {
+  max-width: 920px;
+}
 
 // 字体
 body {
@@ -94,4 +97,9 @@ h3
 
 * {
   box-sizing: border-box;
+}
+table {
+  width 100%
+  display table
+  text-align center
 }
