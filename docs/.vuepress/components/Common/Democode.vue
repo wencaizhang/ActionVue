@@ -27,7 +27,6 @@
 let uid = 0;
 
 import ClipboardJS from 'clipboard';
-import { debuglog } from 'util';
 export default {
   name: "DemoPage",
   props: ["title", "description"],
