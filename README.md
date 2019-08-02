@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="docs/.vuepress/public/logo.png" alt="ActionVue" style="margin: 0 auto; width: 200px;">
+  <img src="docs/.vuepress/public/logo.png" alt="ActionVue" width="200">
 </div>
 
 <p align="center">
