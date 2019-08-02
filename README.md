@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="docs/.vuepress/public/logo.png" alt="ActionVue" style="margin: 0 auto;">
+  <img src="docs/.vuepress/public/logo.png" alt="ActionVue" style="margin: 0 auto; width: 200px;">
 </div>
 
 <p align="center">
@@ -10,7 +10,9 @@
 </p>
 
 <div align="center">
-  [Vue.js](https://cn.vuejs.org/) 组件库. :stuck_out_tongue_winking_eye:
+  <p style="margin-bottom: 10px;">
+    基于 <a href="https://cn.vuejs.org/">Vue.js</a> 开发的一套组件库. :stuck_out_tongue_winking_eye:
+  </p>
 
   
   [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/wencaizhang/ActionVue/blob/master/LICENSE)
