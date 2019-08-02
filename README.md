@@ -18,54 +18,32 @@
   [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/wencaizhang/ActionVue/blob/master/LICENSE)
 </div>
 
-
-
-中文简体 | [English](./README-en.md)
-
-## what is this
-
-这是一个基于 Vue.js 的组件库
-
-## why this
-
-本组件库由个人开发，旨在技术研究，探索如何搭建一个基于 Vue 的组件库，不推荐在生产环境使用。
-
-生产环境中更加推荐市面上现有的成熟的中后台组件库，比如 [Element](https://github.com/ElemeFE/element) /[iview](https://github.com/iview/iview) / [Vant](https://github.com/youzan/vant) 等等，在此不一一列举。
-
-同时我也会努力早日将本组件库打磨成可以投入生产环境的优秀组件库。😀
-
-## why this name
-
-事实上，很早就有一个开发 vue 组件库的想法，但由于各种理由导致这个想法一直往后推延。
-
-因此这里取 `action` 的 “行动” 的之意，意为提醒自己 “立即行动”，just do it.
-
-```bash
-action + vue === ActionVue
-```
-
-## 文档
+## Document
 
 请查看 <a href="https://coolfe.fun/ActionVue/" rel="noopener" target="_blank">文档</a>
 
-## 安装
+## Installation
+
+Install the package in your project directory with:
 
 ```bash
+# with npm
 npm install actionvue --save
 
-# or
-
+# or yarn
 yarn add actionvue
 ```
 
-## 使用
+## Usage
+
+Here is a quick example to get you started.
 
 ```js
 import Vue from 'vue';
 Vue.use(actionvue);
 ```
 
-## 组件
+## Components
 
 + [x] Button
 + [x] Input
@@ -91,6 +69,15 @@ Vue.use(actionvue);
 + [ ] Scroll 滚动组件
 + [ ] Img Load 图片加载
 + [ ] 支付密码框
+
+## Why Do This
+
+本组件库由个人开发，旨在技术研究，探索如何搭建一个基于 Vue 的组件库，不推荐在生产环境使用。
+
+生产环境中更加推荐市面上现有的成熟的中后台组件库，比如 [Element](https://github.com/ElemeFE/element) /[iview](https://github.com/iview/iview) / [Vant](https://github.com/youzan/vant) 等等，在此不一一列举。
+
+同时我也会努力早日将本组件库打磨成可以投入生产环境的优秀组件库。😀
+
 
 ## Contributing
 
