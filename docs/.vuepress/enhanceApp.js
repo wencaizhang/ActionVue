@@ -5,21 +5,8 @@ import VueHighlightJS from 'vue-highlight.js';
 import 'highlight.js/styles/atom-one-dark.css';
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-// import VueECharts from 'vue-echarts' //注册图表
 
-import '../.vuepress/public/css/index.css'
-
-import AIcon        from '../../src/package/icon/icon';
-import Amessage     from '../../src/package/message/message';
-import AToast       from '../../src/package/toast/plugin';
-import AButton      from '../../src/package/button/button';
-import AButtonGroup from '../../src/package/button/button-group';
-import ASkeleton    from '../../src/package/skeleton/skeleton';
-import ACol         from '../../src/package/Grid/col';
-import ARow         from '../../src/package/Grid/row';
-import ASticky      from '../../src/package/sticky/sticky'
-import APager       from '../../src/package/pager/pager';
-import AImage       from '../../src/package/Image/main';
+import actionvue from "../../src/index";
 
 export default ({
   Vue, // VuePress 正在使用的 Vue 构造函数
@@ -31,17 +18,5 @@ export default ({
   Vue.use(VueHighlightJS)
   Vue.use(Element)
   
-  Vue.use(AToast)
-  Vue.component('AIcon', AIcon);
-  Vue.component('AButton', AButton);
-  Vue.component('AButtonGroup', AButtonGroup);
-  Vue.component('ACol', ACol);
-  Vue.component('ARow', ARow);
-  Vue.component('ASkeleton', ASkeleton);
-  Vue.component('ASticky', ASticky);
-  Vue.component('APager', APager);
-  Vue.component('AImage', AImage);
-
-  Vue.prototype.$message = Amessage;
-  // Vue.component('chart', VueECharts)
+  Vue.use(actionvue)
 }

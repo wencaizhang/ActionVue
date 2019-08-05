@@ -1,7 +1,10 @@
 {
   "name": "actionvue",
   "version": "0.1.0",
-  "private": true,
+  "description": "UI components Base on vue.js",
+  "license": "MIT",
+  "author": "wencaizhang <1052642137@qq.como>",
+  "main": "./src/index.js",
   "scripts": {
     "dev": "npm run serve",
     "serve": "vue-cli-service serve",
@@ -55,5 +58,17 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wencaizhang/ActionVue.git"
+  },
+  "keywords": [
+    "vue",
+    "ui",
+    "actionvue",
+    "npm",
+    "component",
+    "frontend"
   ]
 }
