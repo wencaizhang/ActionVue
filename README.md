@@ -14,6 +14,7 @@
     基于 <a href="https://cn.vuejs.org/">Vue.js</a> 开发的一套组件库. :stuck_out_tongue_winking_eye:
   </p>
 
+  [![npm](https://img.shields.io/npm/v/actionvue?style=flat-square)](https://www.npmjs.com/package/actionvue/)
   [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/wencaizhang/ActionVue/blob/master/LICENSE)
 </div>
 
@@ -84,7 +85,7 @@ new Vue({
 
 本组件库由个人开发，旨在技术研究，探索如何搭建一个基于 Vue 的组件库，不推荐在生产环境使用。
 
-生产环境中更加推荐市面上现有的成熟的中后台组件库，比如 [Element](https://github.com/ElemeFE/element) /[iview](https://github.com/iview/iview) / [Vant](https://github.com/youzan/vant) 等等，在此不一一列举。
+生产环境中更加推荐市面上现有的成熟的中后台组件库，比如 [Element](https://github.com/ElemeFE/element) / [iview](https://github.com/iview/iview) / [Vant](https://github.com/youzan/vant) 等等，在此不一一列举。
 
 同时我也会努力早日将本组件库打磨成可以投入生产环境的优秀组件库。😀
 
