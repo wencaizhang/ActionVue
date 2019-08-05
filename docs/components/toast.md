@@ -13,7 +13,7 @@
     <script>
     export default {
       methods: {
-        onClick () {
+        onClick(dir) {
           this.$toast(
             "我是toast我是toast我是toast我是toast我是toast我是toast我是toast",
             {
@@ -35,14 +35,14 @@
 ## API
 
 | 属性        | 说明                                     | 类型    | 默认值 |
-| :----------- | :---------------------------------------- | :------- | :------ |
-| `durition`  | 默认自动关闭延时，单位秒                 | Number  | 3      |
-| `autoClose` | 是否自动关闭                             | Boolean | true   |
+| :---------- | :--------------------------------------- | :------ | :----- |
+| `durition`  | 默认自动关闭延时，单位秒                 | Number  | `3`      |
+| `autoClose` | 是否自动关闭                             | Boolean | `true`   |
 | `position`  | 弹出位置，可选 `top`, `middle`, `bottom` | String  | `top`  |
 | `okText`    | 确认按钮文字                             | String  | `top`  |
 
 ### 事件
 
 | 事件名称 | 说明                 | 回调参数 |
-| :-------- | :-------------------- | :-------- |
+| :------- | :------------------- | :------- |
 | `close`  | 关闭时触发的回调函数 | null     |

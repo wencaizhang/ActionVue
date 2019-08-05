@@ -260,16 +260,16 @@
 ### Row
 
 属性 |	说明	| 类型 |	默认值
---- | --- | --- | ---
+:--- | :--- | :--- | :---
 `gutter` | 栅格间隔 | Number | 0
-`type`	| 布局模式，可选 `flex`，现代浏览器 下有效 |	string | -
-`justify`	| `flex` 布局下的水平排列方式：`flex-start` `flex-end` `center` `space-between` `space-around` | string	| `flex-start`
-`align` | `flex` 布局下的垂直对齐方式：`flex-start` `flex-end` `center` `baseline` `stretch` | string | `stretch`
+`type`	| 布局模式，可选 `flex`，现代浏览器 下有效 |	String | -
+`justify`	| `flex` 布局下的水平排列方式：`flex-start` `flex-end` `center` `space-between` `space-around` | String	| `flex-start`
+`align` | `flex` 布局下的垂直对齐方式：`flex-start` `flex-end` `center` `baseline` `stretch` | String | `stretch`
 
 ### Col
 
 属性 |	说明	| 类型 |	默认值
---- | --- | --- | ---
+:--- | :--- | :--- | :---
 `span` | 栅格占位格数，为 0 时相当于 `display: none` | Number | -
 `offset` | 栅格左侧的间隔格数，间隔内不可以有栅格 | Number | 0
 `order` | 栅格顺序，`flex` 布局模式下有效 | Number | 0
