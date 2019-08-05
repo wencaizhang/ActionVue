@@ -1,11 +1,11 @@
 <template>
   <ul class="icon-list">
     <li
-      v-for="item in iconList"
-      :key="item"
+      v-for="type in iconList"
+      :key="type"
     >
-      <a-icon :name="item" />
-      <span>{{ item }}</span>
+      <a-icon :type="type" />
+      <span>{{ type }}</span>
     </li>
   </ul>
 </template>
@@ -36,7 +36,7 @@ export default {
         },
         text (trigger) {
           let span = trigger.querySelector("span")
-          return `<a-icon name="${span.innerText}" />`
+          return `<a-icon type="${span.innerText}" />`
         }
       });
       this.clip.on("success", e => {

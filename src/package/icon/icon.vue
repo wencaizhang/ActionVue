@@ -1,24 +1,24 @@
 <template>
-  <svg class="a-icon">
-    <use :xlink:href="`#i-${name}`"></use>
+  <svg class="a-icon" :class="`a-icon-${type}`" @click="$emit('click')">
+    <use :xlink:href="`#i-${type}`"></use>
   </svg>
 </template>
 
 <script>
 export default {
-  name: '',
+  name: 'a-icon',
   props: {
-    name: {
+    type: {
       type: String
     }
   },
   mounted () {
     import("./symbol")
-  }
+  },
 }
 </script>
 
-<style  scoped>
+<style scoped>
 .a-icon {
   width: 1em; height: 1em;
   vertical-align: -0.15em;
