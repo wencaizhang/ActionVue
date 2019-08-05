@@ -14,7 +14,6 @@
     基于 <a href="https://cn.vuejs.org/">Vue.js</a> 开发的一套组件库. :stuck_out_tongue_winking_eye:
   </p>
 
-  
   [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/wencaizhang/ActionVue/blob/master/LICENSE)
 </div>
 
@@ -39,8 +38,19 @@ yarn add actionvue
 Here is a quick example to get you started.
 
 ```js
+// src/main.js
 import Vue from 'vue';
+import actionvue from 'actionvue';
+import App from './App'
+
 Vue.use(actionvue);
+
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  render: h => h(App)
+})
 ```
 
 ## Components
@@ -49,7 +59,7 @@ Vue.use(actionvue);
 + [x] Input
 + [x] icon
 + [x] Toast
-+ [ ] Message
++ [x] Message
 + [ ] Notification
 + [x] Pager 分页器
 + [x] Grid 网格系统
