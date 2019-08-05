@@ -26,6 +26,7 @@ module.exports = {
         children: [
           '/components/button',
           '/components/icon',
+          '/components/input',
           '/components/grid',
           '/components/pager',
           '/components/skeleton',
@@ -41,5 +42,3 @@ module.exports = {
     includePaths: [path.join(__dirname, '../../styles')]
   }
 }
-
-

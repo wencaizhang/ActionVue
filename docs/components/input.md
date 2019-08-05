@@ -1,8 +1,69 @@
 # Input 输入框
 
+## 基本使用
+
 <Common-Democode title="" description="">
   <input-demo1 />
   <highlight-code slot="codeText" lang="vue">
+    <template>
+      <a-input
+        v-model="value"
+        placeholder="Basic usage"
+      />
+    </template>
+
+    <script>
+    export default {
+      data () {
+        return {
+          value: '张三',
+        }
+      }
+    }
+    </script>
+  </highlight-code>
+</Common-Democode>
+
+
+## 前缀和后缀
+<Common-Democode title="" description="在输入框上添加前缀或后缀图标。">
+  <input-demo2 />
+  <highlight-code slot="codeText" lang="vue">
+    <template>
+      <a-input v-model="userName" placeholder="Basic usage" style="width: 200px" ref="userNameInput">
+        <a-icon slot="prefix" name="user" />
+        <a-icon v-if="userName" slot="suffix" name="close-circle" @click="emitEmpty" />
+      </a-input>
+    </template>
+    <script>
+    export default {
+      data() {
+        return {
+          userName: ""
+        };
+      },
+      methods: {
+        emitEmpty() {
+          this.$refs.userNameInput.focus();
+          this.userName = "";
+        }
+      }
+    };
+    </script>
+    <style>
+    .a-icon {
+      cursor: pointer;
+      color: #ccc;
+      transition: color 0.3s;
+      font-size: 12px;
+    }
+    .a-icon:hover {
+      color: #999;
+    }
+    .a-icon:active {
+      color: #666;
+    }
+    </style>
   </highlight-code>
 </Common-Democode>
 
@@ -15,6 +76,8 @@
 | `disabled`       | 是否禁用状态                                   | Boolean | `false` |
 | `readonly`       | 是否只读状态                                   | Boolean | `false` |
 | `value(v-model)` | 输入框内容                                     | String  | -       |
+| `prefix`         | input 的前缀图标                           | slot  | -       |
+| `suffix`         | input 的后缀图标                           | slot  | -       |
 
 ### 事件
 
