@@ -1,25 +1,16 @@
 <template>
-  <div>
-    <div class="img-wrapper">
-      <!-- <div v-if="!loading && !error" class="mask">
-        <a-icon @click="handlePreview" class="action" type="eye" />
-      </div> -->
-
-      <slot v-if="loading" name="placeholder">
-        <a-spin />
+  <div class="a-img-wrapper" :class="clazz">
+    <img v-if="loaded" :src="imgSrc" v-bind="$attrs" :style="{ 'object-fit': fit }" />
+    <div v-if="loading" class="a-img__loading">
+      <slot name="loading">
+        加载中...
       </slot>
-
-      <slot v-else-if="error" name="error">
-        <div style="text-align: center;">
-          <a-icon type="picture" />
-        </div>
-      </slot>
-
-      <img v-else :src="src" alt="alt">
     </div>
-    <!-- <a-modal :visible="previewVisible" :footer="null" @cancel="handleCancel">
-      <img alt="example" style="width: 100%" :src="previewImage" />
-    </a-modal> -->
+    <div v-if="error" class="a-img__error">
+      <slot name="error">
+        加载失败
+      </slot>
+    </div>
   </div>
 </template>
 
@@ -30,70 +21,85 @@ export default {
       type: String,
       required: true
     },
-    alt: String,
-  },
-  data () {
-    return {
-      // previewVisible: false,
-      // previewImage: '',
-
-      loading: false,
-      error: false,
+    placeholder: {
+      type: String,
+      default:
+        "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1565061553&di=a7d802393fbe4d61b27b50b8d3619b08&src=http://5b0988e595225.cdn.sohucs.com/images/20180118/a0163c6be9d247918669229bed6c7280.png"
+    },
+    fit: {
+      type: String
+    },
+    round: {
+      type: Boolean,
+      default: false,
     }
   },
-  mounted () {
+  computed: {
+    clazz () {
+      return { 'a-img-wrapper__round': this.round }
+    },
+    imgSrc() {
+      return this.src;
+    }
+  },
+  data() {
+    return {
+      loading: false,
+      error: false,
+      loaded: false,
+    };
+  },
+  mounted() {
     this.loadImage();
   },
   methods: {
-    loadImage () {
-      this.loading = true;
-      this.error = false;
-
+    loadImage() {
       const img = new Image();
-      img.onload = e => this.handleLoad(e, img);
+      img.onload = e => {
+        this.loading = true;
+        this.handleLoad(e, img);
+      };
       img.onerror = this.handleError.bind(this);
 
-      img.src = this.src;
+      img.src = this.imgSrc;
     },
-    handleLoad (e, img) {
+    handleLoad(e, img) {
+      // 原始尺寸
       this.imageWidth = img.width;
       this.imageHeight = img.height;
+
       this.loading = false;
-      console.log(img);
+      this.loaded = true;
+      this.$emit("load", e);
     },
-    handleError (e) {
+    handleError(e) {
       this.loading = false;
       this.error = true;
-      this.$emit('error', e);
-      console.log(e);
+      this.$emit("error", e);
     },
-
-    // handleCancel () {
-    //   this.previewVisible = false
-    // },
-    // handlePreview (file) {
-    //   this.previewImage = this.src;
-    //   this.previewVisible = true
-    // },
   }
-}
+};
 </script>
 
 <style scoped>
-.img-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #d9d9d9;
+.a-img-wrapper {
+  position: relative;
+  display: inline-block;
   width: 100px;
   height: 100px;
   border-radius: 4px;
+  font-size: 14px;
+  overflow: hidden;
+  color: #969799;
 }
-.img-wrapper img {
+.a-img-wrapper.a-img-wrapper__round {
+  border-radius: 50%;
+}
+.a-img-wrapper img {
   max-width: 100%;
   max-height: 100%;
 }
-.img-wrapper .mask {
+.a-img-wrapper .mask {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,11 +115,11 @@ export default {
   opacity: 0;
   border: 5px solid transparent;
 }
-.img-wrapper:hover .mask {
+.a-img-wrapper:hover .mask {
   opacity: 1;
 }
 
-.img-wrapper .mask .action {
+.a-img-wrapper .mask .action {
   display: inline-block;
   z-index: 10;
   width: 16px;
@@ -124,5 +130,18 @@ export default {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.85);
   margin: 0 4px;
+}
+
+.a-img__loading,
+.a-img__error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
 }
 </style>
