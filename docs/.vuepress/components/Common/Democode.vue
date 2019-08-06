@@ -77,7 +77,7 @@ export default {
   margin-bottom: 24px;
   border-width: 1px;
   border-style: solid;
-  border-color: rgb(235, 235, 235);
+  border-color: #f2f2f2;
   border-image: initial;
   border-radius: 3px;
   transition: all 0.2s ease 0s;
@@ -88,7 +88,7 @@ export default {
 
   .meta {
     background-color: rgb(250, 250, 250);
-    border-top: 1px solid rgb(234, 238, 251);
+    border-top: 1px solid #f2f2f2;
     overflow: hidden;
     transition: height 0.2s ease 0s;
 
@@ -126,7 +126,7 @@ export default {
     margin-top: -1px;
     color: rgb(211, 220, 230);
     cursor: pointer;
-    border-top: 1px solid rgb(234, 238, 251);
+    border-top: 1px solid #f2f2f2;
 
     .ctrl {
       display: inline-block;
