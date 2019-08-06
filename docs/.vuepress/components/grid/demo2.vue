@@ -26,6 +26,9 @@
   margin-top: 30px;
   margin-bottom: 10px;
 }
+.grid-demo-wrapper-2 .gutter-box {
+  padding: 5px 0;
+}
 .grid-demo-wrapper-2 .col:nth-child(2n) .gutter-box {
   background: #00a0e9;
 }

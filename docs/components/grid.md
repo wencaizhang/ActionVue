@@ -75,6 +75,9 @@
       margin-top: 30px;
       margin-bottom: 10px;
     }
+    .grid-demo-wrapper .gutter-box {
+      padding: 5px 0;
+    }
     .grid-demo-wrapper .col:nth-child(2n) {
       background: #00a0e9;
     }

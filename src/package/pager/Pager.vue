@@ -1,14 +1,14 @@
 <template>
-  <div class="wraper" v-if="!hideIfOnePage || totalPage > 1">
+  <div class="a-pager-wraper" v-if="!hideIfOnePage || totalPage > 1">
     <span
-      class="pager prev-page"
+      class="a-pager a-prev-page"
       :class="{ disabled: currPage === 1 }"
       @click="onClick(currPage - 1)"
     >上一页</span>
     <template v-if="mode === 'normal'">
       <span
-        class="pager"
-        :class="{ 'curr-page': item == currPage, separator: item === '...'}"
+        class="a-pager"
+        :class="{ 'a-curr-page': item == currPage, 'a-separator': item === '...'}"
         v-for="(item, index) in pages"
         :key="item + index"
         @click="onClick(item)"
@@ -20,7 +20,7 @@
       {{ currPage }} / {{ totalPage }}
     </span>
     <span 
-      class="pager next-page"
+      class="a-pager a-next-page"
       :class="{ disabled: currPage === totalPage }"
       @click="onClick(currPage + 1)"
     >下一页</span>
@@ -88,12 +88,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wraper {
+$primary-color: #1890ff;                         // 全局主色
+.a-pager-wraper {
   display: flex;
   user-select: none;
   font-size: 12px;
+  line-height: 30px;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.pager {
+.a-pager {
   display: inline-flex;
   justify-content: center;
   box-sizing: border-box;
@@ -104,25 +107,28 @@ export default {
   min-width: 20px;
   height: 20px;
   line-height: 18px;
+  min-width: 32px;
+  height: 32px;
+  line-height: 30px;
   cursor: pointer;
 
-  &.separator {
+  &.a-separator {
     border: none;
     cursor: default;
   }
-  &.curr-page {
-    color: blue;
-    border-color: blue;
+  &.a-curr-page {
+    color: $primary-color;
+    border-color: $primary-color;
     pointer-events: none;
   }
   &:hover {
-    border-color: blue;
+    border-color: $primary-color;
   }
   &.disabled {
     cursor: not-allowed;
     pointer-events: none;
-    border-color: #ccc;
-    background-color: #ccc;
+    border-color: #d9d9d9;
+    color: rgba(0, 0, 0, 0.25);
   }
 }
 
