@@ -81,6 +81,7 @@ new Vue({
 + [ ] Scroll 滚动组件
 + [ ] Img Load 图片加载
 + [ ] 支付密码框
++ [x] BackTop 回到顶部
 
 ## Why Do This
 
