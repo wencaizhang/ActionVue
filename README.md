@@ -43,31 +43,23 @@ Here is a quick example to get you started.
 // src/main.js
 import Vue from 'vue';
 import actionvue from 'actionvue';
-import App from './App'
 
 Vue.use(actionvue);
-
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  render: h => h(App)
-})
 ```
 
 ## Components
 
 + [x] Button
 + [x] Input
-+ [x] icon
++ [x] Icon
 + [x] Toast
 + [x] Message
 + [ ] Notification
 + [x] Pager 分页器
 + [x] Grid 网格系统
 + [x] Skeleton 骨架屏
-+ [x] Sticky - 粘滞 / 吸顶组件
-+ [ ] Nav - 导航
++ [x] Sticky 粘滞 / 吸顶组件
++ [ ] Nav 导航
 + [ ] Carousel 轮播组件
 + [ ] Uploader 文件上传
 + [ ] Tab
