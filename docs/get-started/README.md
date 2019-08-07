@@ -21,7 +21,8 @@
 
 ## 导入组件
 
-在 `main.js` 中导入之后，就可以当做全局组件使用：
+### 完整引入
+在 `main.js` 中写入以下内容，就可以将 actionvue 完整引入使用：
 
 <Common-CodeBlock>
   <highlight-code slot="codeText" lang="javascript">
@@ -31,3 +32,7 @@
     Vue.use(actionvue);
   </highlight-code>
 </Common-CodeBlock>
+
+### 按需引入
+
+Coming soon! 敬请期待。
