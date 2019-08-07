@@ -1,9 +1,18 @@
 <template>
-  <button class="a-button" :class="clazz">
+  <button
+    class="a-button"
+    :class="clazz"
+    @click="$emit('click')"
+  >
     <slot name="icon">
-      <icon v-if="loading || icon" class="icon" :class="{loading: loading}" :type="loading ? 'loading' : icon" />
+      <icon
+        v-if="loading || icon"
+        class="icon"
+        :class="{loading: loading}"
+        :type="loading ? 'loading' : icon"
+      />
     </slot>
-    <div class="a-button-content" @click="$emit('click')">
+    <div class="a-button-content">
       <slot></slot>
     </div>
   </button>
@@ -35,6 +44,10 @@ export default {
         return v === 'left' || v === 'right'
       }
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
     block: {
       type: Boolean,
       default: false
@@ -42,12 +55,13 @@ export default {
   },
   computed: {
     clazz () {
-      const { type, loading, iconPosition, icon, block } = this;
+      const { type, loading, iconPosition, icon, block, disabled } = this;
       const typeList = [ 'primary', 'default', 'dashed', 'danger' ]
       return {
         [`icon-${iconPosition}`]: icon ? true : false,
         [`a-button-${type}`]: typeList.includes(type),
         ['a-button-block']: block,
+        ['a-button-disabled']: disabled
       }
     },
   },
@@ -182,6 +196,16 @@ $box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);  // 浮层阴影
   }
   .loading {
     animation: spin 1s infinite linear;
+  }
+  &.a-button-disabled,
+  &.a-button-disabled:hover,
+  &.a-button-disabled:focus {
+    color: rgba(0, 0, 0, 0.25);
+    background-color: #f5f5f5;
+    border-color: #d9d9d9;
+    text-shadow: none;
+    box-shadow: none;
+    cursor: not-allowed;
   }
 }
 </style>
