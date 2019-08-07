@@ -10,6 +10,7 @@ import ARow         from './package/Grid/row';
 import ASticky      from './package/sticky/sticky'
 import APager       from './package/pager/pager';
 import AImage       from './package/Image/main';
+import ABackTop     from './package/back-top/main';
 
 // 定义我们的插件
 export default {
@@ -25,6 +26,7 @@ export default {
     Vue.component('ASticky', ASticky);
     Vue.component('APager', APager);
     Vue.component('AImage', AImage);
+    Vue.component('ABackTop', ABackTop);
 
     Vue.prototype.$message = Amessage;
   }
