@@ -18,6 +18,7 @@ module.exports = {
         collapsable: false,
         children: [
           '/get-started/',
+          '/get-started/z-index-guide',
         ]
       },
       {
