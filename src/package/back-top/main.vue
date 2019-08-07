@@ -38,22 +38,12 @@ export default {
   },
   data () {
     return {
-      scrollTop: '',
+      scrollTop: 0,
       visible: false,
       interval: null,
-
-      m1: null,
-      m2: null,
     }
   },
   mounted () {
-    // import("../../../assets/music/back-top-music.mp3").then(m => {
-    //   this.m1 = m;
-    // })
-    // import("../../../assets/music/back-top-music-2.mp3").then(m => {
-    //   this.m2 = m;
-    //   console.log(this.m1, this.m2);
-    // })
     window.addEventListener('scroll', this.handleScroll)
   },
   beforeDestroy () {
@@ -72,6 +62,7 @@ export default {
       this.interval = setInterval(() => {
         this.scrollTop = this.scrollTop + (-this.scrollTop) / this.rate
         window.scrollTo(0, this.scrollTop)
+
         if (this.scrollTop <= 0) {
           window.scrollTo(0, 0)
           clearInterval(this.interval)
