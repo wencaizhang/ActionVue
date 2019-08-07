@@ -41,6 +41,30 @@
 </Common-Democode>
 
 
+## 禁用状态
+
+<Common-Democode title="" description="">
+  <button-disabled-demo />
+  <highlight-code slot="codeText" lang="vue">
+    <template>
+      <div>
+        <a-button type="primary">Primary</a-button>
+        <a-button type="primary" disabled>Primary(disabled)</a-button>
+        <br />
+        <a-button>Default</a-button>
+        <a-button disabled>Default(disabled)</a-button>
+        <br />
+        <a-button type="dashed">Dashed</a-button>
+        <a-button type="dashed" disabled>Dashed(disabled)</a-button>
+        <br />
+        <a-button type="danger">Danger</a-button>
+        <a-button type="danger" disabled>Danger(disabled)</a-button>
+      </div>
+    </template>
+  </highlight-code>
+</Common-Democode>
+
+
 ## 图标按钮
 
 <Common-Democode title="" description="">
@@ -115,3 +139,19 @@
     </template>
   </highlight-code>
 </Common-Democode>
+
+## API
+
+参数 | 说明 | 类型 | 默认值
+:--- | :--- | :--- | :---
+`type` | 设置按钮类型，可选值为 `primary` `dashed` `danger` | String | -
+`loading` | 设置按钮载入状态 | Boolean | `false`
+`disabled` | 按钮禁用状态 | Boolean | `false`
+`block` | 将按钮宽度调整为其父宽度的选项 | Boolean | `false`
+`icon` | 设置按钮的图标类型 | String | -
+
+### 事件
+
+事件名 | 说明 | 回调参数
+:--- | :--- | :---
+`click` | 点击按钮时的回调 | `function()`
