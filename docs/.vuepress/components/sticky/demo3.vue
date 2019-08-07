@@ -1,13 +1,22 @@
 <template>
   <div class="wraper" ref="wraper">
-    <p>基础版</p>
-    <a-sticky>
+    <a-sticky position="bottom" :getContainer="getContainer">
       <nav>
-        <h3>导航1</h3>
+        <h3>导航3，吸附在底部</h3>
       </nav>
     </a-sticky>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    getContainer () {
+      return this.$refs.wraper
+    }
+  }
+}
+</script>
 
 <style scoped>
 h3 {

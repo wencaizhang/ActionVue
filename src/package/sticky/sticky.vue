@@ -1,6 +1,16 @@
 <template>
-  <div class="sticky-wraper" ref="wrapper" :style="{ height }">
-    <div class="sticky-inner" :style="{ position: sticky ? 'fixed' : '', left, width, top, bottom, }">
+  <div
+    ref="wrapper"
+    class="a-sticky-wraper"
+    :class="wrapperclazz"
+    :style="wrapperStyles"
+  >
+    <div
+      ref="inner-wrapper"
+      class="a-sticky-inner"
+      :class="innerClazz"
+      :style="innerStyles"
+    >
       <slot />
     </div>
   </div>
@@ -26,7 +36,12 @@ export default {
     },
     customClass: {
       type: String,
-      default: 'stuck',
+    },
+    getContainer: {
+      type: Function,
+      default () {
+        return document.body
+      }
     }
   },
   data () {
@@ -36,57 +51,85 @@ export default {
       bottom: undefined,
       left: undefined,
       width: undefined,
-      height: undefined
-    }
-  },
-  beforeDestroy () {
-    window.removeEventListener('scroll', this.windowScrollHandler)
-  },
-  computed: {
-    clazz () {
-      return { [this.customClass]: this.sticky }
+      height: undefined,
     }
   },
   mounted () {
     this.windowScrollHandler = this._windowScrollHandler.bind(this)
     window.addEventListener('scroll', this.windowScrollHandler)
   },
-  methods: {
-    getDistance () {
-      let offset = this.$refs.wrapper.getBoundingClientRect()
-      return offset[this.position]
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.windowScrollHandler)
+  },
+  computed: {
+    wrapperclazz () {
+      return { [this.customClass]: this.sticky }
     },
-    _windowScrollHandler () {
-      let { height, left, width } = this.$refs.wrapper.getBoundingClientRect()
-
-      let distance = this.position === 'top'
-        ? this.getDistance()
-        : document.documentElement.clientHeight - this.getDistance()
-
-      if (distance < this.distance) {
-        this.sticky = true
-        this.height = height + 'px'
-        this.left = left + 'px'
-        this.width = width + 'px'
-        this[this.position] = this.distance + 'px'
-      } else {
-        this.sticky = false
-        this.height = undefined
-        this.left = undefined
-        this.width = undefined
-        this[this.position] = undefined
+    wrapperStyles () {
+      const { isSupperSticky, height, } = this;
+      return isSupperSticky ? {} : {
+        height,
       }
+    },
+    innerClazz () {
+      const { sticky, customClass } = this;
+      return {
+        [`a-sticky-inner-fixed`]: sticky,
+        [customClass]: customClass && sticky
+      }
+    },
+    innerStyles () {
+      const { sticky, left, width, top, bottom } = this;
+      return {
+        position: sticky ? 'fixed' : '',
+        left, width, top, bottom,
+      }
+    },
+  },
+  methods: {
+    _windowScrollHandler () {
+      let offset = this.$refs['wrapper'].getBoundingClientRect()
+      let offset_container = this.getContainer().getBoundingClientRect();
+      let { top, left, bottom, width, height } = offset;
+
+      // sticky 元素容器顶部距离文档顶部的距离
+      let distance = this.position === 'top'
+        ? top
+        : document.documentElement.clientHeight - bottom;
+
+      let limit = this.position === 'top'
+        ? offset_container.bottom
+        : offset_container.top;
+
+      distance <= this.distance && this.distance < limit
+        ? this.setStyles(offset)
+        : this.clearStyles();
+    },
+    setStyles ({ top, left, width, height }) {
+      this.sticky         = true
+      this.height         = height + 'px'
+      this.left           = left   + 'px'
+      this.width          = width  + 'px'
+      this[this.position] = this.distance + 'px'
+    },
+    clearStyles () {
+      this.sticky         = false
+      this.height         = undefined
+      this.left           = undefined
+      this.width          = undefined
+      this[this.position] = undefined
     }
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.sticky-wraper {
-  border: 1px solid #ccc;
+.a-sticky-wraper {
+  // border: 1px solid #ccc;
 
-  .sticky-inner {
-    position: fixed;
+  .a-sticky-inner {
+    z-index: 100
   }
 }
+
 </style>

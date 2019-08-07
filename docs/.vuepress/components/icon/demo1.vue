@@ -15,7 +15,7 @@ import ClipboardJS from 'clipboard';
 export default {
   data () {
     return {
-      iconList: ["down", "up", "left", "right", "close-circle", "check-circle", "loading", "error", "download", "upload", "user", "eye", "setting", "warning-circle", "info-circle", "setting", "home"],
+      iconList: ["down", "up", "left", "right", "close-circle", "check-circle", "loading", "error", "download", "upload", "user", "eye", "warning-circle", "info-circle", "setting", "home"],
     }
   },
   mounted () {
