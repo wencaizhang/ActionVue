@@ -2,9 +2,9 @@
 
 ## 图标列表
 
-<Common-Democode title="" description="">
-  <icon-demo1 />
-</Common-Democode>
+*具体 icon 的 type 可以通过下面示例看到，点击会自动复制相应代码。*
+
+<icon-demo1 />
 
 
 ## API
@@ -13,3 +13,4 @@
 属性 |	说明	| 类型 |	默认值
 :--- | :--- | :--- | :---
 `type` | 图标类型 | String | -
+

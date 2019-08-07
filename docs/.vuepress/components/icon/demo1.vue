@@ -15,14 +15,7 @@ import ClipboardJS from 'clipboard';
 export default {
   data () {
     return {
-      iconList: [
-        "home",
-        "user",
-        "download",
-        "upload",
-        "loading",
-        "setting",
-      ],
+      iconList: ["down", "up", "left", "right", "close-circle", "check-circle", "loading", "error", "download", "upload", "user", "eye", "setting", "warning-circle", "info-circle", "setting", "home"],
     }
   },
   mounted () {
@@ -52,11 +45,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+$primary-color: #1890ff;
 .icon-list {
   font-size: 3em;
   margin: 0;
   padding: 0;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .icon-list li {
   display: inline-block;
@@ -64,14 +59,15 @@ export default {
   list-style: none;
   cursor: pointer;
   text-align: center;
-  padding: 0 16px;
+  padding: 0 16px 5px;
+  border-radius: 4px;
 }
 .icon-list li:hover {
-  background-color: lightblue;
+  background-color: $primary-color;
   color: #fff;
 }
 .icon-list li span {
   display: block;
-  font-size: 16px;
+  font-size: 14px;
 }
 </style>
