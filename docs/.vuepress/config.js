@@ -34,6 +34,7 @@ module.exports = {
           '/components/toast',
           '/components/image',
           '/components/message',
+          '/components/back-top',
         ]
       },
     ]
