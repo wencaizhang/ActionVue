@@ -1,102 +1,170 @@
 <template>
-  <section class="toast" :style="styles">
-    <slot></slot>
-    <span class="close" v-if="closeText">
-      <span @click="onClickClose">{{ closeText }}</span>
-    </span>
+  <section class="a-toast-wrapper" ref="toast" :class="clazz">
+    <div class="a-toast-inner">
+      <span class="a-toast-massage" v-if="enableHtml" v-html="message" />
+      <span class="a-toast-massage" v-else v-text="message" />
+
+      <span
+        v-if="showClose && closeText"
+        ref="close-box"
+        @click="onClickClose"
+        class="a-toast-close-box"
+      >
+        {{ closeText }}
+      </span>
+    </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'Toast',
-  components: {},
+  name: "Toast",
   props: {
+    message: {
+      type: String,
+      required: true
+    },
     durition: {
       type: Number,
       default: 3
     },
+    enableHtml: {
+      type: Boolean,
+      default: false
+    },
+    showClose: {
+      type: Boolean,
+      default: true
+    },
     autoClose: {
       type: Boolean,
-      default: true,
+      default: true
     },
     closeText: {
       type: String,
-      default: '确定',
+      default: "确定"
     },
-    close: {
-      type: Function,
+    onClose: {
+      type: Function
     },
     position: {
       type: String,
-      default: 'top',
-      validtor (v) {
-        return ['top', 'middle', 'bottom'].includes(v);
+      default: "top",
+      validtor(v) {
+        return ["top", "middle", "bottom"].includes(v);
       }
     }
   },
   computed: {
-    styles () {
-      const map = {
-        top: { top: '15px' },
-        middle: { top: '50%' },
-        bottom: { bottom: '15px' },
-      }
-      return map[this.position]
-    }
+    clazz() {
+      return [`a-toast-position-${this.position}`];
+    },
   },
-  mounted () {
-    if (this.autoClose) {
-      setTimeout(() => {
-        this.remove()
-      }, this.durition * 1000)
-    }
+  mounted() {
+    this.updateStyles();
+    this.execAutoClose();
   },
-  data () {
-    return {}
+  data() {
+    return {
+      timer: null,
+    };
   },
   methods: {
-    remove () {
-      this.$el.remove()
+    updateStyles() {
+      if (!this.showClose) { return; }
+      this.$nextTick(() => {
+        let height = this.$refs.toast.getBoundingClientRect().height;
+        this.$refs['close-box'].style.height = `${height}px`;
+        this.$refs['close-box'].style.lineHeight = `${height}px`;
+      });
+    },
+    execAutoClose() {
+      if (this.autoClose) {
+        this.timer = setTimeout(() => {
+          this.remove();
+        }, this.durition * 1000);
+      }
+    },
+    remove() {
+      this.$el.remove();
       // destroy 并不会把元素删掉，所以要自己手动删掉
-      this.$destroy()
+      this.$destroy();
+      clearTimeout(this.timer);
+      this.closeText && this.onClose && this.onClose();
     },
-    onClickClose () {
-      this.remove()
-      this.closeText && this.close && this.close();
-    },
+    onClickClose() {
+      this.remove();
+    }
   }
-}
+};
 </script>
 
-<style scoped >
-/* $font-size: 14px;
-  $toast-height: 40px;
-  $toast-bg: rgba(0, 0, 0, 0.75); */
+<style lang="scss" scoped>
+$font-size: 14px;
+$toast-min-height: 40px;
+$toast-bg: rgba(0, 0, 0, 0.75);
+$animation-duration: 300ms;
+@keyframes slide-up {
+  0% { opacity: 0; transform: translateY(100%); }
+  100% { opacity: 1; transform: translateY(0%); }
+}
+@keyframes slide-down {
+  0% { opacity: 0; transform: translateY(-100%); }
+  100% { opacity: 1; transform: translateY(0%); }
+}
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
-.toast {
-  font-size: 14px;
-  background-color: rgba(0, 0, 0, 0.75);
-  color: #fff;
-
+.a-toast-wrapper {
   position: fixed;
   left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
 
+  &.a-toast-position-top {
+    top: 15px;
+    .a-toast-inner {
+      animation: slide-down $animation-duration;
+    }
+  }
+  &.a-toast-position-middle {
+    top: 50%;
+    transform: translateX(-50%);
+    .a-toast-inner {
+      animation: fade-in $animation-duration;
+    }
+  }
+  &.a-toast-position-bottom {
+    bottom: 15px;
+
+    .a-toast-inner {
+      animation: slide-up $animation-duration;
+    }
+  }
+}
+
+.a-toast-inner {
+  font-size: $font-size;
+  background-color: $toast-bg;
+  min-height: $toast-min-height;
+  line-height: 1.8;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
+  
   display: flex;
   align-items: center;
 
-  transform: translate(-50%);
-  line-height: 1.8;
-  padding: 5px 16px;
-  border-radius: 4px;
-}
+  .a-toast-massage {
+    padding: 8px 16px;
+  }
 
-.close {
-  flex-shrink: 0;
-  display: inline-block;
-  border-left: 1px solid #666;
-  margin-left: 8px;
-  padding-left: 8px;
+  .a-toast-close-box {
+    border-left: 1px solid #666;
+    padding: 0 16px;
+    cursor: pointer;
+  }
 }
 </style>
