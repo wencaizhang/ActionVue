@@ -67,6 +67,7 @@ export default {
   data() {
     return {
       timer: null,
+      closed: false,
     };
   },
   methods: {
@@ -86,11 +87,16 @@ export default {
       }
     },
     remove() {
+      if (this.closed) { return; }
+      /**
+       * closed 状态可以避免 onClose 中再次调用 toast 时导致的循环调用
+       */
+      this.closed = true;
+      clearTimeout(this.timer);
+      this.closeText && this.onClose && this.onClose();
       this.$el.remove();
       // destroy 并不会把元素删掉，所以要自己手动删掉
       this.$destroy();
-      clearTimeout(this.timer);
-      this.closeText && this.onClose && this.onClose();
     },
     onClickClose() {
       this.remove();
