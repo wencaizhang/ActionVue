@@ -153,19 +153,25 @@
 
 Toast 默认采用单例模式，即同一时间只会存在一个 Toast，如果需要在同一时间弹出多个 Toast，可以参考下面的示例：
 
-```js
-// main.js
-Vue.prototype.$toast.allowMultiple();
-```
+
+<Common-CodeBlock>
+  <highlight-code slot="codeText" lang="javascript">
+    // main.js
+    Vue.prototype.$toast.allowMultiple();
+  </highlight-code>
+</Common-CodeBlock>
+
 
 `allowMultiple` 方法接收一个 Boolean 类型参数来决定是否允许同时存在多个 Toast，参数默认值是 `true`。
 
 组件中调用方式不变。
 
-```js
-this.$toast('第一个 Toast');
-this.$toast('第二个 Toast');
-```
+<Common-CodeBlock>
+  <highlight-code slot="codeText" lang="javascript">
+    this.$toast('第一个 Toast');
+    this.$toast('第二个 Toast');
+  </highlight-code>
+</Common-CodeBlock>
 
 
 ## API
@@ -176,18 +182,23 @@ this.$toast('第二个 Toast');
 
 最简单的调用方式：
 
-```js
-this.$toast('this is a toast')
-```
+<Common-CodeBlock>
+  <highlight-code slot="codeText" lang="javascript">
+    this.$toast('this is a toast')
+  </highlight-code>
+</Common-CodeBlock>
 
 或者传入一个对象：
 
-```js
-this.$toast({
-  message: 'this is a toast',
-  durition: 2
-})
-```
+<Common-CodeBlock>
+  <highlight-code slot="codeText" lang="javascript">
+    this.$toast({
+      message: 'this is a toast',
+      durition: 2
+    })
+  </highlight-code>
+</Common-CodeBlock>
+
 
 下面是详细的参数：
 
