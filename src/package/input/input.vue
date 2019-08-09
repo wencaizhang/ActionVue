@@ -12,7 +12,10 @@
         :disabled="disabled"
         :readonly="readonly"
         v-bind="$attrs"
-        @input="onInput"
+        @input="$emit('input', $event.target.value)"
+        @change="$emit('change', $event)"
+        @focus="$emit('focus', $event)"
+        @blur="$emit('blur', $event)"
       />
       <span v-if="$slots.suffix" class="a-input-suffix">
         <slot name="suffix" />
@@ -54,19 +57,6 @@ export default {
       type: String
     }
   },
-  mounted () {
-    
-    
-  },
-  methods: {
-    onInput (e) {
-      this.$emit("input", e.target.value);
-      this.$emit("change", e);
-    },
-    focus () {
-      this.$refs.input.focus();
-    }
-  }
 };
 </script>
 
