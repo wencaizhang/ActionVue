@@ -11,6 +11,10 @@ import ASticky      from './package/sticky/sticky'
 import APager       from './package/pager/pager';
 import AImage       from './package/Image/main';
 import ABackTop     from './package/back-top/main';
+import ATabs        from './package/tabs/tabs';
+import ATabItem     from './package/tabs/tab-item';
+import ASwipe       from './package/swipe/swipe';
+import ASwipeItem   from './package/swipe/swipe-item';
 
 // 定义我们的插件
 export default {
@@ -27,6 +31,10 @@ export default {
     Vue.component('APager', APager);
     Vue.component('AImage', AImage);
     Vue.component('ABackTop', ABackTop);
+    Vue.component('ATabs', ATabs);
+    Vue.component('ATabItem', ATabItem);
+    Vue.component('ASwipe', ASwipe);
+    Vue.component('ASwipeItem', ASwipeItem);
 
     Vue.prototype.$message = Amessage;
   }
