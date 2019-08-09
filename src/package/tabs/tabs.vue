@@ -38,10 +38,25 @@ export default {
       .map(item => ({
         title: item.title,
         name: item.name,
+        disabled: this.getBool(item.$options.propsData.disabled)
       }))
     this.selectedKey = this.value || this.navList[0].name;
   },
   methods: {
+    getBool (v) {
+      // TODO
+      // 问题调查
+      // disabled 简写时：<a-tab-item title="tab 2" name="2" disabled>
+      // 通过 propsData 得到的 disabled 值是 ""
+      // 而通过 this.disabled 得到的是正常的 true 和 false
+      if (v === void(0)) {
+        return false;
+      }
+      if (v === '') {
+        return true;
+      }
+      return !!v;
+    },
     onChange (name) {
       this.selectedKey = name;
       let index = this.navList.findIndex(item => item.name === name);

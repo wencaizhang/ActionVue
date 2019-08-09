@@ -7,7 +7,7 @@
         :key="item.name"
         class="a-tabs-tab"
         :ref="`a-tabs-nav-${item.name}`"
-        :class="{ 'a-tabs-tab-selected': selectedKey === item.name }"
+        :class="item | clazz(selectedKey)"
         @click="onClick(item.name)"
       >
         {{ item.title }}
@@ -29,6 +29,14 @@ export default {
   data () {
     return {
 
+    }
+  },
+  filters: {
+    clazz (item, selectedKey) {
+      return {
+        'a-tabs-tab-selected': selectedKey === item.name,
+        'a-tabs-tab-disabled': item.disabled
+      }
     }
   },
   mounted () {
@@ -83,6 +91,10 @@ $transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
       &.a-tabs-tab-selected {
         color: $primary-color;
         font-weight: bold;
+      }
+      &.a-tabs-tab-disabled {
+        color: rgba(0, 0, 0, 0.25);
+        cursor: not-allowed;
       }
     }
   }

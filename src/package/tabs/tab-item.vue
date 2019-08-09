@@ -15,8 +15,12 @@ export default {
     name: {
       type: String,
       required: true
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
-  }
+  },
 }
 </script>
 
