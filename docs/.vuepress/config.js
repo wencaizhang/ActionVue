@@ -32,7 +32,7 @@ module.exports = {
           '/components/grid',
           '/components/pager',
           '/components/skeleton',
-          '/components/skicky',
+          '/components/sticky',
           '/components/toast',
           '/components/image',
           '/components/message',
