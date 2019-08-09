@@ -1,6 +1,10 @@
 <template>
   <div class="alert">
-    <div class="alert-main" v-for="item in notices" :key="item.name">
+    <div
+      class="alert-main"
+      v-for="item in notices"
+      :key="item.name"
+    >
       <div class="alert-content">
         <div class="conten">
           <i class="alert-icon" :class="'alert-icon-' + item.type"></i>
