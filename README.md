@@ -19,10 +19,6 @@
   [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/wencaizhang/ActionVue/blob/master/LICENSE)
 </div>
 
-## Document
-
-请查看 <a href="https://coolfe.fun/ActionVue/" rel="noopener" target="_blank">文档</a>
-
 ## Installation
 
 Install the package in your project directory with:
@@ -46,6 +42,10 @@ import actionvue from 'actionvue';
 
 Vue.use(actionvue);
 ```
+
+## Document
+
+具体使用方法请查看 <a href="https://coolfe.fun/ActionVue/" rel="noopener" target="_blank">文档</a>
 
 ## Components
 
