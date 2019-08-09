@@ -1,20 +1,6 @@
 <template>
   <div class="wrapper">
 
-    <div class="menu">
-      <h3>目录</h3>
-      <a @click="$router.go(-1)">&lt;- 返回</a>
-      <router-link :to="{ name: 'button' }">Button Demo</router-link>
-      <router-link :to="{ name: 'input' }">input Demo</router-link>
-      <router-link :to="{ name: 'icon' }">icon Demo</router-link>
-      <router-link :to="{ name: 'toast' }">toast Demo</router-link>
-      <router-link :to="{ name: 'grid' }">Grid Demo</router-link>
-      <router-link :to="{ name: 'pager' }">pager Demo</router-link>
-      <router-link :to="{ name: 'collapse' }">collapse Demo</router-link>
-      <router-link :to="{ name: 'sticky' }">sticky Demo</router-link>
-      <router-link :to="{ name: 'keyboard' }">keyboard Demo</router-link>
-    </div>
-
     <div class="content">
       <router-view />
       
