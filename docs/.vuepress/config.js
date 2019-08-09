@@ -37,6 +37,8 @@ module.exports = {
           '/components/image',
           '/components/message',
           '/components/back-top',
+          '/components/tabs',
+          '/components/swipe',
         ]
       },
     ]
