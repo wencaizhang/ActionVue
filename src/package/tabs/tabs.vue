@@ -19,7 +19,10 @@ export default {
     // selectedKey: {
     //   type: String,
     //   default: '1',
-    // }
+    // },
+    value: {
+      type: String,
+    },
   },
   data () {
     return {
@@ -36,12 +39,15 @@ export default {
         title: item.title,
         name: item.name,
       }))
+    this.selectedKey = this.value || this.navList[0].name;
   },
   methods: {
     onChange (name) {
       this.selectedKey = name;
       let index = this.navList.findIndex(item => item.name === name);
       this.$refs.content.style.marginLeft = `-${index * 100}%`
+      this.$emit('input', name);
+      this.$emit('change', name);
     }
   },
 }

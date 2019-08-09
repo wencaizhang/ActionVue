@@ -69,7 +69,7 @@ $transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   margin: 0 0 16px 0;
 
   .a-tabs-tab-list {
-    border-bottom: 1px solid rgb(232, 232, 232);;
+    border-bottom: 1px solid rgb(232, 232, 232);
 
     .a-tabs-tab {
       display: inline-block;
