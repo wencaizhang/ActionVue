@@ -2,7 +2,6 @@
   <div
     ref="wrapper"
     class="a-sticky-wraper"
-    :class="wrapperclazz"
     :style="wrapperStyles"
   >
     <div
@@ -47,10 +46,10 @@ export default {
   data () {
     return {
       sticky: false,
-      top: undefined,
+      top:    undefined,
       bottom: undefined,
-      left: undefined,
-      width: undefined,
+      left:   undefined,
+      width:  undefined,
       height: undefined,
     }
   },
@@ -62,14 +61,9 @@ export default {
     window.removeEventListener('scroll', this.windowScrollHandler)
   },
   computed: {
-    wrapperclazz () {
-      return { [this.customClass]: this.sticky }
-    },
     wrapperStyles () {
-      const { isSupperSticky, height, } = this;
-      return isSupperSticky ? {} : {
-        height,
-      }
+      const { height, } = this;
+      return { height }
     },
     innerClazz () {
       const { sticky, customClass } = this;
@@ -125,10 +119,10 @@ export default {
 
 <style lang="scss" scoped>
 .a-sticky-wraper {
-  // border: 1px solid #ccc;
 
   .a-sticky-inner {
-    z-index: 100
+    z-index: 100;
+    overflow: hidden;
   }
 }
 
