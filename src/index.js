@@ -15,6 +15,11 @@ import ATabs        from './package/tabs/tabs';
 import ATabItem     from './package/tabs/tab-item';
 import ASwipe       from './package/swipe/swipe';
 import ASwipeItem   from './package/swipe/swipe-item';
+import ALayout         from './package/layout/layout';
+import ALayoutHeader   from './package/layout/layout-header';
+import ALayoutSider   from './package/layout/layout-sider';
+import ALayoutContent   from './package/layout/layout-content';
+import ALayoutFooter   from './package/layout/layout-footer';
 
 // 定义我们的插件
 export default {
@@ -35,6 +40,12 @@ export default {
     Vue.component('ATabItem', ATabItem);
     Vue.component('ASwipe', ASwipe);
     Vue.component('ASwipeItem', ASwipeItem);
+
+    Vue.component('ALayout', ALayout);
+    Vue.component('ALayoutHeader', ALayoutHeader);
+    Vue.component('ALayoutSider', ALayoutSider);
+    Vue.component('ALayoutContent', ALayoutContent);
+    Vue.component('ALayoutFooter', ALayoutFooter);
 
     Vue.prototype.$message = Amessage;
   }
