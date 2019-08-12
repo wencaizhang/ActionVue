@@ -5,23 +5,37 @@
 </template>
 
 <script>
+import util from "../../utils/util";
+
 export default {
-  // props: {
-  //   collapsed: {
-  //     type: Boolean,
-  //     default: false,
-  //   }
-  // },
+  props: {
+    collapsed: {
+      type: Boolean,
+      default: false,
+    }
+  },
+  watch: {
+    collapsed () {
+      this.setCollapsed()
+    }
+  },
+  mounted () {
+    this.childSidebar = util.findComponentDownward(this, 'a-layout-sider');
+    this.layoutClazz['a-layout-has-sider'] = this.$children.some(item => item.$options.name === 'a-layout-sider')
+    this.setCollapsed();
+  },
   data () {
     return {
       layoutClazz: {
         'a-layout-has-sider': false
       },
-      hasSider: false,
+      childSidebar: null,
     }
   },
-  mounted () {
-    this.layoutClazz['a-layout-has-sider'] = this.$children.some(item => item.$options.name === 'a-layout-sider')
+  methods: {
+    setCollapsed () {
+      if (this.childSidebar) { this.childSidebar.$data.collapsed = this.collapsed; }
+    }
   }
 }
 </script>
