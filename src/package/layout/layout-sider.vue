@@ -9,21 +9,12 @@
 <script>
 export default {
   name: "a-layout-sider",
-  data() {
-    return {
-      collapsed: true,
-      siderWidth: 0
-    };
-  },
-  mounted() {
-    this.getSiderWidth();
-  },
-  methods: {
-    getSiderWidth() {
-      let { width } = this.$el.getBoundingClientRect();
-      this.siderWidth = width;
+  props: {
+    collapsed: {
+      type: Boolean,
+      default: false,
     }
-  }
+  },
 };
 </script>
 
@@ -34,12 +25,9 @@ $siderWidth: 200px;
   width: $siderWidth;
 }
 
-/* 可以设置不同的进入和离开动画 */
-/* 设置持续时间和动画函数 */
 .slide-enter-active,
 .slide-leave-active {
   transition: all 0.3s ease;
-  // cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 
 .slide-enter,
