@@ -17,9 +17,10 @@ import ASwipe       from './package/swipe/swipe';
 import ASwipeItem   from './package/swipe/swipe-item';
 import ALayout         from './package/layout/layout';
 import ALayoutHeader   from './package/layout/layout-header';
-import ALayoutSider   from './package/layout/layout-sider';
-import ALayoutContent   from './package/layout/layout-content';
+import ALayoutSider    from './package/layout/layout-sider';
+import ALayoutContent  from './package/layout/layout-content';
 import ALayoutFooter   from './package/layout/layout-footer';
+import ASwitch         from './package/switch/switch';
 
 // 定义我们的插件
 export default {
@@ -46,6 +47,8 @@ export default {
     Vue.component('ALayoutSider', ALayoutSider);
     Vue.component('ALayoutContent', ALayoutContent);
     Vue.component('ALayoutFooter', ALayoutFooter);
+    
+    Vue.component('ASwitch', ASwitch);
 
     Vue.prototype.$message = Amessage;
   }
