@@ -12,6 +12,9 @@ export default {
 
 <style lang="scss" scoped>
 .a-layout-footer {
-
+  background: #f0f2f5;
+  padding: 24px 50px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
 }
 </style>

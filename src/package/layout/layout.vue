@@ -6,6 +6,12 @@
 
 <script>
 export default {
+  // props: {
+  //   collapsed: {
+  //     type: Boolean,
+  //     default: false,
+  //   }
+  // },
   data () {
     return {
       layoutClazz: {
@@ -25,6 +31,8 @@ export default {
   display: flex;
   flex: auto;
   flex-direction: column;
+
+  overflow: hidden;
 
   &.a-layout-has-sider {
     flex-direction: row;
