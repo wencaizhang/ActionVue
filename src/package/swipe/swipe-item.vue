@@ -1,22 +1,52 @@
 <template>
-  <div class="a-swipe-item">
-    <slot />
-  </div>
+  <transition name="slide">
+    <div v-show="visible" key="name" class="a-swipe-item" :class="{ 'animation-reverse': reverse }">
+      <slot />
+    </div>
+  </transition>
 </template>
 
 <script>
 export default {
-  name: 'a-swipe-item',
-
-}
+  name: "a-swipe-item",
+  props: {
+    name: [String, Number],
+    required: true,
+  },
+  data() {
+    return {
+      visible: false,
+      reverse: false,
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
 .a-swipe-item {
-  flex-shrink: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.slide-leave-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.slide-enter-active,
+.slide-leave-active {
+  transition: all .5s ease;
+}
+
+.slide-enter {
+  transform: translateX(100%);
+  &.animation-reverse {
+    transform: translateX(-100%);
+  }
+}
+.slide-leave-to {
+  transform: translateX(-100%);
+  &.animation-reverse {
+    transform: translateX(100%);
+  }
 }
 </style>
