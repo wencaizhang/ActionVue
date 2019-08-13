@@ -39,7 +39,8 @@ module.exports = {
           '/components/back-top',
           '/components/tabs',
           '/components/swipe',
-          '/components/layout',
+          // '/components/layout',
+          '/components/switch',
         ]
       },
     ]
