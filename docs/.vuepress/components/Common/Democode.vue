@@ -1,24 +1,29 @@
 <template>
-  <div class="demo-block">
+  <div class="demo-block" @mouseenter="showCtrl = true" @mouseleave="showCtrl = false">
     <div class="source">
       <slot></slot>
     </div>
+
     <div class="meta">
+      <!-- 描述 -->
       <div v-show="description" class="desc">
         <small>{{ description }}</small>
       </div>
-      <div v-show="isShowCode" class="highlight" ref="highlight">
-        <span class="copy-code-btn" :class="className" title="点击复制代码">复制</span>
-        <transition name="slide">
-          <slot name="codeText"></slot>
-        </transition>
-      </div>
+      <!-- 代码块 -->
+      <transition name="expand">
+        <div v-show="isShowCode" class="highlight" ref="highlight">
+          <span class="copy-code-btn" :class="className" title="点击复制代码">复制</span>
+            <slot name="codeText"></slot>
+        </div>
+      </transition>
     </div>
+
+    <!-- 显示隐藏控制按钮 -->
     <div class="demo-block-control" @click="isShowCode = !isShowCode">
-      <div class="ctrl">
-        <i class="icon" :class="iconClass"></i>
-        <span>{{ codeTextBtn }}</span>
-      </div>
+      <a-icon :type="iconType" :class="{ hovering: showCtrl }"></a-icon>
+      <transition name="text-slide">
+        <span v-show="showCtrl">{{ codeTextBtn }}</span>
+      </transition>
     </div>
   </div>
 </template>
@@ -34,12 +39,12 @@ export default {
     return {
       isShowCode: false,
       clip: null,
-
+      showCtrl: false,
     };
   },
   computed: {
-    iconClass () {
-      return this.isShowCode ? "triangle-up" : "triangle-down";
+    iconType () {
+      return this.isShowCode ? "up" : "down";
     },
     codeTextBtn() {
       return this.isShowCode ? "隐藏代码" : "显示代码";
@@ -108,11 +113,11 @@ export default {
       margin: 10px;
     }
   }
-  &:hover .demo-block-control span {
-    display: inline;
-  }
+
   .demo-block-control:hover {
     color: rgb(25, 137, 250);
+    color: #409eff;
+    background-color: #f9fafc;
   }
 
   .demo-block-control {
@@ -127,87 +132,57 @@ export default {
     color: rgb(211, 220, 230);
     cursor: pointer;
     border-top: 1px solid #f2f2f2;
+    & > .a-icon {
+      font-size: 16px;
+      height: 44px;
+      line-height: 44px;
+      transition: .3s;
 
-    .ctrl {
-      display: inline-block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transform: translate(-50%, -50%);
+      &.hovering {
+        transform: translateX(-40px);
+      }
     }
-    & span {
-      display: none;
+    & > span {
+      position: absolute;
+      transform: translateX(-30px);
       font-size: 14px;
       line-height: 44px;
-      margin-left: 16px;
-      transition: all 0.3s ease 0s;
+      transition: .3s;
+      display: inline-block
     }
-
-    // .icon {
-    //   height: 10px;
-    //   width: 10px;
-    //   border: 1px;
-    //   background-color: currentColor;
-    //   display: inline-block;
-    // }
   }
 }
 
 // 代码块展开收缩动画
-.expand-enter-active {
-  transition: all 0.5s ease;
-  height: auto;
-  overflow: hidden;
-}
-.expand-leave-active {
-  transition: all 0.5s ease;
-  height: 0px;
-  overflow: hidden;
-}
-.expand-enter,
-.expand-leave {
-  height: 0;
-  opacity: 0;
+// .expand-enter-active,
+// .expand-leave-active {
+//   transition-duration: 1s;
+//   transition-timing-function: ease-in;
+//   // transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+// }
+
+// .expand-enter,
+// .expand-leave-to {
+//   // transform: translateY(-100%);
+// }
+
+.demo-block .demo-block-control .text-slide-enter,
+.demo-block .demo-block-control .text-slide-leave-active {
+    opacity: 0;
+    transform: translateX(10px)
 }
 
-.slide-enter-active {
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-}
+// .slide-enter-active,
+// .slide-leave-active {
+//   transition-duration: 0.3s;
+//   transition-timing-function: ease-in;
+//   // transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+// }
 
-.slide-leave-active {
-  transition-duration: 0.3s;
-  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-}
-
-.slide-enter-to,
-.slide-leave {
-  height: auto;
-  overflow: hidden;
-}
-
-.slide-enter,
-.slide-leave-to {
-  height: auto;
-  overflow: hidden;
-}
-
-// 三角形图标
-
-.icon.triangle-up {
-  width: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 6px solid;
-}
-.icon.triangle-down {
-  width: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid;
-}
+// .slide-enter,
+// .slide-leave {
+//   opacity: 1;
+//   transform: translateX(100%);
+// }
 
 </style>
