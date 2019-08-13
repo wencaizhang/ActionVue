@@ -4,19 +4,19 @@
       <slot></slot>
     </div>
 
-    <div class="meta">
-      <!-- 描述 -->
-      <div v-show="description" class="desc">
-        <small>{{ description }}</small>
-      </div>
-      <!-- 代码块 -->
-      <transition name="expand">
-        <div v-show="isShowCode" class="highlight" ref="highlight">
+    <!-- 代码块 -->
+    <transition name="expand">
+      <div v-show="isShowCode" class="meta">
+        <!-- 描述 -->
+        <div v-show="description" class="desc">
+          <small>{{ description }}</small>
+        </div>
+        <div class="highlight" ref="highlight">
           <span class="copy-code-btn" :class="className" title="点击复制代码">复制</span>
             <slot name="codeText"></slot>
         </div>
-      </transition>
-    </div>
+      </div>
+    </transition>
 
     <!-- 显示隐藏控制按钮 -->
     <div class="demo-block-control" @click="isShowCode = !isShowCode">
