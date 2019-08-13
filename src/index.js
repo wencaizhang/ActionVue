@@ -21,6 +21,7 @@ import ALayoutSider    from './package/layout/layout-sider';
 import ALayoutContent  from './package/layout/layout-content';
 import ALayoutFooter   from './package/layout/layout-footer';
 import ASwitch         from './package/switch/switch';
+import APopover        from './package/popover/popover';
 
 // 定义我们的插件
 export default {
@@ -49,6 +50,7 @@ export default {
     Vue.component('ALayoutFooter', ALayoutFooter);
     
     Vue.component('ASwitch', ASwitch);
+    Vue.component('APopover', APopover);
 
     Vue.prototype.$message = Amessage;
   }
