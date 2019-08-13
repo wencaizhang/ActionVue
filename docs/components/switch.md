@@ -131,7 +131,7 @@
   </highlight-code>
 </Common-Democode>
 
-## 扩展的 value 类型
+## value 类型扩展
 
 设置 `active-value` 和 `inactive-value` 属性，接受 Boolean, String 或 Number 类型的值。这样可以使 switch 的值更加灵活。
 
@@ -273,7 +273,7 @@
 | `v-model`        | 绑定值                  | Boolean                   | `true`  |
 | `disabled`       | 是否禁用                | Boolean                   | `false` |
 | `loading`        | 加载中                  | Boolean                   | `false` |
-| `active-color`   | switch 打开时的背景色   | String                    | `#000`  |
+| `active-color`   | switch 打开时的背景色   | String                    | `#1890ff`  |
 | `inactive-color` | switch 关闭时的背景色   | String                    | `#ddd`  |
 | `active-value`   | switch 打开时的值       | Boolean / String / Number | `true`  |
 | `inactive-value` | switch 关闭时的值       | Boolean / String / Number | `false` |
