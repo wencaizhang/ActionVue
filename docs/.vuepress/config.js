@@ -41,6 +41,7 @@ module.exports = {
           '/components/swipe',
           // '/components/layout',
           '/components/switch',
+          '/components/popover',
         ]
       },
     ]
