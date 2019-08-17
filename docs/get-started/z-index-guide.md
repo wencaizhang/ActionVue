@@ -9,3 +9,5 @@
 | Toast     | 100     |
 | Message   | 100     |
 | Notice    | 100     |
+| Popover   | 100     |
+| Github Corner   | 20     |
