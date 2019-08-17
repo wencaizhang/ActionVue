@@ -134,7 +134,7 @@ $primary-color: #1890ff;                         // 全局主色
     margin-left: 0;
   }
   &.a-next-page {
-    margin-left: 0;
+    margin-right: 0;
   }
 }
 
