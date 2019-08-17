@@ -42,6 +42,7 @@ module.exports = {
           // '/components/layout',
           '/components/switch',
           '/components/popover',
+          '/components/github-corner',
         ]
       },
     ]
