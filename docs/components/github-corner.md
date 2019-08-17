@@ -2,6 +2,8 @@
 
 ## 基本使用
 
+通过 `repo` 指定 github 仓库地址，格式是 `<用户名>/<仓库名>`，例如：`wencaizhang/ActionVue`。
+
 <Common-Democode>
   <github-corner-demo1 />
   <highlight-code slot="codeText" lang="vue">
@@ -25,6 +27,8 @@
 
 
 ## 背景色
+
+通过 `bgColor` 指定背景颜色
 
 <Common-Democode>
   <github-corner-demo3 />
@@ -57,7 +61,9 @@
   </highlight-code>
 </Common-Democode>
 
-## github 图标填充颜色
+## 图标颜色
+
+通过 `color` 指定图标颜色
 
 <Common-Democode>
   <github-corner-demo4 />
@@ -81,6 +87,8 @@
 
 
 ## 位置
+
+默认情况，github corner 是绝对定位，靠右上角定位。你也可以通过 `position` 指定靠左上角定位。
 
 <Common-Democode>
   <github-corner-demo5 />
@@ -107,7 +115,9 @@
   </highlight-code>
 </Common-Democode>
 
-## 左上角
+## 固定定位
+
+默认是绝对定位 `position: absolute;`，如果你需要使其固定定位，可以在外边包裹一层 `div`，将 `div` 设置为 `position: fixed; top: 0; right: 0;` 即可。
 
 <Common-Democode>
   <github-corner-demo6 />

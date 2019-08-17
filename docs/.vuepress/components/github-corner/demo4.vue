@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <a-github-corner repo="wencaizhang/ActionVue" color="#fff"/>
+    <a-github-corner repo="wencaizhang/ActionVue" color="yellow"/>
   </div>
 </template>
 <style scoped>
