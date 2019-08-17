@@ -1,7 +1,10 @@
 # Popover 气泡卡片
 
+点击/鼠标移入元素，弹出气泡式的卡片浮层。
 
 ## 位置
+
+气泡卡片的位置有十二个方向可供选择。
 
 <Common-Democode>
   <popover-demo1 />
@@ -193,3 +196,12 @@
     </template>
   </highlight-code>
 </Common-Democode>
+
+
+## API
+
+属性 |	说明	| 类型 |	默认值
+:--- | :--- | :--- | :---
+`trigger` | 触发 popover 显示的方式，可选 `click` `hover` | String | `click`
+`position` | popover 的位置，可选  `topLeft` `top` `topRight` <br /> `leftTop` `left` `leftBottom` <br /> `rightTop` `right` `rightBottom` <br /> `bottomLeft` `bottom` `bottomRight` | String | `top`
+

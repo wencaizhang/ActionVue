@@ -123,7 +123,10 @@
     };
     </script>
     <style>
-    svg {
+    .toast-demo-html {
+      text-align: center;
+    }
+    .toast-demo-html svg {
       width: 100%;
       margin: 0 auto;
       text-align: center;
