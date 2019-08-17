@@ -49,31 +49,33 @@ Vue.use(actionvue);
 
 ## Components
 
-+ [x] Button
-+ [x] Input
-+ [x] Icon
-+ [x] Toast
-+ [x] Message
-+ [ ] Notification
++ [x] Button 按钮
++ [x] Input 输入框
++ [x] Switch 开关
++ [x] Icon 图标
++ [x] Toast 轻提示
++ [x] Message 信息
++ [ ] Notification 
 + [x] Pager 分页器
 + [x] Grid 网格系统
 + [x] Skeleton 骨架屏
 + [x] Sticky 粘滞 / 吸顶组件
 + [ ] Nav 导航
-+ [ ] Carousel 轮播组件
++ [x] Swipe 轮播组件
 + [ ] Uploader 文件上传
 + [ ] Tab
-+ [ ] Table
-+ [ ] Popover
-+ [ ] Layout 默认布局
++ [ ] Table 表格
++ [x] Popover 气泡卡片
++ [x] Layout 默认布局
 + [ ] 手风琴
 + [ ] 省市区级联组件
 + [ ] Animation 动画
-+ [ ] Datepicker
++ [ ] Datepicker 日期选择
 + [ ] Scroll 滚动组件
-+ [ ] Img Load 图片加载
++ [x] Img Load 图片加载
 + [ ] 支付密码框
 + [x] BackTop 回到顶部
++ [x] GitHub Corner
 
 ## Why Do This
 
