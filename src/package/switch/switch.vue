@@ -156,6 +156,7 @@ export default {
     overflow: hidden;
     min-width: 40px;
     height: 20px;
+    line-height: 18px;
     background: #ddd;
     border-radius: 10px;
     border: 1px solid #ddd;
