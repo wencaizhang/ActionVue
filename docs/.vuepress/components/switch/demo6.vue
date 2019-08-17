@@ -1,7 +1,9 @@
 <template>
   <div class="switch-demo">
-    <a-switch v-model="value1" loading />
-    <a-switch v-model="value2" loading />
+    Loading: <a-switch v-model="loading" active-text="on" inactive-text="off"/>
+    <br />
+    <a-switch v-model="value1" :loading="loading" />
+    <a-switch v-model="value2" :loading="loading" />
   </div>
 </template>
 
@@ -9,6 +11,7 @@
 export default {
   data() {
     return {
+      loading: false,
       value1: true,
       value2: false,
     };
