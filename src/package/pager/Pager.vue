@@ -130,6 +130,12 @@ $primary-color: #1890ff;                         // 全局主色
     border-color: #d9d9d9;
     color: rgba(0, 0, 0, 0.25);
   }
+  &.a-prev-page {
+    margin-left: 0;
+  }
+  &.a-next-page {
+    margin-left: 0;
+  }
 }
 
 </style>
