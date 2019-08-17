@@ -4,7 +4,7 @@
     <br />
     <a-switch v-model="value2" :textInline="textInline" activeText="开" inactiveText="关" />
     <br />
-    <a-switch v-model="value2" :textInline="textInline" activeText="1" inactiveText="0" />
+    <a-switch v-model="value3" :textInline="textInline" activeText="1" inactiveText="0" />
     <br />
     <a-button @click="textInline = !textInline">Toggle TextInline</a-button>
   </div>

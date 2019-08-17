@@ -10,7 +10,7 @@ export default {
     onClick() {
       this.$toast({
         message: `
-          <div style="text-align: center;">
+          <div class="toast-demo-html">
             <p>给你我的小心心</p>
             <svg xmlns="https://www.w3.org/2000/svg"
               xmlns:xlink="https://www.w3.org/1999/xlink"
@@ -39,7 +39,10 @@ export default {
 </script>
 
 <style>
-svg {
+.toast-demo-html {
+  text-align: center;
+}
+.toast-demo-html svg {
   width: 100%;
   margin: 0 auto;
   text-align: center;
