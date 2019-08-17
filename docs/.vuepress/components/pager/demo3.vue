@@ -1,9 +1,9 @@
 <template>
   <div>
-    <label>
-      当只有一页时隐藏分页
-      <input type="checkbox" v-model="hideIfOnePage">
-    </label>
+    <div style="margin-bottom: 8px;">
+      当只有一页时隐藏分页：
+      <a-switch v-model="hideIfOnePage" active-text="on" inactive-text="off"/>
+    </div>
     <a-pager
       :totalPage="1"
       :currPage="currPage"

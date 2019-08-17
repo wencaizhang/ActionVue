@@ -239,6 +239,8 @@
   <highlight-code slot="codeText" lang="vue">
     <template>
       <div class="switch-demo">
+        Loading: <a-switch v-model="loading" active-text="on" inactive-text="off"/>
+        <br />
         <a-switch v-model="value1" loading />
         <a-switch v-model="value2" loading />
       </div>
