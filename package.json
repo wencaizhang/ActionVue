@@ -22,7 +22,6 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
     "@vue/cli-plugin-eslint": "^3.9.0",
-    "@vue/cli-service": "^3.9.0",
     "babel-eslint": "^10.0.1",
     "element-ui": "^2.3.7",
     "eslint": "^5.16.0",
@@ -34,7 +33,7 @@
     "sass-loader": "^7.1.0",
     "vue-highlight.js": "^2.2.0",
     "vue-template-compiler": "^2.6.10",
-    "vuepress": "^0.14.8"
+    "vuepress": "^1.0.3"
   },
   "eslintConfig": {
     "root": true,
