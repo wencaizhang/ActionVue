@@ -2,7 +2,7 @@
 home: true
 heroImage: ./logo.png
 heroText: ActionVue
-tagline: 个人开发的组件库
+tagline: 基于 Vue.js 开发的组件库
 actionText: 快速上手 →
 actionLink: /get-started/
 features:
