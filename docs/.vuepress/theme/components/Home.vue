@@ -28,6 +28,8 @@
             :item="actionLink"
           />
         </a-button>
+        <!-- Place this tag where you want the button to render. -->
+        <github-button href="https://github.com/wencaizhang/ActionVue" data-size="large" data-show-count="true" aria-label="Star wencaizhang/ActionVue on GitHub">Star</github-button>
       </p>
     </header>
     
@@ -46,9 +48,11 @@
 
 <script>
 import NavLink from '@theme/components/NavLink.vue'
+import GithubButton from 'vue-github-button'
+
 
 export default {
-  components: { NavLink },
+  components: { NavLink, GithubButton},
   computed: {
     data () {
       return this.$page.frontmatter
@@ -114,6 +118,10 @@ export default {
     position: absolute;
     bottom: 0;
     left: 0
+}
+.action {
+  display flex
+  align-items center
 }
 .footer
   padding 2.5rem
