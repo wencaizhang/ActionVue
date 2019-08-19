@@ -137,3 +137,9 @@ code.hljs[class~=bash]:before {
   -webkit-box-shadow: 18px 0 0 0 #ffbd2e, 36px 0 0 0 #27c93f;
   box-shadow: 18px 0 0 0 #ffbd2e, 36px 0 0 0 #27c93f;
 }
+
+.theme-default-content pre {
+  padding-top: 3rem;
+}
+
+

@@ -1,11 +1,3 @@
-
-$navbarHeight = 3.6rem
-th, td {
-  border: 1px solid #f2f2f2;
-  padding: 0.6em 1em;
-}
-
-// sidebar 拆分成左右结构
 .sidebar
   .sidebar-heading
     display flex
@@ -26,11 +18,10 @@ th, td {
     border-right 0.12rem solid transparent
     border-left 0
     &.active
-      font-weight 600
+      font-weight 400
       color $accentColor
       border-color $accentColor
       background-color #e6f7ff
-
 
 @media (min-width: 719px)
   .page
@@ -53,47 +44,3 @@ th, td {
 @media (max-width: 719px)
   .theme-container .page
     padding-right 0
-// sidebar 拆分成左右结构 - end
-
-.page-edit, .page-nav,
-.content:not(.custom) {
-  max-width: 920px;
-}
-
-// 字体
-body {
-  font-family: PingFang SC,Helvetica Neue,Arial,sans-serif;
-}
-h1, h2, h3, h4, h5 {
-  font-weight: 400;
-  color: rgb(31, 47, 61);
-  border: none;
-}
-h1
-  font-size 1.9rem
-
-h2
-  font-size 1.5rem
-  padding-bottom: 1rem
-
-h3
-  font-size 1.2rem
-
-* {
-  box-sizing: border-box;
-}
-table {
-  width 100%
-  display table
-  text-align center
-}
-
-// 文档代码块样式优化
-.content .demo-block pre {
-  margin: 0;
-  border-radius: 0;
-}
-
-.navbar .links {
-  right: 6rem;
-}
