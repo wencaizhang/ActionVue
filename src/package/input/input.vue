@@ -31,7 +31,10 @@
         :disabled="disabled"
         :readonly="readonly"
         v-bind="$attrs"
-        @input="onInput"
+        @input="$emit('input', $event.target.value)"
+        @change="$emit('change', $event)"
+        @focus="$emit('focus', $event)"
+        @blur="$emit('blur', $event)"
       />
     </template>
   </div>
