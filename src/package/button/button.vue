@@ -114,6 +114,7 @@ $box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);  // 浮层阴影
 }
 
 .a-button {
+  position: relative;
   font-size: $font-size;
   height: $button-height;
   color: $color;
@@ -152,9 +153,7 @@ $box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);  // 浮层阴影
     border-color: $primary-color;
   }
   &:active {
-    color: #fff;
-    background-color: #40a9ff;
-    border-color: #40a9ff;
+    top: 1px;
   }
   &:focus {
     outline: none;
@@ -172,10 +171,6 @@ $box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);  // 浮层阴影
       background-color: #40a9ff;
       border-color: #40a9ff;
     }
-    &:active {
-      color: #40a9ff;
-      background-color: #fff;
-    }
   }
   &.a-button-danger {
     background-color: #f5f5f5;
@@ -184,10 +179,6 @@ $box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);  // 浮层阴影
       border-color: $error-color;
       background-color: $error-color;
       color: #fff;
-    }
-    &:active {
-      color: $error-color;
-      background-color: #fff;
     }
   }
   &.a-button-block {
@@ -206,6 +197,7 @@ $box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);  // 浮层阴影
     text-shadow: none;
     box-shadow: none;
     cursor: not-allowed;
+    pointer-events: none;
   }
 }
 </style>
