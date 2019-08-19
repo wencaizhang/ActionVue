@@ -6,6 +6,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: "/logo.png" }],
   ],
+  extend: '@vuepress/theme-default',
   themeConfig: {
     nav: [
       {text: '主页', link: '/'},
