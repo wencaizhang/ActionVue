@@ -23,6 +23,7 @@ import ALayoutFooter   from './package/layout/layout-footer';
 import ASwitch         from './package/switch/switch';
 import APopover        from './package/popover/popover';
 import AGithubCorner   from './package/github-corner/main';
+import ASpin           from './package/spin/main';
 
 // 定义我们的插件
 export default {
@@ -53,6 +54,7 @@ export default {
     Vue.component('ASwitch', ASwitch);
     Vue.component('APopover', APopover);
     Vue.component('AGithubCorner', AGithubCorner);
+    Vue.component('ASpin', ASpin);
 
     Vue.prototype.$message = Amessage;
   }
