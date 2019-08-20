@@ -1,5 +1,5 @@
 <template>
-  <svg class="a-icon" :class="`a-icon-${type}`" @click="$emit('click')">
+  <svg class="a-icon" :class="clazz" @click="$emit('click')">
     <use :xlink:href="`#i-${type}`"></use>
   </svg>
 </template>
@@ -9,7 +9,20 @@ export default {
   name: 'a-icon',
   props: {
     type: {
-      type: String
+      type: String,
+      required: true
+    },
+    spin: {
+      type: Boolean,
+      default: false
+    },
+  },
+  computed: {
+    clazz () {
+      return {
+        [`a-icon-${this.type}`]: true,
+        [`a-icon-spin`]: this.spin,
+      }
     }
   },
   mounted () {
@@ -24,5 +37,13 @@ export default {
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
+}
+.a-icon-spin {
+  animation: loadingCircle 1s infinite linear;
+}
+@keyframes loadingCircle {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 </style>
