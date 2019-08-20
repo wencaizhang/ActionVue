@@ -9,12 +9,12 @@
         class="a-switch-inner"
       >
         <span v-show="checked">
-          <a-icon v-show="activeIcon" :type="activeIcon"></a-icon>
-          <template v-show="!activeIcon">{{ activeText }}</template>
+          <a-icon v-if="activeIcon" :type="activeIcon"></a-icon>
+          <template v-if="!activeIcon">{{ activeText }}</template>
         </span>
         <span v-show="!checked">
-          <a-icon v-show="inactiveIcon" :type="inactiveIcon"></a-icon>
-          <template v-show="!inactiveIcon">{{ inactiveText }}</template>
+          <a-icon v-if="inactiveIcon" :type="inactiveIcon"></a-icon>
+          <template v-if="!inactiveIcon">{{ inactiveText }}</template>
         </span>
       </span>
     </span>
