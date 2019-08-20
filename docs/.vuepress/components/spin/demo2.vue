@@ -1,25 +1,7 @@
 <template>
-  <section>
-    <a-button @click="spinning = !spinning">toggle spinning</a-button>
-    <a-spin :spinning="spinning">
-      <p>xxxxx</p>
-    </a-spin>
-  </section>
+  <div>
+    <a-spin size="small" />
+    <a-spin />
+    <a-spin size="large" />
+  </div>
 </template>
-
-<script>
-export default {
-  name: 'spin-demo2',
-  data () {
-    return {
-      spinning: true,
-    }
-  },
-  methods: {
-  },
-}
-</script>
-
-<style scoped>
-
-</style>
