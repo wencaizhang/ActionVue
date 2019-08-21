@@ -86,7 +86,10 @@ export default {
   border-image: initial;
   border-radius: 3px;
   transition: all 0.2s ease 0s;
-
+  &:hover {
+    box-shadow: 0 0 8px 0 rgba(232, 237, 250, .6),
+      0 2px 4px 0 rgba(232, 237, 250, .5);
+  }
   .source {
     padding: 24px;
   }
