@@ -2,8 +2,7 @@
   <div class="demo-block">
 
     <div class="meta">
-
-      <div  class="highlight" ref="highlight">
+      <div class="highlight" ref="highlight">
         <span class="copy-code-btn" :class="className" title="点击复制代码">复制</span>
         <transition name="slide">
           <slot name="codeText"></slot>

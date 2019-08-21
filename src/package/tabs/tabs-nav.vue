@@ -8,7 +8,7 @@
         class="a-tabs-tab"
         :ref="`a-tabs-nav-${item.name}`"
         :class="item | clazz(selectedKey)"
-        @click="onClick(item.name)"
+        @click="onClick(item)"
       >
         {{ item.title }}
       </div>
@@ -53,8 +53,9 @@ export default {
     getSelectedRefName () {
       return `a-tabs-nav-${this.selectedKey}`
     },
-    onClick (key) {
-      this.$emit('update:selectedKey', key);
+    onClick (item) {
+      if (item.disabled) { return; }
+      this.$emit('update:selectedKey', item.name);
     },
     selectChange () {
       let ref = this.getSelectedRefName();
@@ -95,6 +96,7 @@ $transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
       &.a-tabs-tab-disabled {
         color: rgba(0, 0, 0, 0.25);
         cursor: not-allowed;
+        pointer-events: none;
       }
     }
   }
