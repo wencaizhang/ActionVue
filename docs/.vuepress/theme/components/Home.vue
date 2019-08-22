@@ -25,7 +25,7 @@
           aria-label="Star wencaizhang/ActionVue on GitHub"
         >Star</github-button>
         <div style="margin-left: 20px;"></div>
-        <div class="nav-link">
+        <div class="nav-link-box">
           <NavLink class="action-button" :item="actionLink" />
           <div class="scroll-hover"></div>
         </div>
@@ -89,7 +89,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .flex-center {
@@ -130,33 +129,40 @@ export default {
   margin-bottom: 3.125rem;
   font-family: 'bariol-thin', 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
 }
-.main .nav-link {
+.main .nav-link-box {
   position relative
   display inline-block
   // margin-left 16px
   overflow hidden
   font-size 0
-}
-.main .action-button {
-  color: #fff;
-  width: auto;
-  background: none;
-  box-shadow: none;
+  background-color: #5a7bef;
   border: 2px solid #fff;
   overflow: hidden;
-  position: relative;
+  height 50px
+  line-height 50px
+  width 170px
+}
+.main .action-button {
+  position absolute
+  top 0
+  left 0
+  z-index 1
+  color: #fff;
+  height 100%
+  width 100%
+  // padding: 15px 45px;
+  display block
   font-family: 'lato-regular', helvetica, arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.875rem;
-  padding: 15px 45px;
   transition: all 600ms ease-in-out;
-  background-color: #5a7bef;
+  background transparent
 }
 
 .main .scroll-hover {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   width: 100%;
   height: 100%;
   top: 100%;
@@ -164,12 +170,10 @@ export default {
   transition: all 600ms ease-in-out;
   background-color: #fff;
 }
-.main .action-button:hover {
-  background-color: #fff;
+.main .nav-link-box:hover .action-button {
   color: #5a7bef;
 }
-
-.main .nav-link:hover .scroll-hover {
+.main .nav-link-box:hover .scroll-hover {
   top: 0;
 }
 </style>
