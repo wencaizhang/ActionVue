@@ -1,6 +1,6 @@
 <template>
   <main class="home flex-center" aria-labelledby="main-title">
-    <bubbles-effect :options="options"></bubbles-effect>
+    <bubbles-effect v-if="show" :options="options"></bubbles-effect>
     <div class="main">
       <div class="flex-center">
         <img
@@ -37,17 +37,20 @@
 <script>
 import NavLink from "@theme/components/NavLink.vue";
 import GithubButton from "vue-github-button";
-// import FSS from "./FSS";
-
+import Vue from "vue";
 export default {
   components: { NavLink, GithubButton },
-  // mounted() {
-  //   setTimeout(() => {
-  //     FSS("container", "output");
-  //   }, 1000);
-  // },
+  mounted() {
+    const self = this;
+    import('vue-canvas-effect').then(module => {
+      Vue.use(module)
+      self.show = true;
+      // use code
+    })
+  },
   data() {
     return {
+      show: false,
       options: {
         color: "rgba(225,225,225,0.5)", //Bubble color
         radius: 15, //Bubble radius
@@ -81,41 +84,12 @@ export default {
   bottom: 0;
   left: 0;
   z-index: 30; // 覆盖 navbar
-  // background-color: #fff;
-  // background-image: url(https://file.iviewui.com/dist/dc1e877946dd4568404a432623fca8fc.jpg);
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: 50%;
   background-color: #5a7bef;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  .hero {
-    padding-left: 10%;
-    padding-top: 10%;
-  }
-
-  .description {
-    margin-bottom: 50px;
-    font-size: 24px;
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-
-    img {
-      width: 100px;
-      height: 100px;
-    }
-
-    h1 {
-      display: inline-block;
-      font-size: 3rem;
-    }
-  }
 }
 
 .flex-center {
