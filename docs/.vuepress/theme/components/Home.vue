@@ -101,6 +101,7 @@ export default {
 .main {
   text-align: center;
   padding-bottom: 80px;
+  z-index 10
 }
 
 .main .logo {
