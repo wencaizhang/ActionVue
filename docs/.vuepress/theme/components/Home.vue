@@ -4,14 +4,12 @@
     <div class="main">
       <div class="flex-center">
         <img
-            class="logo"
-            v-if="data.heroImage"
-            :src="$withBase(data.heroImage)"
-            :alt="data.heroAlt || 'hero'"
-          />
-        <h1 v-if="data.heroText !== null" id="main-title">
-          {{ data.heroText || $title || 'Hello' }}
-        </h1>
+          class="logo"
+          v-if="data.heroImage"
+          :src="$withBase(data.heroImage)"
+          :alt="data.heroAlt || 'hero'"
+        />
+        <h1 v-if="data.heroText !== null" id="main-title">{{ data.heroText || $title || 'Hello' }}</h1>
       </div>
 
       <p class="description">{{ data.tagline || $description || 'Welcome to your VuePress site' }}</p>
@@ -42,11 +40,11 @@ export default {
   components: { NavLink, GithubButton },
   mounted() {
     const self = this;
-    import('vue-canvas-effect').then(module => {
-      Vue.use(module)
+    import("vue-canvas-effect").then(module => {
+      Vue.use(module);
       self.show = true;
       // use code
-    })
+    });
   },
   data() {
     return {
@@ -92,15 +90,15 @@ export default {
 }
 
 .flex-center {
-  display flex
-  align-items center
-  justify-content center
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main {
   text-align: center;
   padding-bottom: 80px;
-  z-index 10
+  z-index: 10;
 }
 
 .main .logo {
@@ -129,35 +127,37 @@ export default {
   margin-bottom: 3.125rem;
   font-family: 'bariol-thin', 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
 }
+
 .main .nav-link-box {
-  position relative
-  display inline-block
+  position: relative;
+  display: inline-block;
   // margin-left 16px
-  overflow hidden
-  font-size 0
+  overflow: hidden;
+  font-size: 0;
   background-color: #5a7bef;
   border: 2px solid #fff;
   overflow: hidden;
-  height 50px
-  line-height 50px
-  width 170px
+  height: 50px;
+  line-height: 50px;
+  width: 170px;
 }
+
 .main .action-button {
-  position absolute
-  top 0
-  left 0
-  z-index 1
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   color: #fff;
-  height 100%
-  width 100%
+  height: 100%;
+  width: 100%;
   // padding: 15px 45px;
-  display block
+  display: block;
   font-family: 'lato-regular', helvetica, arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.875rem;
   transition: all 600ms ease-in-out;
-  background transparent
+  background: transparent;
 }
 
 .main .scroll-hover {
@@ -170,9 +170,11 @@ export default {
   transition: all 600ms ease-in-out;
   background-color: #fff;
 }
+
 .main .nav-link-box:hover .action-button {
   color: #5a7bef;
 }
+
 .main .nav-link-box:hover .scroll-hover {
   top: 0;
 }
