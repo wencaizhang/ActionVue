@@ -3,6 +3,7 @@
  */
 import VueHighlightJS from 'vue-highlight.js';
 import 'highlight.js/styles/atom-one-dark.css';
+import vueCanvas from 'vue-canvas-effect';
 
 import actionvue from "../../src/index";
 
@@ -14,6 +15,6 @@ export default ({
 }) => {
   // ...做一些其他的应用级别的优化
   Vue.use(VueHighlightJS)
-  
+  Vue.use(vueCanvas)
   Vue.use(actionvue)
 }
