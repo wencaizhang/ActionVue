@@ -2427,6 +2427,11 @@ compression@^1.7.4:
     safe-buffer "5.1.2"
     vary "~1.1.2"
 
+comutils@^1.1.11:
+  version "1.1.19"
+  resolved "https://registry.yarnpkg.com/comutils/-/comutils-1.1.19.tgz#3e07f306abf48e83726511713a72b20565034443"
+  integrity sha512-JxXB67juILiwhdLwOsYyjUqwWEhHdObI0EClOPk+JDtEuTbac59s0pxGpfCBnNNQ5JommifmcMGneW/4Cg7YWw==
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -8638,6 +8643,13 @@ vm-browserify@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha512-iq+S7vZJE60yejDYM0ek6zg308+UZsdtPExWP9VZoCFCz1zkJoXFnAX7aZfd/ZwrkidzdUZL0C/ryW+JwAiIGw==
+
+vue-canvas-effect@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/vue-canvas-effect/-/vue-canvas-effect-0.0.12.tgz#19e73b2ec3e189a3996a716d31b401ad037049de"
+  integrity sha512-2iE/WN8iF4FF1CWAg8HKNoD7up0iXEfh6rkE5KH6sLee+ouOCrfyNHX202MbUSEEh+Wn7e63OnU19RrJ65v4lQ==
+  dependencies:
+    comutils "^1.1.11"
 
 vue-eslint-parser@^2.0.3:
   version "2.0.3"

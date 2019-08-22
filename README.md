@@ -76,6 +76,7 @@ Vue.use(actionvue);
 + [ ] 支付密码框
 + [x] BackTop 回到顶部
 + [x] GitHub Corner
++ [x] ASpin 加载中
 
 ## Why Do This
 

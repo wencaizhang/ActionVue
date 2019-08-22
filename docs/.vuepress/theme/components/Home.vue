@@ -1,132 +1,181 @@
 <template>
-  <main class="home" aria-labelledby="main-title">
-    <header class="hero">
-      <div class="logo">
+  <main class="home flex-center" aria-labelledby="main-title">
+    <bubbles-effect v-if="show" :options="options"></bubbles-effect>
+    <div class="main">
+      <div class="flex-center">
         <img
+          class="logo"
           v-if="data.heroImage"
           :src="$withBase(data.heroImage)"
           :alt="data.heroAlt || 'hero'"
-        >
-
+        />
         <h1 v-if="data.heroText !== null" id="main-title">{{ data.heroText || $title || 'Hello' }}</h1>
       </div>
-      <p class="description">
-        {{ data.tagline || $description || 'Welcome to your VuePress site' }}
-      </p>
 
-      <p
-        class="action"
-        v-if="data.actionText && data.actionLink"
-      >
-        <a-button
-          class="action-button"
-          type="primary"
-        >
-          <NavLink
-            style="color: #fff;"
-            class="action-button"
-            :item="actionLink"
-          />
-        </a-button>
+      <p class="description">{{ data.tagline || $description || 'Welcome to your VuePress site' }}</p>
+
+      <div class="action flex-center" v-if="data.actionText && data.actionLink">
         <!-- Place this tag where you want the button to render. -->
-        <github-button href="https://github.com/wencaizhang/ActionVue" data-size="large" data-show-count="true" aria-label="Star wencaizhang/ActionVue on GitHub">Star</github-button>
-      </p>
-    </header>
-    
-    <div class="index-bg-footer"><img src="https://file.iviewui.com/dist/1dd818d51d9a168714dd715897b4d769.png"></div>
-
-    <Content class="theme-default-content custom"/>
-
-    <div
-      class="footer"
-      v-if="data.footer"
-    >
-      {{ data.footer }}
+        <github-button
+          href="https://github.com/wencaizhang/ActionVue"
+          data-size="large"
+          data-show-count="true"
+          aria-label="Star wencaizhang/ActionVue on GitHub"
+        >Star</github-button>
+        <div style="margin-left: 20px;"></div>
+        <div class="nav-link-box">
+          <NavLink class="action-button" :item="actionLink" />
+          <div class="scroll-hover"></div>
+        </div>
+      </div>
     </div>
   </main>
 </template>
 
 <script>
-import NavLink from '@theme/components/NavLink.vue'
-import GithubButton from 'vue-github-button'
-
-
+import NavLink from "@theme/components/NavLink.vue";
+import GithubButton from "vue-github-button";
+import Vue from "vue";
 export default {
-  components: { NavLink, GithubButton},
+  components: { NavLink, GithubButton },
+  mounted() {
+    const self = this;
+    import("vue-canvas-effect").then(module => {
+      Vue.use(module);
+      self.show = true;
+      // use code
+    });
+  },
+  data() {
+    return {
+      show: false,
+      options: {
+        color: "rgba(225,225,225,0.5)", //Bubble color
+        radius: 15, //Bubble radius
+        densety: 0.3, // The larger the bubble density, the greater the density (suggest no more than 1).
+        clearOffset: 0.2 // The larger the bubble disappears [0-1], the longer it disappears.
+      }
+    };
+  },
   computed: {
-    data () {
-      return this.$page.frontmatter
+    data() {
+      return this.$page.frontmatter;
     },
 
-    actionLink () {
+    actionLink() {
       return {
         link: this.data.actionLink,
         text: this.data.actionText
-      }
+      };
     }
   }
-}
+};
 </script>
 
-<style lang="stylus">
 
+<style lang="stylus">
 .home {
-  min-width 100vw
-  min-height 100vh
+  min-width: 100vw;
+  min-height: 100vh;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  z-index 30; // 覆盖 navbar
-  background-color: #fff;
-  background-image: url(https://file.iviewui.com/dist/dc1e877946dd4568404a432623fca8fc.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
+  z-index: 30; // 覆盖 navbar
+  background-color: #5a7bef;
   overflow: hidden;
-
-  display flex
-  flex-direction column
-  justify-content space-between
-
-  .hero {
-    padding-left 10%
-    padding-top 10%
-  }
-
-  .description {
-    margin-bottom 50px
-    font-size 24px
-  }
-  .logo {
-    display flex
-    align-items center;
-    img {
-      width 100px
-      height 100px
-    }
-    h1 {
-      display inline-block
-      font-size 3rem
-    }
-  }
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.index-bg-footer {
-    width: 260px;
-    height: 90px;
-    position: absolute;
-    bottom: 0;
-    left: 0
-}
-.action {
-  display flex
-  align-items center
-}
-.footer
-  padding 2.5rem
-  text-align center
-  color lighten($textColor, 25%)
-  z-index 10
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  text-align: center;
+  padding-bottom: 80px;
+  z-index: 10;
+}
+
+.main .logo {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+.main h1 {
+  font-family: 'bariol-regular', 'helvetica', sans-serif;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 10rem;
+  color: #fff;
+  line-height: 200px;
+  margin-top: 2.1875rem;
+}
+
+.main .description {
+  color: #fff;
+  text-align: center;
+  line-height: 80%;
+  font-weight: 100;
+  font-size: 3.375rem;
+  margin-bottom: 3.125rem;
+  font-family: 'bariol-thin', 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+}
+
+.main .nav-link-box {
+  position: relative;
+  display: inline-block;
+  // margin-left 16px
+  overflow: hidden;
+  font-size: 0;
+  background-color: #5a7bef;
+  border: 2px solid #fff;
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+  width: 170px;
+}
+
+.main .action-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  // padding: 15px 45px;
+  display: block;
+  font-family: 'lato-regular', helvetica, arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.875rem;
+  transition: all 600ms ease-in-out;
+  background: transparent;
+}
+
+.main .scroll-hover {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  transition: all 600ms ease-in-out;
+  background-color: #fff;
+}
+
+.main .nav-link-box:hover .action-button {
+  color: #5a7bef;
+}
+
+.main .nav-link-box:hover .scroll-hover {
+  top: 0;
+}
 </style>
