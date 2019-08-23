@@ -155,7 +155,7 @@ export default {
   font-family: 'lato-regular', helvetica, arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 0.875rem;
+  font-size: 1.2rem;
   transition: all 600ms ease-in-out;
   background: transparent;
 }
