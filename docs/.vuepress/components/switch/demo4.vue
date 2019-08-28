@@ -6,6 +6,8 @@
     <br />
     <a-switch v-model="value3" :textInline="textInline" activeText="1" inactiveText="0" />
     <br />
+    <a-switch v-model="value4" :textInline="false" active-text="来一场永远不分手的恋爱" />
+    <br />
     <a-button @click="textInline = !textInline">Toggle TextInline</a-button>
   </div>
 </template>
@@ -17,6 +19,7 @@ export default {
       value1: true,
       value2: true,
       value3: true,
+      value4: false,
       textInline: false,
     };
   },

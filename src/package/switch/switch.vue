@@ -1,6 +1,8 @@
 <template>
   <div class="a-switch" :class="switchClazz" @click="switchValue">
-    <span v-if="!inner" class="a-switch__label a-switch__label-left">{{ activeText }}</span>
+    <span v-if="!inner" class="a-switch__label a-switch__label-left"
+      :style="{ color: checked ? activeColor : 'currentColor' }"
+    >{{ activeText }}</span>
     <span ref="core" class="a-switch_core" :class="coreClazz" :style="styles">
       <span class="a-switch-loading-icon">
         <a-icon v-if="loading" type="loading"></a-icon>
@@ -18,7 +20,9 @@
         </span>
       </span>
     </span>
-    <span v-if="!inner" class="a-switch__label a-switch__label-right">{{ inactiveText }}</span>
+    <span v-if="!inner" class="a-switch__label a-switch__label-right"
+      :style="{ color: !checked ? activeColor : 'currentColor' }"
+    >{{ inactiveText }}</span>
     <input
       ref="checkbox"
       class="a-switch_input"
