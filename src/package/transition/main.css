@@ -1,0 +1,19 @@
+.a-fade-in-enter-active,
+.a-fade-in-leave-active {
+  transition: all .3s ease;
+}
+.a-fade-in-enter,
+.a-fade-in-leave-to {
+  opacity: 0;
+}
+
+
+.a-slide-enter-active,
+.a-slide-leave-active {
+  transition: all .3s ease;
+  overflow: hidden;
+}
+.a-slide-enter,
+.a-slide-leave-to {
+  transform: translateY(-100%);
+}

@@ -55,7 +55,7 @@ Vue.use(actionvue);
 + [x] Icon 图标
 + [x] Toast 轻提示
 + [x] Message 信息
-+ [ ] Notification 
++ [ ] Notification
 + [x] Pager 分页器
 + [x] Grid 网格系统
 + [x] Skeleton 骨架屏
@@ -69,7 +69,7 @@ Vue.use(actionvue);
 + [x] Layout 默认布局
 + [ ] 手风琴
 + [ ] 省市区级联组件
-+ [ ] Animation 动画
++ [x] Transition 过渡动画
 + [ ] Datepicker 日期选择
 + [ ] Scroll 滚动组件
 + [x] Img Load 图片加载

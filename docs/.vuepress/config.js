@@ -45,6 +45,7 @@ module.exports = {
           '/components/popover',
           '/components/github-corner',
           '/components/spin',
+          '/components/transition',
         ]
       },
     ]

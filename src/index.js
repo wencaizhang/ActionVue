@@ -24,6 +24,7 @@ import ASwitch         from './package/switch/switch';
 import APopover        from './package/popover/popover';
 import AGithubCorner   from './package/github-corner/main';
 import ASpin           from './package/spin/main';
+import './package/transition/main.css';
 
 // 定义我们的插件
 export default {
