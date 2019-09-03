@@ -46,6 +46,7 @@ module.exports = {
           '/components/github-corner',
           '/components/spin',
           '/components/transition',
+          '/components/notification',
         ]
       },
     ]

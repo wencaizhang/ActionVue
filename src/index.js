@@ -1,6 +1,7 @@
 import AIcon        from './package/icon/icon';
 import AInput       from './package/input/input';
 import Amessage     from './package/message/message';
+import ANotification     from './package/notification/plugin';
 import AToast       from './package/toast/plugin';
 import AButton      from './package/button/button';
 import AButtonGroup from './package/button/button-group';
@@ -30,6 +31,7 @@ import './package/transition/main.css';
 export default {
   install(Vue) {
     Vue.use(AToast)
+    Vue.use(ANotification);
     Vue.component('AIcon', AIcon);
     Vue.component('AInput', AInput);
     Vue.component('AButton', AButton);
