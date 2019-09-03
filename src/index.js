@@ -5,8 +5,8 @@ import AToast       from './package/toast/plugin';
 import AButton      from './package/button/button';
 import AButtonGroup from './package/button/button-group';
 import ASkeleton    from './package/skeleton/skeleton';
-import ACol         from './package/Grid/col';
-import ARow         from './package/Grid/row';
+import ACol         from './package/grid/col';
+import ARow         from './package/grid/row';
 import ASticky      from './package/sticky/sticky'
 import APager       from './package/pager/pager';
 import AImage       from './package/Image/main';
