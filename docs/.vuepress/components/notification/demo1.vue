@@ -14,7 +14,10 @@ export default {
   },
   methods: {
     onClick () {
-      this.$notify()
+      this.$notify({
+        title: '提示',
+        message: '消息1'
+      })
     }
   },
 }
