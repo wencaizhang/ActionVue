@@ -18,10 +18,11 @@ module.exports = {
     '@vuepress/pwa', {
       serviceWorker: true,
       updatePopup: true
-    }
+    },
   ],
   extend: '@vuepress/theme-default',
   themeConfig: {
+    lastUpdated: '最后更新时间',
     nav: [
       {text: '主页', link: '/'},
       {text: '文档', link: '/docs/'},
