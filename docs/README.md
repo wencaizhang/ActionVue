@@ -4,7 +4,7 @@ heroImage: ./logo.png
 heroText: ActionVue
 tagline: 基于 Vue.js 开发的组件库
 actionText: 快速上手 →
-actionLink: /get-started/
+actionLink: /docs/get-started/
 features:
 - title: 可定制
   details: 提供丰富且简洁友好的API，方便进行个性化定制

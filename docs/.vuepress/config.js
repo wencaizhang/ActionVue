@@ -10,46 +10,68 @@ module.exports = {
   themeConfig: {
     nav: [
       {text: '主页', link: '/'},
-      {text: 'GitHub', link: 'https://github.com/wencaizhang/ActionVue/'},
-      {text: '交流', link: 'https://github.com/wencaizhang/ActionVue/issues'},
+      {text: '文档', link: '/docs/'},
+      {text: '开发笔记', link: '/notes/'},
+      // {text: 'GitHub', link: 'https://github.com/wencaizhang/ActionVue/'},
+      // {text: '交流', link: 'https://github.com/wencaizhang/ActionVue/issues'},
     ],
-    sidebar: [
-      {
-        title: '入门',
-        collapsable: false,
-        children: [
-          '/get-started/',
-          '/get-started/custom-theme',
-          '/get-started/z-index-guide',
-        ]
-      },
-      {
-        title: 'components 组件',
-        collapsable: false,
-        children: [
-          '/components/button',
-          '/components/icon',
-          '/components/input',
-          '/components/grid',
-          '/components/pager',
-          '/components/skeleton',
-          '/components/sticky',
-          '/components/toast',
-          '/components/image',
-          '/components/message',
-          '/components/back-top',
-          '/components/tabs',
-          '/components/swipe',
-          '/components/layout',
-          '/components/switch',
-          '/components/popover',
-          '/components/github-corner',
-          '/components/spin',
-          '/components/transition',
-          '/components/notification',
-        ]
-      },
-    ]
+    sidebar: {
+      '/docs/': [
+        '',
+        {
+          title: '入门',
+          collapsable: false,
+          children: [
+            './get-started/',
+            './get-started/custom-theme',
+            './get-started/z-index-guide',
+          ]
+        },
+        {
+          title: 'components 组件',
+          collapsable: false,
+          children: [
+            './components/button',
+            './components/icon',
+            './components/input',
+            './components/grid',
+            './components/pager',
+            './components/skeleton',
+            './components/sticky',
+            './components/toast',
+            './components/image',
+            './components/message',
+            './components/back-top',
+            './components/tabs',
+            './components/swipe',
+            './components/layout',
+            './components/switch',
+            './components/popover',
+            './components/github-corner',
+            './components/spin',
+            './components/transition',
+            './components/notification',
+          ]
+        },
+      ],
+      '/notes/': [
+        {
+          title: '开发笔记',
+          collapsable: false,
+          children: [
+            // '',
+            './extend-and-$mount',
+            './find-comp-by-name',
+            './make-icons-from-iconfont',
+            './nextTick',
+            './publish-on-npm',
+            './sync',
+            './v-model',
+            './vue-plugin',
+          ]
+        },
+      ]
+    }
   },
   scss:{
     includePaths: [path.join(__dirname, '../../styles')]
