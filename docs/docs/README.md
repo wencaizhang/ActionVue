@@ -3,10 +3,6 @@
 
 这是一套基于 Vue.js 开发的 PC 端 UI 组件库
 
-  [![npm](https://img.shields.io/npm/v/actionvue?style=flat-square)](https://www.npmjs.com/package/actionvue/)
-  [![vue](https://img.shields.io/badge/vue-2.6.10-blue.svg?style=flat-square)](https://github.com/vuejs/vue)
-  [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/wencaizhang/ActionVue/blob/master/LICENSE)
-
 
 ## Contributing
 
