@@ -17,3 +17,13 @@
 .a-slide-leave-to {
   transform: translateY(-100%);
 }
+
+
+.a-flip-list-enter, .a-flip-list-leave-to
+/* .a-flip-list-leave-active for below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.a-flip-list-leave-active {
+  position: absolute;
+}
