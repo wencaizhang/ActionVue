@@ -153,51 +153,50 @@
     <template>
       <div class="anim-demo-wrapper">
         <div>
+          <a-button @click="show0 = !show0">显示动画</a-button>
+          <transition name="a-fold">
+            <div v-show="show0" class="transition-box-demo">居中折叠</div>
+          </transition>
+        </div>
+        <div>
           <a-button @click="show1 = !show1">显示动画</a-button>
-          <div style="height: 100px; overflow: hidden;">
-            <transition name="a-slide-up">
-              <div v-show="show1" class="transition-box-demo2">向上</div>
-            </transition>
-          </div>
+          <transition name="a-fold-up">
+            <div v-show="show1" class="transition-box-demo">向上</div>
+          </transition>
         </div>
         <div>
           <a-button @click="show2 = !show2">显示动画</a-button>
-          <div style="height: 100px; overflow: hidden;">
-            <transition name="a-slide-down">
-              <div v-show="show2" class="transition-box-demo2">向下</div>
-            </transition>
-          </div>
+          <transition name="a-fold-down">
+            <div v-show="show2" class="transition-box-demo">向下</div>
+          </transition>
         </div>
         <div>
           <a-button @click="show3 = !show3">显示动画</a-button>
-          <div style="height: 100px; overflow: hidden;">
-            <transition name="a-slide-left">
-              <div v-show="show3" class="transition-box-demo2">向左</div>
-            </transition>
-          </div>
+          <transition name="a-fold-left">
+            <div v-show="show3" class="transition-box-demo">向左</div>
+          </transition>
         </div>
         <div>
           <a-button @click="show4 = !show4">显示动画</a-button>
-          <div style="height: 100px; overflow: hidden;">
-            <transition name="a-slide-right">
-              <div v-show="show4" class="transition-box-demo2">向右</div>
-            </transition>
-          </div>
+          <transition name="a-fold-right">
+            <div v-show="show4" class="transition-box-demo">向右</div>
+          </transition>
         </div>
       </div>
     </template>
     <script>
     export default {
       data: () => ({
+        show0: true,
         show1: true,
         show2: true,
         show3: true,
         show4: true,
-      })
+      }),
     };
     </script>
     <style>
-    .transition-box-demo2 {
+    .transition-box-demo {
       margin-bottom: 10px;
       height: 100px;
       line-height: 100px;
@@ -212,7 +211,7 @@
       justify-content: space-between;
     }
     .anim-demo-wrapper > div {
-      width: 22%;
+      width: 18%;
     }
     </style>
   </highlight-code>
@@ -302,7 +301,6 @@
 | :--- | :--- |
 | `a-fade-in` | 淡入淡出 |
 | `a-zoom` | 缩放 |
-| `a-spin` | 旋转，注意：直接添加类名即可 |
 | `a-slide-up` | 向上滑入滑出 |
 | `a-slide-down` | 向下滑入滑出 |
 | `a-slide-left` | 向左滑入滑出 |
@@ -313,3 +311,4 @@
 | `a-fold-left` | 向左折叠 |
 | `a-fold-right` | 向右折叠 |
 | `a-flip-list` | 列表过渡，适用于 `<transition-group>` 组件 |
+| `a-spin` | 旋转，注意：直接添加类名即可 |

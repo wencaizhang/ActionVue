@@ -1,5 +1,5 @@
 <template>
-  <div class="anim-demo-wrapper">
+  <div class="anim-demo2-wrapper">
     <div>
       <a-button @click="show1 = !show1">显示动画</a-button>
       <transition name="a-slide-up">
@@ -47,11 +47,11 @@ export default {
   color: #fff;
   box-sizing: border-box;
 }
-.anim-demo-wrapper {
+.anim-demo2-wrapper {
   display: flex;
   justify-content: space-between;
 }
-.anim-demo-wrapper > div {
+.anim-demo2-wrapper > div {
   width: 22%;
 }
 </style>
