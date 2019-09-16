@@ -2,28 +2,286 @@
 .a-fade-in-leave-active {
   transition: all .3s ease;
 }
+
 .a-fade-in-enter,
 .a-fade-in-leave-to {
   opacity: 0;
 }
 
-
-.a-slide-enter-active,
-.a-slide-leave-active {
+/* 缩放 */
+.a-zoom-enter-active,
+.a-zoom-leave-active {
   transition: all .3s ease;
-  overflow: hidden;
 }
-.a-slide-enter,
-.a-slide-leave-to {
+
+.a-zoom-enter,
+.a-zoom-leave-to {
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+
+/* 滑入滑出，4个方向 */
+.a-slide-up-enter-active,
+.a-slide-up-leave-active,
+.a-slide-down-enter-active,
+.a-slide-down-leave-active,
+.a-slide-left-enter-active,
+.a-slide-left-leave-active,
+.a-slide-right-enter-active,
+.a-slide-right-leave-active {
+  transition: all .3s ease;
+  /* overflow: hidden; */
+}
+
+.a-slide-up-enter,
+.a-slide-up-leave-to {
   transform: translateY(-100%);
+  opacity: 0;
+}
+
+.a-slide-down-enter,
+.a-slide-down-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.a-slide-left-enter,
+.a-slide-left-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.a-slide-right-enter,
+.a-slide-right-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
 }
 
 
-.a-flip-list-enter, .a-flip-list-leave-to
-/* .a-flip-list-leave-active for below version 2.1.8 */ {
+.a-flip-list-enter,
+.a-flip-list-leave-to {
   opacity: 0;
   transform: translateY(30px);
 }
+
 .a-flip-list-leave-active {
   position: absolute;
+}
+
+
+
+/* 旋转 */
+.a-spin {
+  animation: a-spin 1s linear infinite;
+}
+
+@keyframes a-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+
+/* -------折叠========= */
+
+.a-fold-enter-active,
+.a-fold-leave-active,
+.a-fold-up-enter-active,
+.a-fold-up-leave-active,
+.a-fold-down-enter-active,
+.a-fold-down-leave-active,
+.a-fold-right-enter-active,
+.a-fold-right-leave-active,
+.a-fold-left-enter-active,
+.a-fold-left-leave-active {
+  animation-duration: .2s;
+  animation-fill-mode: both;
+  animation-play-state: paused;
+  animation-timing-function: ease-in-out;
+  animation-play-state: running;
+}
+
+.a-fold-up-enter-active {
+  animation-name: aFoldUpIn;
+}
+
+.a-fold-up-leave-active {
+  animation-name: aFoldUpOut;
+}
+
+.a-fold-down-enter-active {
+  animation-name: aFoldDownIn;
+}
+
+.a-fold-down-leave-active {
+  animation-name: aFoldDownOut;
+}
+
+.a-fold-left-enter-active {
+  animation-name: aFoldLeftIn;
+}
+
+.a-fold-left-leave-active {
+  animation-name: aFoldLeftOut;
+}
+
+.a-fold-right-enter-active {
+  animation-name: aFoldRightIn;
+}
+
+.a-fold-right-leave-active {
+  animation-name: aFoldRightOut;
+}
+
+.a-fold-enter-active {
+  animation-name: aTransitionDropIn;
+}
+
+.a-fold-leave-active {
+  animation-name: aTransitionDropOut;
+}
+
+@keyframes aFoldUpIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(.8);
+  }
+
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes aFoldUpOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleY(1);
+  }
+
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(.8);
+  }
+}
+
+@keyframes aFoldDownIn {
+  0% {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes aFoldDownOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+
+  to {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(.8);
+  }
+}
+
+@keyframes aFoldLeftIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(.8);
+  }
+
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes aFoldLeftOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: scaleX(1);
+  }
+
+  to {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleX(.8);
+  }
+}
+
+@keyframes aFoldRightIn {
+  0% {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(.8);
+  }
+
+  to {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes aFoldRightOut {
+  0% {
+    opacity: 1;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+  }
+
+  to {
+    opacity: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(.8);
+  }
+}
+
+@keyframes aTransitionDropIn {
+  0% {
+      opacity: 0;
+      transform: scaleY(.8)
+  }
+
+  to {
+      opacity: 1;
+      transform: scaleY(1)
+  }
+}
+
+@keyframes aTransitionDropOut {
+  0% {
+      opacity: 1;
+      transform: scaleY(1)
+  }
+
+  to {
+      opacity: 0;
+      transform: scaleY(.8)
+  }
 }
