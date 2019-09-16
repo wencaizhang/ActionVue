@@ -1,8 +1,8 @@
 <template>
   <div>
-    <a-button v-on:click="shuffle">Shuffle</a-button>
-    <a-button v-on:click="add">Add</a-button>
-    <a-button v-on:click="remove">Remove</a-button>
+    <a-button v-on:click="shuffle">乱序</a-button>
+    <a-button v-on:click="add">添加</a-button>
+    <a-button v-on:click="remove">删除</a-button>
     <transition-group name="a-flip-list" tag="p">
       <span v-for="item in items" v-bind:key="item" class="a-flip-list-item">{{ item }}</span>
     </transition-group>

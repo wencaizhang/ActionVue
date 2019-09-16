@@ -1,9 +1,9 @@
 <template>
   <div>
-    <a-button @click="show = !show">Click Me</a-button>
+    <a-button @click="show = !show">显示动画</a-button>
     <div style="display: flex; margin-top: 20px; height: 100px;">
-      <transition name="a-fade-in">
-        <div v-show="show" class="transition-box">.a-fade-in</div>
+      <transition name="a-zoom">
+        <div v-show="show" class="transition-box">缩放</div>
       </transition>
     </div>
   </div>
