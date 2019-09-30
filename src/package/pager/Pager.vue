@@ -54,11 +54,6 @@ export default {
       }
     }
   },
-  filters: {
-    currPage (v) {
-
-    }
-  },
   computed: {
     pages () {
       const { currPage, totalPage } = this
