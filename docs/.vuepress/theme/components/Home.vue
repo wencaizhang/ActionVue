@@ -129,7 +129,7 @@ export default {
 }
 
 .main h1 {
-  font-family: 'bariol-regular', 'helvetica', sans-serif;
+  font-family: 'PT Serif', Serif, 'bariol-regular', 'helvetica', sans-serif;
   text-align: center;
   padding: 0;
   margin-bottom: 0;
