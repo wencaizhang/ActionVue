@@ -75,11 +75,11 @@ export default {
 
 <style lang="stylus">
 .home {
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   top: 0;
-  bottom: 0;
+  // bottom: 0;
   left: 0;
   z-index: 30; // 覆盖 navbar
   background-color: #5a7bef;
@@ -95,6 +95,27 @@ export default {
   justify-content: center;
 }
 
+// 首页手机端显示情况
+@media screen and (max-width: 768px) {
+  .flex-center {
+    display: flex;
+    flex-direction: column;
+  }
+  #app .main h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  #app .main .logo {
+    width: 160px;
+    height: 160px;
+  }
+  #app .main .description {
+    font-size: 2rem;
+  }
+  #app .nav-link-box {
+    margin-top: 10px;
+  }
+}
 .main {
   text-align: center;
   padding-bottom: 80px;
