@@ -86,27 +86,27 @@
   <transition-demo2 />
   <highlight-code slot="codeText" lang="vue">
     <template>
-      <div class="anim-demo-wrapper">
+      <div class="anim-demo2-wrapper">
         <div>
-          <a-button @click="show1 = !show1">显示动画</a-button>
+          <a-button @click="show1 = !show1">向上</a-button>
           <transition name="a-slide-up">
             <div v-show="show1" class="transition-box-demo2">向上</div>
           </transition>
         </div>
         <div>
-          <a-button @click="show2 = !show2">显示动画</a-button>
+          <a-button @click="show2 = !show2">向下</a-button>
           <transition name="a-slide-down">
             <div v-show="show2" class="transition-box-demo2">向下</div>
           </transition>
         </div>
         <div>
-          <a-button @click="show3 = !show3">显示动画</a-button>
+          <a-button @click="show3 = !show3">向左</a-button>
           <transition name="a-slide-left">
             <div v-show="show3" class="transition-box-demo2">向左</div>
           </transition>
         </div>
         <div>
-          <a-button @click="show4 = !show4">显示动画</a-button>
+          <a-button @click="show4 = !show4">向右</a-button>
           <transition name="a-slide-right">
             <div v-show="show4" class="transition-box-demo2">向右</div>
           </transition>
@@ -151,35 +151,35 @@
   <transition-demo4 />
   <highlight-code slot="codeText" lang="vue">
     <template>
-      <div class="anim-demo-wrapper">
+      <div class="anim-demo4-wrapper">
         <div>
-          <a-button @click="show0 = !show0">显示动画</a-button>
+          <a-button @click="show0 = !show0">居中折叠</a-button>
           <transition name="a-fold">
             <div v-show="show0" class="transition-box-demo">居中折叠</div>
           </transition>
         </div>
         <div>
-          <a-button @click="show1 = !show1">显示动画</a-button>
+          <a-button @click="show1 = !show1">向上折叠</a-button>
           <transition name="a-fold-up">
-            <div v-show="show1" class="transition-box-demo">向上</div>
+            <div v-show="show1" class="transition-box-demo">向上折叠</div>
           </transition>
         </div>
         <div>
-          <a-button @click="show2 = !show2">显示动画</a-button>
+          <a-button @click="show2 = !show2">向下折叠</a-button>
           <transition name="a-fold-down">
-            <div v-show="show2" class="transition-box-demo">向下</div>
+            <div v-show="show2" class="transition-box-demo">向下折叠</div>
           </transition>
         </div>
         <div>
-          <a-button @click="show3 = !show3">显示动画</a-button>
+          <a-button @click="show3 = !show3">向左折叠</a-button>
           <transition name="a-fold-left">
-            <div v-show="show3" class="transition-box-demo">向左</div>
+            <div v-show="show3" class="transition-box-demo">向左折叠</div>
           </transition>
         </div>
         <div>
-          <a-button @click="show4 = !show4">显示动画</a-button>
+          <a-button @click="show4 = !show4">向右折叠</a-button>
           <transition name="a-fold-right">
-            <div v-show="show4" class="transition-box-demo">向右</div>
+            <div v-show="show4" class="transition-box-demo">向右折叠</div>
           </transition>
         </div>
       </div>

@@ -1,3 +1,4 @@
+/* fade 淡入淡出 */
 .a-fade-in-enter-active,
 .a-fade-in-leave-active {
   transition: all .3s ease;
@@ -7,8 +8,9 @@
 .a-fade-in-leave-to {
   opacity: 0;
 }
+/* fade 淡入淡出 - end */
 
-/* 缩放 */
+/* zoom 缩放 */
 .a-zoom-enter-active,
 .a-zoom-leave-active {
   transition: all .3s ease;
@@ -19,9 +21,10 @@
   transform: scale(0.7);
   opacity: 0;
 }
+/* zoom 缩放 - end*/
 
 
-/* 滑入滑出，4个方向 */
+/* slide 滑入滑出，4个方向 */
 .a-slide-up-enter-active,
 .a-slide-up-leave-active,
 .a-slide-down-enter-active,
@@ -57,8 +60,9 @@
   transform: translateX(100%);
   opacity: 0;
 }
+/* slide 滑入滑出，4个方向 - end */
 
-
+/* flip 列表过渡 */
 .a-flip-list-enter,
 .a-flip-list-leave-to {
   opacity: 0;
@@ -68,10 +72,10 @@
 .a-flip-list-leave-active {
   position: absolute;
 }
+/* flip 列表过渡 - end */
 
 
-
-/* 旋转 */
+/* spin 旋转 */
 .a-spin {
   animation: a-spin 1s linear infinite;
 }
@@ -89,9 +93,10 @@
     transform: rotate(1turn);
   }
 }
+/* spin 旋转 - end */
 
 
-/* -------折叠========= */
+/* fold 折叠 */
 
 .a-fold-enter-active,
 .a-fold-leave-active,
@@ -149,6 +154,7 @@
 .a-fold-leave-active {
   animation-name: aTransitionDropOut;
 }
+
 
 @keyframes aFoldUpIn {
   0% {
@@ -285,3 +291,5 @@
       transform: scaleY(.8)
   }
 }
+
+/* fold 折叠 - end */
