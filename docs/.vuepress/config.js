@@ -66,6 +66,7 @@ module.exports = {
             './components/spin',
             './components/transition',
             './components/notification',
+            './components/steps',
           ]
         },
       ],
