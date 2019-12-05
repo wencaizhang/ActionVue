@@ -1,4 +1,4 @@
-# Popover 气泡卡片
+# Popover 气泡卡片 <Common-SourceCodeLink comp="popover" />
 
 点击/鼠标移入元素，弹出气泡式的卡片浮层。
 

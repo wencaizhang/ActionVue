@@ -1,4 +1,4 @@
-# Pager 分页器
+# Pager 分页器 <Common-SourceCodeLink comp="pager" />
 
 
 ## 简洁模式

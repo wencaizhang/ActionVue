@@ -1,4 +1,4 @@
-# Transition 过渡动画
+# Transition 过渡动画 <Common-SourceCodeLink comp="transition" />
 
 内置丰富的过渡动画，可以直接作用于 `<transition>` 组件。
 

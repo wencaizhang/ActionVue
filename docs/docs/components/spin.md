@@ -1,4 +1,4 @@
-# Spin 加载中
+# Spin 加载中 <Common-SourceCodeLink comp="spin" />
 
 ## 基本使用
 

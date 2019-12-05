@@ -1,4 +1,4 @@
-# Image 图片
+# Image 图片 <Common-SourceCodeLink comp="image" />
 
 图片容器，在保留原生 img 的特性下，支持懒加载，自定义占位、加载失败等
 

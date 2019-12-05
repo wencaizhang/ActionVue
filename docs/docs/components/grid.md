@@ -1,4 +1,4 @@
-# Grid 网格组件
+# Grid 网格组件 <Common-SourceCodeLink comp="grid" />
 
 ## 基本用法
 

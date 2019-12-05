@@ -1,4 +1,4 @@
-# Swipe 轮播图
+# Swipe 轮播图 <Common-SourceCodeLink comp="swipe" />
 
 <swipe-demo1 />
 

@@ -1,5 +1,5 @@
 
-# Skeleton 骨架屏
+# Skeleton 骨架屏 <Common-SourceCodeLink comp="skeleton" />
 
 ## 基本使用
 

@@ -1,4 +1,4 @@
-# Toast 轻提示
+# Toast 轻提示 <Common-SourceCodeLink comp="toast" />
 
 ## 简单使用
 

@@ -1,4 +1,4 @@
-# Mssage 消息提示
+# Mssage 消息提示 <Common-SourceCodeLink comp="message" />
 
 <Common-Democode title="" description="">
   <message-demo1 />

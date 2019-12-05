@@ -1,4 +1,4 @@
-# BackTop 回到顶部
+# BackTop 回到顶部 <Common-SourceCodeLink comp="back-top" />
 
 
 ## 基本用法

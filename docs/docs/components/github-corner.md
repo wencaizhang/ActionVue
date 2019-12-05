@@ -1,4 +1,4 @@
-# GitHub Corner 
+# GitHub Corner <Common-SourceCodeLink comp="github-corner" /> 
 
 ## 基本使用
 

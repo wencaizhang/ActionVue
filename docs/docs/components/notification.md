@@ -1,4 +1,4 @@
-# Notification 通知
+# Notification 通知 <Common-SourceCodeLink comp="notification" />
 
 <Common-Democode title="" description="">
   <notification-demo1 />

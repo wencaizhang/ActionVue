@@ -1,4 +1,4 @@
-# Skicky 粘滞吸顶组件
+# Skicky 粘滞吸顶组件 <Common-SourceCodeLink comp="skicky" />
 
 ## 基本使用
 

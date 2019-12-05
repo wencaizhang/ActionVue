@@ -1,4 +1,4 @@
-# Tabs 标签页
+# Tabs 标签页 <Common-SourceCodeLink comp="tabs" />
 
 ## 基本使用
 

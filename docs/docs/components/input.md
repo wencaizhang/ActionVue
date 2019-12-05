@@ -1,4 +1,4 @@
-# Input 输入框
+# Input 输入框 <Common-SourceCodeLink comp="input" />
 
 ## 基本使用
 
