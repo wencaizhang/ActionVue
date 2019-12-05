@@ -67,6 +67,7 @@ module.exports = {
             './components/transition',
             './components/notification',
             './components/steps',
+            './components/collapse',
           ]
         },
       ],

@@ -1,7 +1,6 @@
 <template>
-  <section>
+  <section class="a-collapse">
     <slot />
-    {{ value }}
   </section>
 </template>
 
@@ -34,5 +33,9 @@ export default {
 </script>
 
 <style>
-
+.a-collapse {
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  border-radius: 4px;
+}
 </style>
