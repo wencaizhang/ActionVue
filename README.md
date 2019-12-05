@@ -77,9 +77,11 @@ Vue.use(actionvue);
 + [ ] Datepicker 日期选择
 + [ ] Scroll 滚动组件
 
-## Why Do This
+## Why and What
 
-本组件库由个人开发，旨在技术研究，探索如何搭建一个基于 Vue 的组件库，不推荐在生产环境使用。
+本组件库借鉴了一些成熟 UI 框架（如 Element UI 和 Ant Design）的外观，API，甚至部分源码，在此感谢。
+
+本组件库由个人开发，旨在技术研究，探索如何搭建一个基于 Vue 的组件库，暂时不推荐在生产环境使用。
 
 生产环境中更加推荐市面上现有的成熟的中后台组件库，比如 [Element](https://github.com/ElemeFE/element) / [iview](https://github.com/iview/iview) / [Vant](https://github.com/youzan/vant) 等等，在此不一一列举。
 
