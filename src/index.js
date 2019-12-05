@@ -7,6 +7,8 @@ import AButton      from './package/button/button';
 import AButtonGroup from './package/button/button-group';
 import ASkeleton    from './package/skeleton/skeleton';
 import ACol         from './package/grid/col';
+import ACollapse    from './package/collapse/collapse'
+import ACollapseItem    from './package/collapse/collapse-item'
 import ARow         from './package/grid/row';
 import ASticky      from './package/sticky/sticky'
 import APager       from './package/pager/pager';
@@ -38,6 +40,8 @@ export default {
     Vue.component('AButton', AButton);
     Vue.component('AButtonGroup', AButtonGroup);
     Vue.component('ACol', ACol);
+    Vue.component('ACollapse', ACollapse);
+    Vue.component('ACollapseItem', ACollapseItem);
     Vue.component('ARow', ARow);
     Vue.component('ASkeleton', ASkeleton);
     Vue.component('ASticky', ASticky);
