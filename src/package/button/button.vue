@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import icon from '../icon/icon'
+import icon from '../icon/index'
 export default {
   name: 'a-button',
   components: {
