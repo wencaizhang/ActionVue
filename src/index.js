@@ -12,7 +12,7 @@ import ACollapseItem    from './package/collapse/collapse-item'
 import ARow         from './package/grid/row';
 import ASticky      from './package/sticky/sticky'
 import APager       from './package/pager/pager';
-import AImage       from './package/Image/main';
+import AImage       from './package/image/main';
 import ABackTop     from './package/back-top/main';
 import ATabs        from './package/tabs/tabs';
 import ATabItem     from './package/tabs/tab-item';
