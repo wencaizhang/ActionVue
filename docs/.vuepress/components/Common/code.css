@@ -7,6 +7,7 @@
   font-size: 0.75rem;
   cursor: pointer;
   color: rgba(255,255,255,0.4);
+  color: rgba(219,73,132,.8);
 }
 .content pre {
   position: relative;
@@ -23,6 +24,7 @@ code.hljs:before {
   left: 6em;
   font-size: .75rem;
   color: hsla(0,0%,100%,.4);
+  color: rgba(219,73,132,.8);
 }
 
 code.hljs[class~=js]:before {

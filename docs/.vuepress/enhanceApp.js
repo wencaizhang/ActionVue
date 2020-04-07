@@ -2,7 +2,7 @@
  * 扩展 VuePress 应用
  */
 import VueHighlightJS from 'vue-highlight.js';
-import 'highlight.js/styles/atom-one-dark.css';
+import 'highlight.js/styles/atom-one-light.css';
 
 import actionvue from "../../src/index";
 
