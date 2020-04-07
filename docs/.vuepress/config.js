@@ -37,14 +37,14 @@ module.exports = {
           title: '入门',
           collapsable: false,
           children: [
-            './get-started/',
+            './get-started/start',
             './get-started/custom-theme',
             './get-started/z-index-guide',
           ]
         },
         {
           title: 'components 组件',
-          collapsable: false,
+          collapsable: true,
           children: [
             './components/button',
             './components/icon',
