@@ -23,6 +23,7 @@ module.exports = {
   extend: '@vuepress/theme-default',
   themeConfig: {
     lastUpdated: '最后更新时间',
+    smoothScroll: true,
     nav: [
       {text: '主页', link: '/'},
       {text: '文档', link: '/docs/'},
@@ -43,31 +44,78 @@ module.exports = {
           ]
         },
         {
-          title: 'components 组件',
-          collapsable: true,
+          title: '基础组件',
+          collapsable: false,
           children: [
             './components/button',
             './components/icon',
-            './components/input',
+          ]
+        },
+        {
+          title: '布局组件',
+          collapsable: false,
+          children: [
             './components/grid',
-            './components/pager',
-            './components/skeleton',
-            './components/sticky',
-            './components/toast',
-            './components/image',
-            './components/message',
-            './components/back-top',
-            './components/tabs',
-            './components/swipe',
             './components/layout',
+          ]
+        },
+        {
+          title: '表单组件',
+          collapsable: false,
+          children: [
+            './components/input',
             './components/switch',
-            './components/popover',
-            './components/github-corner',
-            './components/spin',
-            './components/transition',
+          ]
+        },
+        {
+          title: '反馈组件',
+          collapsable: false,
+          children: [
+            './components/toast',
+            './components/message',
             './components/notification',
-            './components/steps',
+            './components/spin',
+            './components/skeleton',
+            './components/popover',
+          ]
+        },
+        {
+          title: '数据展示',
+          collapsable: false,
+          children: [
+            './components/pager',
+            './components/sticky',
+            './components/swipe',
+            './components/tabs',
             './components/collapse',
+          ]
+        },
+        {
+          title: '其他组件',
+          collapsable: false,
+          children: [
+            // './components/button',
+            // './components/icon',
+            // './components/input',
+            // './components/grid',
+            // './components/pager',
+            // './components/skeleton',
+            // './components/sticky',
+            // './components/toast',
+            './components/image',
+            // './components/message',
+            './components/back-top',
+            // './components/tabs',
+            // './components/swipe',
+            // './components/layout',
+            // './components/switch',
+            // './components/popover',
+            './components/github-corner',
+            // './components/spin',
+            './components/transition',
+            // './components/notification',
+            './components/steps',
+            // './components/collapse',
           ]
         },
       ],
