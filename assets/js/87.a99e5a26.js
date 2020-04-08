@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[87],{648:function(t,n,s){"use strict";s.r(n);var i={methods:{onClick:function(){this.$toast("This is a toast")}}},o=s(1),c=Object(o.a)(i,(function(){var t=this.$createElement,n=this._self._c||t;return n("div",[n("a-button",{on:{click:this.onClick}},[this._v("简单 Toast")])],1)}),[],!1,null,null,null);n.default=c.exports}}]);
