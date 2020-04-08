@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .a-layout-header {
   background: #001529;
   padding: 0 50px;

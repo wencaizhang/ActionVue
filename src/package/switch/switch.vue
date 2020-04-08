@@ -136,7 +136,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .a-switch {
   display: inline-flex;
   align-items: center;

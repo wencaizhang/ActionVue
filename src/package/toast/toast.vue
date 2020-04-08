@@ -105,11 +105,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-$font-size: 14px;
-$toast-min-height: 40px;
-$toast-bg: rgba(0, 0, 0, 0.75);
-$animation-duration: 300ms;
+<style lang="less" scoped>
+@font-size: 14px;
+@toast-min-height: 40px;
+@toast-bg: rgba(0, 0, 0, 0.75);
+@animation-duration: 300ms;
 @keyframes slide-up {
   0% { opacity: 0; transform: translateY(100%); }
   100% { opacity: 1; transform: translateY(0%); }
@@ -132,29 +132,29 @@ $animation-duration: 300ms;
   &.a-toast-position-top {
     top: 15px;
     .a-toast-inner {
-      animation: slide-down $animation-duration;
+      animation: slide-down @animation-duration;
     }
   }
   &.a-toast-position-middle {
     top: 50%;
     transform: translateX(-50%);
     .a-toast-inner {
-      animation: fade-in $animation-duration;
+      animation: fade-in @animation-duration;
     }
   }
   &.a-toast-position-bottom {
     bottom: 15px;
 
     .a-toast-inner {
-      animation: slide-up $animation-duration;
+      animation: slide-up @animation-duration;
     }
   }
 }
 
 .a-toast-inner {
-  font-size: $font-size;
-  background-color: $toast-bg;
-  min-height: $toast-min-height;
+  font-size: @font-size;
+  background-color: @toast-bg;
+  min-height: @toast-min-height;
   line-height: 1.8;
   color: #fff;
   border-radius: 4px;

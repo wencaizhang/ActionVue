@@ -63,7 +63,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .a-input {
   padding: 4px 11px;
   outline: none;

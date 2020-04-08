@@ -68,9 +68,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-$primary-color: #1890ff;
-$transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+<style lang="less" scoped>
+@primary-color: #1890ff;
+@transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 .a-tabs {
   overflow: hidden;
 
@@ -78,7 +78,7 @@ $transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    transition: $transition;
+    transition: @transition;
   }
 }
 </style>

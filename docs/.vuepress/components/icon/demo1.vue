@@ -45,8 +45,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-$primary-color: #1890ff;
+<style lang="less" scoped>
+@primary-color: #1890ff;
 .icon-list {
   font-size: 3em;
   margin: 0;
@@ -63,7 +63,7 @@ $primary-color: #1890ff;
   border-radius: 4px;
 }
 .icon-list li:hover {
-  background-color: $primary-color;
+  background-color: @primary-color;
   color: #fff;
 }
 .icon-list li span {

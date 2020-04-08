@@ -115,7 +115,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 
 // @abc: #f2f2f2;
 // @gradient: #e6e6e6;

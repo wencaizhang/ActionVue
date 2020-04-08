@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .a-swipe-item {
   min-height: 160px;
   color: #fff;

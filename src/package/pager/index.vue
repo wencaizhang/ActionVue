@@ -82,8 +82,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-$primary-color: #1890ff;                         // 全局主色
+<style lang="less" scoped>
+@primary-color: #1890ff;                         // 全局主色
 .a-pager-wraper {
   display: flex;
   user-select: none;
@@ -112,12 +112,12 @@ $primary-color: #1890ff;                         // 全局主色
     cursor: default;
   }
   &.a-curr-page {
-    color: $primary-color;
-    border-color: $primary-color;
+    color: @primary-color;
+    border-color: @primary-color;
     pointer-events: none;
   }
   &:hover {
-    border-color: $primary-color;
+    border-color: @primary-color;
   }
   &.disabled {
     cursor: not-allowed;

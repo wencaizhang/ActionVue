@@ -18,11 +18,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-$siderWidth: 200px;
+<style lang="less" scoped>
+@siderWidth: 200px;
 
 .a-layout-sider {
-  width: $siderWidth;
+  width: @siderWidth;
 }
 
 .slide-enter-active,
@@ -32,6 +32,6 @@ $siderWidth: 200px;
 
 .slide-enter,
 .slide-leave-to {
-  margin-left: -$siderWidth;
+  margin-left: -@siderWidth;
 }
 </style>

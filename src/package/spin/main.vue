@@ -52,8 +52,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-$primary-color: #1890ff;
+<style lang="less" scoped>
+@primary-color: #1890ff;
 .a-spin {
   position: relative;
   display: inline-block;
@@ -99,7 +99,7 @@ $primary-color: #1890ff;
   }
 }
 .a-spin-tip {
-  color: $primary-color;
+  color: @primary-color;
 }
 .a-spin-blur {
   pointer-events: none;

@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .a-tab-item {
   width: 100%;
   flex-shrink: 0;

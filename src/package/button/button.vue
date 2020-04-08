@@ -68,39 +68,39 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 // @import "var";
 
-$border-color-hover: #666;
-$border-color: rgb(217, 217, 217);
-$border-color-light: lighten($border-color, 30%);
-$border-radius: 4px;
-$box-shadow-color: rgba(0, 0, 0, 0.5);
-$button-active-bg: #eee;
-$button-bg: white;
-$button-height: 32px;
-$color: #333;
-$light-color: #666;
-$font-size: 14px;
-$small-font-size: 12px;
-$input-height: 32px;
-$red: #F1453D;
-$grey: #eee;
-$blue: #4a90e2;
+@border-color-hover: #666;
+@border-color: rgb(217, 217, 217);
+@border-color-light: lighten(@border-color, 30%);
+@border-radius: 4px;
+@box-shadow-color: rgba(0, 0, 0, 0.5);
+@button-active-bg: #eee;
+@button-bg: white;
+@button-height: 32px;
+@color: #333;
+@light-color: #666;
+@font-size: 14px;
+@small-font-size: 12px;
+@input-height: 32px;
+@red: #F1453D;
+@grey: #eee;
+@blue: #4a90e2;
 
-$primary-color: #1890ff;                         // 全局主色
-$link-color: #1890ff;                            // 链接色
-$success-color: #52c41a;                         // 成功色
-$warning-color: #faad14;                         // 警告色
-$error-color: #f5222d;                           // 错误色
-$font-size-base: 14px;                             // 主字号
-$heading-color: rgba(0, 0, 0, .85);              // 标题色
-$text-color: rgba(0, 0, 0, .65);                 // 主文本色
-$text-color-secondary : rgba(0, 0, 0, .45);      // 次文本色
-$disabled-color : rgba(0, 0, 0, .25);            // 失效色
-$border-radius-base: 4px;                          // 组件/浮层圆角
-$border-color-base: #d9d9d9;                     // 边框色
-$box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);  // 浮层阴影
+@primary-color: #1890ff;                         // 全局主色
+@link-color: #1890ff;                            // 链接色
+@success-color: #52c41a;                         // 成功色
+@warning-color: #faad14;                         // 警告色
+@error-color: #f5222d;                           // 错误色
+@font-size-base: 14px;                             // 主字号
+@heading-color: rgba(0, 0, 0, .85);              // 标题色
+@text-color: rgba(0, 0, 0, .65);                 // 主文本色
+@text-color-secondary : rgba(0, 0, 0, .45);      // 次文本色
+@disabled-color : rgba(0, 0, 0, .25);            // 失效色
+@border-radius-base: 4px;                          // 组件/浮层圆角
+@border-color-base: #d9d9d9;                     // 边框色
+@box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);  // 浮层阴影
 
 .box-shadow {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
@@ -109,19 +109,16 @@ $box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);  // 浮层阴影
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-@mixin spin {
-  animation: spin 2s infinite linear;
-}
 
 .a-button {
   position: relative;
-  font-size: $font-size;
-  height: $button-height;
-  color: $color;
-  background-color: $button-bg;
+  font-size: @font-size;
+  height: @button-height;
+  color: @color;
+  background-color: @button-bg;
   border: 1px solid;
-  border-color: $border-color;
-  border-radius: $border-radius;
+  border-color: @border-color;
+  border-radius: @border-radius;
   padding: 0 1em;
   cursor: pointer;
   display: inline-flex;
@@ -149,8 +146,8 @@ $box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);  // 浮层阴影
     }
   }
   &:hover {
-    color: $primary-color;
-    border-color: $primary-color;
+    color: @primary-color;
+    border-color: @primary-color;
   }
   &:active {
     top: 1px;
@@ -163,8 +160,8 @@ $box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);  // 浮层阴影
     border-style: dashed;
   }
   &.a-button-primary {
-    background-color: $primary-color;
-    border-color: $primary-color;
+    background-color: @primary-color;
+    border-color: @primary-color;
     color: #fff;
     &:hover {
       color: #fff;
@@ -174,10 +171,10 @@ $box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);  // 浮层阴影
   }
   &.a-button-danger {
     background-color: #f5f5f5;
-    color: $error-color;
+    color: @error-color;
     &:hover {
-      border-color: $error-color;
-      background-color: $error-color;
+      border-color: @error-color;
+      background-color: @error-color;
       color: #fff;
     }
   }

@@ -69,9 +69,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-$primary-color: #1890ff;
-$transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+<style lang="less" scoped>
+@primary-color: #1890ff;
+@transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 .a-tabs-nav {
   position: relative;
@@ -90,7 +90,7 @@ $transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
       }
   
       &.a-tabs-tab-selected {
-        color: $primary-color;
+        color: @primary-color;
         font-weight: bold;
       }
       &.a-tabs-tab-disabled {
@@ -105,11 +105,11 @@ $transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     left: 0;
     bottom: 0;
     z-index: 1;
-    transition: $transition;
+    transition: @transition;
 
     // width: 40px;
     box-sizing: border-box;
-    background-color: $primary-color;
+    background-color: @primary-color;
     height: 2px;
   }
 }

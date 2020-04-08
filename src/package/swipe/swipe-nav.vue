@@ -40,8 +40,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-$primary-color: #1890ff;
+<style lang="less" scoped>
+@primary-color: #1890ff;
 .a-swipe-navigation {
   & > div {
     position: absolute;
@@ -50,7 +50,7 @@ $primary-color: #1890ff;
     transform: translateY(-50%);
     cursor: pointer;
     font-size: 2em;
-    color: $primary-color;
+    color: @primary-color;
   }
   .prev {
     left: 10px;

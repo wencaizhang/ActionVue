@@ -42,7 +42,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scope>
+<style lang="less" scope>
 .a-collapse-item {
   border-bottom: 1px solid #ccc;
   &:last-child {

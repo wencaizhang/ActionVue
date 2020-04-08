@@ -157,10 +157,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 
-$primary-color: #1890ff;
-$transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+@primary-color: #1890ff;
+@transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 .a-swipe {
   position: relative;
   overflow: hidden;

@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .a-layout-footer {
   background: #f0f2f5;
   padding: 24px 50px;

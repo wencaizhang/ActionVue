@@ -82,7 +82,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 .a-back-top{
   position: fixed;
   z-index: 100;
