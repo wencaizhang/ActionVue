@@ -1,5 +1,5 @@
 <template>
-  <section class="a-spin" :class="clazz">
+  <section class="a-spin-container" :class="clazz">
     <div v-show="spinning" class="spinning">
       <slot name="indicator">
         <span class="spin-dot spin-dot-spin">
@@ -54,12 +54,11 @@ export default {
 
 <style lang="less" scoped>
 @primary-color: #1890ff;
-.a-spin {
+.a-spin-container {
   position: relative;
   display: inline-block;
 
   &.a-spin-has-slot {
-
     .spinning {
       position: absolute;
       height: 100%;
@@ -69,7 +68,6 @@ export default {
     }
   }
   .spinning {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,64 +95,54 @@ export default {
       }
     }
   }
-}
-.a-spin-tip {
-  color: @primary-color;
-}
-.a-spin-blur {
-  pointer-events: none;
-  user-select: none;
-  overflow: hidden;
-  opacity: 0.5;
-}
-.spin-dot {
-  animation: antRotate 1.2s infinite linear;
-  transform: rotate(45deg);
-  position: relative;
-  display: inline-block;
-  font-size: 20px;
-  width: 20px;
-  height: 20px;
-  box-sizing: border-box;
-}
+  .a-spin-tip {
+    color: @primary-color;
+  }
+  .a-spin-blur {
+    pointer-events: none;
+    user-select: none;
+    overflow: hidden;
+    opacity: 0.5;
+  }
 
-.spin-dot i {
-  width: 9px;
-  height: 9px;
-  position: absolute;
-  display: block;
-  background-color: #1890ff;
-  border-radius: 100%;
-  transform: scale(0.75);
-  transform-origin: 50% 50%;
-  opacity: 0.3;
-  animation: antSpinMove 1s infinite linear alternate;
-}
+  .spin-dot {
+    animation: antRotate 1.2s infinite linear;
+    transform: rotate(45deg);
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
 
-.spin-dot i:nth-child(1) {
-  top: 0;
-  left: 0;
-}
-
-.spin-dot i:nth-child(2) {
-  top: 0;
-  right: 0;
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-}
-
-.spin-dot i:nth-child(3) {
-  right: 0;
-  bottom: 0;
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-}
-
-.spin-dot i:nth-child(4) {
-  bottom: 0;
-  left: 0;
-  -webkit-animation-delay: 1.2s;
-  animation-delay: 1.2s;
+    i {
+      width: 9px;
+      height: 9px;
+      position: absolute;
+      display: block;
+      background-color: #1890ff;
+      border-radius: 100%;
+      transform: scale(0.75);
+      transform-origin: 50% 50%;
+      opacity: 0.3;
+      animation: antSpinMove 1s infinite linear alternate;
+    }
+    i:nth-child(1) {
+      top: 0; left: 0;
+    }
+    i:nth-child(2) {
+      top: 0; right: 0;
+      animation-delay: 0.4s;
+    }
+    i:nth-child(3) {
+      bottom: 0; right: 0;
+      animation-delay: 0.8s;
+    }
+    i:nth-child(4) {
+      bottom: 0; left: 0;
+      animation-delay: 1.2s;
+    }
+  }
 }
 
 @keyframes antRotate {
@@ -164,20 +152,7 @@ export default {
   }
 }
 
-@-webkit-keyframes antRotate {
-  to {
-    -webkit-transform: rotate(405deg);
-    transform: rotate(405deg);
-  }
-}
-
 @keyframes antSpinMove {
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes antSpinMove {
   to {
     opacity: 1;
   }

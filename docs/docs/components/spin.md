@@ -67,12 +67,14 @@
   <highlight-code slot="codeText" lang="vue">
     <template>
       <div>
+        <div>
+          Loading state：<a-switch v-model="spinning"></a-switch>
+        </div>
         <a-spin :spinning="spinning">
           <div class="spin-content">
             可以点击‘切换’按钮，控制本区域的spin展示。
           </div>
         </a-spin>
-        Loading state：<a-switch v-model="spinning"></a-switch>
       </div>
     </template>
     <script>
@@ -80,11 +82,6 @@
         data () {
           return {
             spinning: false
-          }
-        },
-        methods: {
-          changeSpinning(){
-            this.spinning = !this.spinning
           }
         },
       }
