@@ -15,9 +15,11 @@
   </p>
 
   [![npm](https://img.shields.io/npm/v/actionvue?style=flat-square)](https://www.npmjs.com/package/actionvue/)
-  [![vue](https://img.shields.io/badge/vue-2.6.10-blue.svg?style=flat-square)](https://github.com/vuejs/vue)
+  [![vue](https://img.shields.io/badge/vue-2.6.11-blue.svg?style=flat-square)](https://github.com/vuejs/vue)
   [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/wencaizhang/ActionVue/blob/master/LICENSE)
+  ![Deploy Docs](https://github.com/wencaizhang/ActionVue/workflows/Deploy%20Docs/badge.svg)
 </div>
+
 
 ## Installation
 
