@@ -43,7 +43,7 @@ export default {
       });
       this.clip.on("success", e => {
         e.clearSelection();
-        this.$message.success({ content: '复制成功'})
+        this.$toast({ message: '复制成功', showClose: false })
       });
       this.clip.on("error", e => {
         console.error("Action:", e.action);
