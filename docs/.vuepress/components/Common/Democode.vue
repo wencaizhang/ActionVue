@@ -22,7 +22,7 @@
 
     <!-- 显示隐藏控制按钮 -->
     <div class="demo-block-control" @click="isShowCode = !isShowCode">
-      <a-icon :type="iconType" :class="{ hovering: showCtrl }"></a-icon>
+      <i class="css-icon" :class="[ iconType, showCtrl ? 'hovering' : '' ]"></i>
       <transition name="text-slide">
         <span v-show="showCtrl">{{ codeTextBtn }}</span>
       </transition>
@@ -48,7 +48,7 @@ export default {
   },
   computed: {
     iconType () {
-      return this.isShowCode ? "up" : "down";
+      return this.isShowCode ? "icon-arrow-up" : "icon-arrow-down";
     },
     codeTextBtn() {
       return this.isShowCode ? "隐藏代码" : "显示代码";
@@ -166,7 +166,7 @@ export default {
     color: rgb(211, 220, 230);
     cursor: pointer;
     border-top: 1px solid #f2f2f2;
-    & > .a-icon {
+    & > .css-icon {
       font-size: 16px;
       height: 44px;
       line-height: 44px;
@@ -262,5 +262,19 @@ export default {
 .icon-copy:active::after {
   opacity: .8;
   margin-top: 1px;
+}
+.icon-arrow-up::before {
+  height: .65em; width: .65em;
+  border-style: solid;
+  border-width: 2px 0 0 2px;
+  -ms-transform: translate(-50%, -25%) rotate(45deg);
+  transform: translate(-50%, -25%) rotate(45deg);
+}
+.icon-arrow-down::before {
+  height: .65em; width: .65em;
+  border-style: solid;
+  border-width: 2px 0 0 2px;
+  -ms-transform: translate(-50%, -75%) rotate(225deg);
+  transform: translate(-50%, -75%) rotate(225deg);
 }
 </style>
