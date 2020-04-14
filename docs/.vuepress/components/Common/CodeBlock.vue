@@ -3,7 +3,7 @@
 
     <div class="meta">
       <div class="highlight" ref="highlight">
-        <span class="copy-code-btn" :class="className" title="点击复制代码">
+        <span class="copy-code-btn" :class="className" title="复制代码">
           <i class="css-icon icon-copy"></i>
         </span>
         <transition name="slide">

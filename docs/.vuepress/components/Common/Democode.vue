@@ -6,13 +6,13 @@
 
     <!-- 代码块 -->
     <transition name="expand">
-      <div v-show="isShowCode" class="meta">
+      <div ref="meta" class="meta" :style="metaStyle">
         <!-- 描述 -->
-        <div v-show="description" class="desc">
+        <div v-if="description" class="desc">
           <small>{{ description }}</small>
         </div>
         <div class="highlight" ref="highlight">
-          <span class="copy-code-btn" :class="className" title="点击复制代码">
+          <span class="copy-code-btn" :class="className" title="复制代码">
             <i class="css-icon icon-copy"></i>
           </span>
           <slot name="codeText"></slot>
@@ -42,6 +42,8 @@ export default {
       isShowCode: false,
       clip: null,
       showCtrl: false,
+      metaHeight: 0,
+      computedHeight: false,
     };
   },
   computed: {
@@ -54,11 +56,38 @@ export default {
     className () {
       return 'copy-code-btn' + (uid++);
     },
+    metaStyle () {
+      // 没有计算高度时
+      if (!this.computedHeight) {
+        return {
+          visibility: 'hidden',
+          position: 'absolute',
+          top: '-9999px',
+          left: '-9999px',
+        }
+      }
+      if (!this.isShowCode) {
+        return {
+          height: '0px'
+        }
+      }
+      if (this.isShowCode) {
+        return {
+          height: this.metaHeight + 'px'
+        }
+      }
+    }
   },
   mounted () {
+    this.getHeight()
     this.initCopyCode({});
   },
   methods: {
+    getHeight () {
+      let { height } = this.$refs.meta.getBoundingClientRect()
+      this.metaHeight = height;
+      this.computedHeight = true;
+    },
     initCopyCode({ success, error }) {
       this.clip = new ClipboardJS("." + this.className, {
         target(trigger) {
