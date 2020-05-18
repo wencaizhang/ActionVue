@@ -2,8 +2,8 @@
   <div class="a-tabs">
     <a-tabs-nav
       :navList="navList"
-      :selectedKey="selectedKey"
-      @update:selectedKey="onChange"
+      v-model="selectedKey"
+      @change="onChange"
     />
     <div class="a-tabs-content" ref="content">
       <slot />
@@ -32,6 +32,7 @@ export default {
     }
   },
   mounted () {
+    // 这里需要用到 this.$children，所以必须用 mounted
     let ATabItemName = this.ATabItemName;
     this.navList = this.$children
       .filter(item => item.$options.name === ATabItemName)

@@ -7,7 +7,7 @@
         :key="item.name"
         class="a-tabs-tab"
         :ref="`a-tabs-nav-${item.name}`"
-        :class="item | clazz(selectedKey)"
+        :class="item | clazz(activeKey)"
         @click="onClick(item)"
       >
         {{ item.title }}
@@ -18,12 +18,18 @@
 
 <script>
 export default {
+  model: {
+    prop: 'activeKey',
+    event: 'change'
+  },
   props: {
     navList: {
       type: Array,
+      required: true
     },
-    selectedKey: {
+    activeKey: {
       type: String,
+      required: true
     }
   },
   data () {
@@ -32,9 +38,9 @@ export default {
     }
   },
   filters: {
-    clazz (item, selectedKey) {
+    clazz (item, activeKey) {
       return {
-        'a-tabs-tab-selected': selectedKey === item.name,
+        'a-tabs-tab-selected': activeKey === item.name,
         'a-tabs-tab-disabled': item.disabled
       }
     }
@@ -45,17 +51,17 @@ export default {
     })
   },
   watch: {
-    selectedKey () {
+    activeKey () {
       this.selectChange();
     }
   },
   methods: {
     getSelectedRefName () {
-      return `a-tabs-nav-${this.selectedKey}`
+      return `a-tabs-nav-${this.activeKey}`
     },
     onClick (item) {
       if (item.disabled) { return; }
-      this.$emit('update:selectedKey', item.name);
+      this.$emit('change', item.name);
     },
     selectChange () {
       let ref = this.getSelectedRefName();
