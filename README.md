@@ -92,6 +92,24 @@ Vue.use(actionvue);
 
 ## Contributing
 
+开发组件库涉及到了大量的知识点：
+
+- vue基础语法
+- 组件基本语法
+- 组件通讯(`sync`, `provide`, `inject`)
+- 插槽的使用
+- `props` 校验
+- 过渡与动画处理
+- 计算属性与监听属性
+- v-model语法糖 vue插件机制
+- npm发布
+- VuePress 使用
+- GitHub Actions 自动部署
+- 组件功能和 API 的设计
+- ...
+
+总而言之，这是一个很好的练习编程技能的项目，希望每个人都能通过这个项目得到一些启发。
+
 如果你遇到什么问题，或者有好的建议，欢迎提 [Issues](https://github.com/wencaizhang/ActionVue/issues/) 和 [Pull Request](https://github.com/wencaizhang/ActionVue/pulls/)
 
 ## Licence
