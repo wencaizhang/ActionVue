@@ -133,6 +133,7 @@ module.exports = {
             './sync',
             './v-model',
             './vue-plugin',
+            './tabs',
           ]
         },
       ]

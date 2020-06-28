@@ -266,14 +266,14 @@ export default {
 .icon-arrow-up::before {
   height: .65em; width: .65em;
   border-style: solid;
-  border-width: 2px 0 0 2px;
+  border-width: 1px 0 0 1px;
   -ms-transform: translate(-50%, -25%) rotate(45deg);
   transform: translate(-50%, -25%) rotate(45deg);
 }
 .icon-arrow-down::before {
   height: .65em; width: .65em;
   border-style: solid;
-  border-width: 2px 0 0 2px;
+  border-width: 1px 0 0 1px;
   -ms-transform: translate(-50%, -75%) rotate(225deg);
   transform: translate(-50%, -75%) rotate(225deg);
 }

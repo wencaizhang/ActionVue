@@ -66,7 +66,7 @@
 | 属性               | 说明                                         | 类型   | 默认值     |
 | :----------------- | :------------------------------------------- | :----- | :--------- |
 | `defaultActiveKey` | 初始化选中面板的 key，如果没有设置 activeKey | String | 第一个面板 |
-| `v-model`          | 当前激活 tab 面板的 key                      | String | -          |
+| `v-model`          | 当前激活 tab 面板的 name                      | String | -          |
 
 #### 事件
 
@@ -80,5 +80,5 @@
 | 属性       | 说明             | 类型    | 默认值 |
 | :--------- | :--------------- | :------ | :----- |
 | `title`    | 选项卡头显示文字 | String  | -      |
-| `name`     | 对应 activeKey   | String  | -      |
+| `name`      | 对应 activeKey   | String  | -      |
 | `disabled` | 禁用此面板       | Boolean | false  |
