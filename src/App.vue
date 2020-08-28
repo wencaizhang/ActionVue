@@ -14,11 +14,11 @@ export default {
   name: "App",
   setup() {
     const width = document.documentElement.clientWidth;
-    const menuVisible = ref(width <= 500 ? false : true);
-    provide("menuVisible", menuVisible); // set
+    const asideVisible = ref(width <= 500 ? false : true);
+    provide("asideVisible", asideVisible); // set
     router.afterEach(() => {
       if (width <= 500) {
-        menuVisible.value = false;
+        asideVisible.value = false;
       }
     });
   },

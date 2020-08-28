@@ -2,20 +2,20 @@
 <div class="layout">
   <Navbar class="nav" />
   <div class="content">
-    <aside v-if="menuVisible">
+    <aside v-if="asideVisible">
       <h2>组件列表</h2>
       <ol>
         <li>
-          <router-link to="/doc/switch">Switch 组件</router-link>
+          <router-link to="/docs/switch">Switch 组件</router-link>
         </li>
         <li>
-          <router-link to="/doc/button">Button 组件</router-link>
+          <router-link to="/docs/button">Button 组件</router-link>
         </li>
         <li>
-          <router-link to="/doc/dialog">Dialog 组件</router-link>
+          <router-link to="/docs/dialog">Dialog 组件</router-link>
         </li>
         <li>
-          <router-link to="/doc/tabs">Tabs 组件</router-link>
+          <router-link to="/docs/tabs">Tabs 组件</router-link>
         </li>
       </ol>
     </aside>
@@ -37,9 +37,9 @@ export default {
     Navbar
   },
   setup() {
-    const menuVisible = inject < Ref < boolean >> ("menuVisible"); // get
+    const asideVisible = inject < Ref < boolean >> ("asideVisible"); // get
     return {
-      menuVisible
+      asideVisible
     };
   },
 };
