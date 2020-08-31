@@ -54,6 +54,49 @@
     <Button loading>加载中</Button>
     <Button>加载完毕</Button>
   </div>
+
+  <hr style="margin: 20px 0;" />
+
+  <h1>API</h1>
+
+  <table>
+    <tr>
+      <td>参数</td>
+      <td>说明</td>
+      <td>类型</td>
+      <td>默认值</td>
+    </tr>
+    <tr>
+      <td>theme</td>
+      <td>按钮类型，支持 link / text / button </td>
+      <td>string</td>
+      <td>button</td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td>按钮大小，支持 big / normal / small</td>
+      <td>string</td>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <td>level</td>
+      <td>按钮类型，支持 main / normal / danger</td>
+      <td>string</td>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <td>disabled</td>
+      <td>按钮是否禁用</td>
+      <td>boolean</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>loading</td>
+      <td>按钮加载状态</td>
+      <td>boolean</td>
+      <td>false</td>
+    </tr>
+  </table>
 </template>
 <script lang="ts">
 import Button from "../libs/Button.vue";

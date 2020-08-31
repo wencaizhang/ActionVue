@@ -34,3 +34,20 @@ body {
     "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti",
     SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 }
+
+table {
+  width: 100%;
+  display: table;
+  text-align: center;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  overflow-x: auto;
+  color: #2c3e50;
+}
+tr {
+  border-top: 1px solid #dfe2e5;
+}
+table td, table th {
+  border: 1px solid #f2f2f2;
+  padding: .6em 1em;
+}
