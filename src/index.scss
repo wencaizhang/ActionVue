@@ -3,18 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 ul,
 ol {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: inherit;
+
   &:hover {
     border-bottom: 1px solid;
     cursor: pointer;
   }
 }
+
 h1,
 h2,
 h3,
@@ -44,10 +48,40 @@ table {
   overflow-x: auto;
   color: #2c3e50;
 }
+
 tr {
   border-top: 1px solid #dfe2e5;
 }
-table td, table th {
+
+table td,
+table th {
   border: 1px solid #f2f2f2;
   padding: .6em 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: -3.1rem;
+  padding-top: 4.6rem;
+  margin-bottom: 0;
+  font-weight: 400;
+  color: #1f2f3d;
+  border: none;
+}
+
+h1 {
+  font-size: 1.9rem
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem
+}
+
+h3 {
+  font-size: 1.2rem
 }

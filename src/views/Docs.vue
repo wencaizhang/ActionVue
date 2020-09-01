@@ -103,5 +103,9 @@ aside {
 
 main {
   overflow: auto;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
 }
+
 </style>
