@@ -16,7 +16,7 @@ export default {
       type: String,
       default: "normal",
     },
-    level: {
+    type: {
       type: String,
       default: "normal",
     },
@@ -30,12 +30,12 @@ export default {
     }
   },
   setup(props) {
-    const { theme, size, level } = props;
+    const { theme, size, type } = props;
     const classes = computed(() => {
       return {
         [`a-theme-${theme}`]: theme,
         [`a-size-${size}`]: size,
-        [`a-level-${level}`]: level,
+        [`a-type-${type}`]: type,
       };
     });
     return { classes };
@@ -108,7 +108,7 @@ $grey: grey;
     padding: 0 4px;
   }
   &.a-theme-button {
-    &.a-level-main {
+    &.a-type-main {
       background: $blue;
       color: white;
       border-color: $blue;
@@ -118,7 +118,7 @@ $grey: grey;
         border-color: darken($blue, 10%);
       }
     }
-    &.a-level-danger {
+    &.a-type-danger {
       background: $red;
       border-color: $red;
       color: white;
@@ -130,7 +130,7 @@ $grey: grey;
     }
   }
   &.a-theme-link {
-    &.a-level-danger {
+    &.a-type-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -139,14 +139,14 @@ $grey: grey;
     }
   }
   &.a-theme-text {
-    &.a-level-main {
+    &.a-type-main {
       color: $blue;
       &:hover,
       &:focus {
         color: darken($blue, 10%);
       }
     }
-    &.a-level-danger {
+    &.a-type-danger {
       color: $red;
       &:hover,
       &:focus {
